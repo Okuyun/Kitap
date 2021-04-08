@@ -1,5 +1,5 @@
 function goBack() {
-    location.pathname = "/Kuran/ders/"
+    location.pathname = "/Kitap/ders/"
 }
 function init() {
     for (let a of document.querySelectorAll('a')) {
