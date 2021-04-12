@@ -7,17 +7,27 @@
     }
     pre  {
         font-size: 14px;
-        /* background: white; */
         overflow-x: auto;
     }
     img  {
-        max-width: 500px;
+        width: 400px;
+        border: 0;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+    .ayet {
+        font-family: georgia, serif;
+        color: green;
+    }
     .large  {
-        max-width: 100%;
+        font-size: large;
+    }
+    .small  {
+        font-size: small;
+    }
+    .monospace  {
+        font-family: 'Courier New', Courier, monospace;
     }
     .center {
         text-align: center;

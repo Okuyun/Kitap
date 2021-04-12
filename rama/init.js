@@ -9,6 +9,7 @@ function init() {
     }
     for (let b of document.querySelectorAll('.goBack'))
       b.onclick = goBack
+    title.innerText = document.title
 }
 init()
   
