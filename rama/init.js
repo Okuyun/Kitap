@@ -9,12 +9,12 @@ function init() {
     }
     for (let b of document.querySelectorAll('.goBack'))
       b.onclick = goBack
-    title.innerText = document.title
+    if (window.title) title.innerText = document.title
 }
 
 onload = () => document.body.append(LINKS)
 const LINKS = document.createElement('div')
-LINKS.innerHTML = `<h3>Paylaşalım lutfen:</h3>
+LINKS.innerHTML = `<br><h3>Paylaşalım lutfen:</h3>
 <p>
 <a href="https://groups.google.com/g/rama30"  target="Kuran"><img alt="https://groups.google.com/g/rama30" src="/Kitap/icon/email.png" style="width: 36px" /></a>
 &ensp;
