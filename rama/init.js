@@ -9,10 +9,10 @@ function init() {
     }
     for (let b of document.querySelectorAll('.goBack'))
       b.onclick = goBack
+    document.body.append(LINKS)
     if (window.title) title.innerText = document.title
 }
 
-onload = () => document.body.append(LINKS)
 const LINKS = document.createElement('div')
 LINKS.innerHTML = `<br><h3>Paylaşalım lutfen:</h3>
 <p>
