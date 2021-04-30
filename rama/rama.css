@@ -9,6 +9,9 @@
         font-size: 14px;
         overflow-x: auto;
     }
+    figure {
+        margin: 1em 0;
+    }
     img  {
         width: 400px;
         border: 0;
