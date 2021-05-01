@@ -22,6 +22,9 @@
     div img {
         display: inline;
     }
+    .preWrap {
+        white-space: pre-wrap;
+    }
     .ayet {
         font-family: georgia, serif;
         color: green;
