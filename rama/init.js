@@ -16,7 +16,7 @@ function init() {
 const LINKS = document.createElement('div')
 LINKS.innerHTML = `<br><h3>Paylaşalım lutfen:</h3>
 <p>
-<a href="https://groups.google.com/g/rama30"  target="Kuran"><img alt="https://groups.google.com/g/rama30" src="/Kitap/icon/email.png" style="width: 36px" /></a>
+<a href="https://groups.google.com/g/okuyun5"  target="Kuran"><img alt="https://groups.google.com/g/okuyun5" src="/Kitap/icon/email.png" style="width: 36px" /></a>
 &ensp;
 <a href="https://twitter.com/okuyun5"  target="Kuran"><img alt="https://twitter.com/okuyun5" src="/Kitap/icon/twitter.png" style="width: 36px" /></a>
 &ensp;
@@ -27,7 +27,7 @@ LINKS.innerHTML = `<br><h3>Paylaşalım lutfen:</h3>
 &ensp;
 <a href="https://youtube.com/playlist?list=PLBDiqooDrruv0MDNyRbG-JBLH2CnfNxAd"  target="Kuran"><img alt="https://youtube.com/" src="/Kitap/icon/youtube.png" style="width: 38px" /></a>
 &ensp;
-<a href="https://github.com/Okuyun/Kitap"  target="Kuran"><img alt="https://github.com/Okuyun/Kitap"" src="/Kitap/icon/github.webp" style="width: 40px" /></a>
+<a href="https://github.com/Okuyun/"  target="Kuran"><img alt="https://github.com/Okuyun/" src="/Kitap/icon/github.webp" style="width: 40px" /></a>
 </p>`
 
 init()
