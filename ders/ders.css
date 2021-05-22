@@ -5,6 +5,12 @@
         font: 15px/1.4 sans-serif;
         background: #eee;
     }
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+    a:hover { font-weight: bold; }
+    /* a:visited { color: rgb(141, 6, 130);} */
     pre  {
         font-size: 14px;
         background: white;
