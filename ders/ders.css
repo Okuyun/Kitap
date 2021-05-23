@@ -10,9 +10,19 @@
         text-decoration: none;
     }
     a:hover { font-weight: bold; }
-    /* a:visited { color: rgb(141, 6, 130);} */
+    a:focus, a:hover {
+        background: #ddd;
+    }
+    a:active {
+        background: #282;
+        color: white;
+    }
+    li {
+        margin: 5px;
+    }
     pre  {
         font-size: 14px;
+        padding: 2px;
         background: white;
         overflow-x: auto;
     }
