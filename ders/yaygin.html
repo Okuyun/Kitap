@@ -19,11 +19,15 @@
     border: 0.5px solid;
     text-align: center;
   }
-  td:nth-child(3) {
+  .left {
     text-align: left;
   }
   td a {
     font-size: x-large;
+  }
+  th {
+    font-weight: normal;
+    padding-right: 4px;
   }
   .head {
     font-weight: bold;
@@ -32,10 +36,16 @@
   <body>
 <h2>Sık geçen kelimeler &emsp; <button class=goBack>◀</button></h2>
 
-<p>Kuran-ı Kerim'de en sık (bütün türevleri ile en az 100 kere) kullanılan kelime kökleri aşağıda. En sık geçen 25 kök kitabın üçte birini kapsıyor. İlk 100 kökte kapsama oranı %60.</p>
+<p>Kuran-ı Kerim'de en sık (bütün türevleri ile en az 100 kere) kullanılan kelime kökleri aşağıdaki tabloda:</p>
 
 <table id=tablo></table>
 
+<p>En sık geçen 25 kök kitabın üçte birini kapsıyor. İlk 100 kökte kapsama oranı %60. Hesap yöntemi ve grafik 
+<a href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vQaN26zEPJcYxkcYNChydpYV_8W_78BRT5JFY5dyFZF0RpLamtN1gnIiTrIjXAQiJe6q_xr5CQWtSv9/pubhtml?lsrp=1#" target="Kuran">burada</a>.
+</p>
+<p><img src="./Eylul 2001.jpg">
+Bu çalışma 2001'de kağıt üzerinde yapılırken günlerce sürmüştü. 
+Mucem verileri ile birkaç saatte tamamlandı...</p>
 <br>
 <p>Dersler <button class=goBack>◀</button>
 <br><br>
@@ -165,18 +175,18 @@ const DATA =
 شدد	102	Şiddetli
 دين	101	Borç. Din`
 function makeTable() {
-  function line(str) {
+  function line(str, i) {
     let [root, count, word] = str.split('\t')
     let buck = toBuckwalter(root)
-    return `<tr>
+    return `<tr><th>${i}</th>
   <td><a href="/Kuran/mujam.html#r=${buck}">${root}</a></td>
-  <td>${count}</td><td>${word}</td>
+  <td>${count}</td><td class=left>${word}</td>
 </tr>`
   }
     let a = DATA.split('\n')
-    tablo.innerHTML = `<tr class=head>
-  <td>Kök</td><td>Sayı</td><td>Anlam</td>
-</tr>` + a.map(line).join('\n')
+    tablo.innerHTML = `<tr class=head><th></th>
+  <td>Kök</td><td>Sayı</td><td>Anlam</td></tr>`
+        + a.map(line).join('\n')
 }
 function goBack() {
     location.pathname = "/Kitap/ders/"
