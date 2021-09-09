@@ -22,7 +22,7 @@
   .left {
     text-align: left;
   }
-  td a {
+  .root {
     font-size: x-large;
   }
   th {
@@ -37,7 +37,7 @@
   <body>
 <h2>Sık geçen kelimeler &emsp; <button class=goBack>◀</button></h2>
 
-<p>Kuran-ı Kerim'de en sık (bütün türevleri ile en az 100 kere) kullanılan kelime kökleri aşağıdaki tabloda görülüyor. Tabloda bir köke tıklayınca, o kökten türemiş bütün kelimeler Mucem yazılımında gösterilir. Anlam sütununda ise Türkçe'ye geçmiş kelimeler mavi renkli.</p>
+<p>Kuran-ı Kerim'de en sık (bütün türevleri ile en az 100 kere) kullanılan kelime kökleri aşağıdaki tabloda görülüyor. Tabloda bir köke tıklayınca, o kökten türemiş bütün kelimeler Mucem yazılımında açılır. Anlam sütununda ise, Türkçe'ye geçmiş kelimelere tıklayınca birer örnek ayet gösterilir.</p>
 
 <table id=tablo></table>
 
@@ -59,128 +59,129 @@ Mucem verileri ile birkaç saatte tamamlandı...</p>
 <script>
 "use strict";
 const DATA =
-`ٱللَّه	2704	<m>Allah</m> (özel isim)
-قول	1722	Söylemek. <m>Kavl,</m> söz.
-كون	1390	Olmak. <m>Kevn. Mekan.</m>
-ربب	980	<m>Rabb</m> (cins isim)
-امن	879	Güvenmek, inanmak. <m>Emanet, iman, mümin.</m>
-علم	854	Bilmek, öğretmek. <m>İlim. Âlem.</m> Dağ.
-قوم	660	Kalkmak, yerleşmek. <m>Kavim. Kıyam. İstikamet.</m>
-اتي	549	Gelmek, getirmek, vermek. <m>Îtâ.</m>
-كفر	525	Nankörlük, inkar, <m>küfür. Kefaret.</m>
-بين	523	Açıklamak. <m>Beyan.</m>
-شيا	519	Dilemek. <m>Şey.</m>
-رسل	513	Göndermek. <m>Rasûl.</m>
-ارض	461	<m>Arz,</m> yeryüzü.
+`ٱللَّه	2704	<a name="v=33:38&r={ll~ah">Allah</a> (özel isim)
+قول	1722	Söylemek. <a name="v=81:25&r=qwl">Kavl,</a> söz.
+كون	1390	Olmak. <a name="v=36:82&r=kwn">Kevn.</a> <a name="v=50:41&r=kwn">Mekan.</a>
+ربب	980	<a name="v=55:17&r=rbb">Rabb</a> (cins isim). <a name="v=12:39&r=rbb">Erbâb.</a>
+امن	879	Güvenmek, inanmak. <a name="v=70:32&r=Amn">Emanet,</a> <a name="v=40:28&r=Amn">iman, mümin.</a>
+علم	854	Bilmek, öğretmek. <a name="v=2:32&r=Elm">İlim.</a>  <a name="v=1:2&r=Elm">Âlem.</a> Dağ.
+قوم	660	Kalkmak, yerleşmek. <a name="v=26:70&r=qwm">Kavim.</a> <a name="v=75:1&r=qwm">Kıyamet.</a> <a name="v=17:79&r=qwm">Makam.</a>
+اتي	549	Gelmek, getirmek, vermek. <a name="v=16:90&r=Aty">Îtâ.</a>
+كفر	525	Nankörlük, inkar, <a name="v=2:88&r=kfr">küfür.</a> <a name="v=5:89&r=kfr">Kefaret.</a>
+بين	523	Arasında. Açıklamak. <a name="v=75:19&r=byn">Beyan.</a>
+شيا	519	Dilemek. <a name="v=16:73&r=$yA">Şey.</a>
+رسل	513	Göndermek. <a name="v=2:285&r=rsl">Rasûl.</a>
+ارض	461	<a name="v=6:1&r=ArD">Arz,</a> yeryüzü.
 يوم	405	Gün.
-ايي	382	<m>Ayet.</m>
-سمو	381	<m>Sema. İsim.</m>
+ايي	382	<a name="v=30:16&r=Ayy">Ayet.</a>
+سمو	381	<a name="v=6:1&r=smw">Sema.</a> <a name="v=96:1&r=smw">İsim.</a>
 كلل	377	Bütün, hepsi.
-عذب	373	<m>Azap.</m> Tatlı.
-عمل	360	Yapmak. <m>Amel.</m>
+عذب	373	<a name="v=5:115&r=E*b">Azap.</a> Tatlı.
+عمل	360	Yapmak. <a name="v=67:2&r=Eml">Amel.</a>
 جعل	346	Yapmak.
-رحم	339	Acımak. <m>Rahmet.</m>
-راي	328	Görmek. <m>Rüya.</m>
-كتب	319	Yazmak. <m>Kâtip, kitap.</m>
-هدي	316	<m>Hidayet,</m> yol göstermek. <m>Hediye.</m>
-ظلم	315	<m>Zulüm,</m> haksızlık. Karanlık.
-نفس	298	Yarışmak. <m>Nefs,</m> kendi.
-قبل	294	<m>Kabul.</m> Karşılıklı. Önce.
+رحم	339	Acımak. <a name="v=21:107&r=rHm">Rahmet.</a>
+راي	328	Görmek. <a name="v=12:5&r=rAy">Rüya.</a>
+كتب	319	Yazmak. <a name="v=82:11&r=ktb">Kâtip,</a> <a name="v=3:78&r=ktb">kitap.</a>
+هدي	316	Yol göstermek, hidayet. <a name="v=7:178&r=hdy">Muhtedi.</a> <a name="v=27:35&r=hdy">Hediye.</a>
+ظلم	315	<a name="v=31:13&r=Zlm">Zulüm,</a> haksızlık. Karanlık.
+نفس	298	Yarışmak. <a name="v=12:53&r=nfs">Nefs,</a> kendi.
+قبل	294	<a name="v=3:37&r=qbl">Kabul.</a> Karşılıklı. Önce.
 نزل	293	İnmek, indirmek. Konak yeri.
-ذكر	292	<m>Zikretmek,</m> anmak, hatırlamak. Erkek.
-حقق	287	<m>Hakk. Hakiki.</m> Gerçekleşmek.
-كذب	282	Yalan. <m>Kizb, tekzib.</m>
+ذكر	292	<a name="v=2:198&r=*kr">Zikretmek,</a> anmak, hatırlamak. Erkek.
+حقق	287	<a name="v=8:4&r=Hqq">Hakk. Hakiki.</a> Gerçekleşmek.
+كذب	282	Yalan. <a name="v=16:116&r=k*b">Kizb,</a> <a name="v=85:19&r=k*b">tekzib.</a>
 جيا	278	Gelmek, getirmek.
-عبد	275	Kul. <m>İbadet.</m>
-اخذ	273	Almak, tutmak. <m>Âhize.</m>
-خلق	261	Yaratmak. <m>Halk.</m>
-وقي	258	Korumak, sakınmak. <m><Takva./m>
-اخر	250	Ertelemek. Son, diğer. <m>Ahiret.</m>
-امر	248	Emretmek. <m>Emir,</m> iş.
-نوس	241	<m>İnsan.</m>
+عبد	275	Kul. <a name="v=40:60&r=Ebd">İbadet.</a>
+اخذ	273	Almak, tutmak. <a name="v=2:267&r=Ax*">Âhize.</a>
+خلق	261	Yaratmak. <a name="v=17:98&r=xlq">Halk.</a> <a name="v=68:4&r=xlq">Ahlak.</a> 
+وقي	258	Korumak, sakınmak. <a name="v=5:2&r=wqy"><Takva./m>
+اخر	250	Ertelemek. Son, diğer. <a name="v=43:35&r=Axr">Ahiret.</a>
+امر	248	Emretmek. <a name="v=17:85&r=Amr">Emir,</a> iş.
+نوس	241	<a name="v=103:2&r=Ans">İnsan.</a>
 بعد	235	Uzak, sonra.
-غفر	234	Bağışlamak. <m>Mağfiret. İstiğfar.</m>
-ولي	232	Yakın olmak. Dost. <m>Veli.</m>
-دعو	212	<m>Davet,</m> çağırmak.
-حكم	210	<m>Hüküm, hikmet.</m>
-ملك	206	<m>Malik</m> olmak. <m>Melik. Melek.</m>
-جنن	201	<m>Cennet. Cin.</m>
-عند	201	Yanında, katında. <m>İnat.</m>
-خير	196	<m>Hayr.</m> Seçmek.
-نور	194	Aydınlatmak. <m>Nur. Nar,</m> ateş.
-حسن	194	Güzel. <m>Hasen.</m>
-ضلل	191	<m>Dalalet,</m> sapmak.
+غفر	234	Bağışlamak. <a name="v=67:12&r=gfr">Mağfiret.</a> <a name="v=9:114&r=gfr">İstiğfar.</a>
+ولي	232	Yakın olmak. Dost. <a name="v=42:8&r=wly">Veli.</a>
+دعو	212	<a name="v=14:39&r=dEw">Dua.</a> <a name="v=2:186&r=dEw">Davet,</a> çağırmak.
+حكم	210	<a name="v=12:22&r=Hkm">Hüküm,</a> <a name="v=2:269&r=Hkm">hikmet.</a>
+ملك	206	<a name="v=3:26&r=mlk">Mâlik</a> olmak. <a name="v=2:246&r=mlk">Melik.</a> <a name="v=6:8&r=mlk">Melek.</a>
+جنن	201	<a name="v=7:42&r=jnn">Cennet.</a> <a name="v=114:6&r=jnn">Cin.</a>
+عند	201	Yanında, katında.
+خير	196	<a name="v=99:7&r=xyr">Hayr.</a> Seçmek.
+نور	194	Aydınlatmak. <a name="v=24:35&r=nwr">Nur. Nar,</a> ateş.
+حسن	194	Güzel. <a name="v=64:17&r=Hsn">Hasen.</a>
+ضلل	191	<a name="v=4:44&r=Dll">Dalalet,</a> sapmak.
 سمع	185	Duymak, kulak vermek.
 بني	184	Oğul, çocuk.
-حيي	184	Diriltmek. <m>Hayat.</m>
-خرج	182	Çıkmak. <m>Hariç, ihraç.</m>
-صلح	180	<m>Salih</m> (cins ve özel isim)
-سبل	176	Yol. <m>Sebil.</m>
-تبع	172	Uymak, <m>tâbi</m> olmak. Peşpeşe.
-قتل	170	Öldürmek, savaşmak. <m>Katil.</m>
-اول	170	Aile. Birinci, <m>evvel.</m> Tevil.
-مثل	169	Benzetmek. <m>Misal.</m>
-قلب	168	Çevirmek. <m>Kalp.</m>
-شرك	168	Ortak, <m>şirk.</m>
+حيي	184	Diriltmek. <a name="v=:&r=">Hayat.</a>
+خرج	182	Çıkmak. <a name="v=:&r=">Hariç,</a> <a name="v=:&r=">ihraç.</a>
+صلح	180	<a name="v=:&r=">Salih</a> (cins ve özel isim)
+سبل	176	Yol. <a name="v=:&r=">Sebil.</a>
+تبع	172	Uymak, <a name="v=:&r=">tâbi</a> olmak. Peşpeşe.
+قتل	170	Öldürmek, savaşmak. <a name="v=:&r=">Katil.</a>
+اول	170	Aile. Birinci, <a name="v=:&r=">evvel.</a> Tevil.
+مثل	169	Benzetmek. <a name="v=:&r=">Misal.</a>
+قلب	168	Çevirmek. <a name="v=:&r=">Kalp.</a>
+شرك	168	Ortak, <a name="v=:&r=">şirk.</a>
 سوا	167	Kötü.
-كثر	167	Çok. Çoğalmak. <m>Kesret.</m>
-موت	165	Ölüm. <m>Mevt, mevta.</m>
-كبر	161	Büyük, yaşlı. <m>Tekbir, kibir.</m>
-نبا	160	Haber vermek, bildirmek. Haber, <m>nebi.</m>
-شهد	160	<m>Şahit</m> olmak. <m>Şehit.</m>
+كثر	167	Çok. Çoğalmak. <a name="v=:&r=">Kesret.</a>
+موت	165	Ölüm. <a name="v=:&r=">Mevt, mevta.</a>
+كبر	161	Büyük, yaşlı. <a name="v=:&r=">Tekbir,</a> <a name="v=:&r=">kibir.</a>
+نبا	160	Haber vermek, bildirmek. Haber, <a name="v=:&r=">nebi.</a>
+شهد	160	<a name="v=:&r=">Şahit</a> olmak. <a name="v=:&r=">Şehit.</a>
 نصر	158	Yardım.
-بعض	158	Bir kısım, <m>bazı.</m>
-صدق	155	Doğruluk. <m>Tasdik. Sadaka.</m>
-غير	154	<m>Gayrı,</m> başka. Değişmek.
-وعد	151	<m>Vaad.</m>
-رود	148	<m>İrade. Murad.</m> Düzen kurmak.
-بصر	148	Bakmak. <m>Basiret.</m> Aydınlatan.
-اله	147	<m>İlah,</m> tanrı (cins isim)
+بعض	158	Bir kısım, <a name="v=:&r=">bazı.</a>
+صدق	155	Doğruluk. <a name="v=:&r=">Tasdik. Sadaka.</a>
+غير	154	<a name="v=:&r=">Gayrı,</a> başka. Değişmek.
+وعد	151	<a name="v=:&r=">Vaad.</a>
+رود	148	<a name="v=:&r=">İrade. Murad.</a> Düzen kurmak.
+بصر	148	Bakmak. <a name="v=:&r=">Basiret.</a> Aydınlatan.
+اله	147	<a name="v=:&r=">İlah,</a> tanrı (cins isim)
 لقي	146	Karşılaşmak.
 دون	144	Aşağı.
-سلم	140	Barış, <m>selam, teslim.</m>
-نعم	140	<m>Nimet.</m> Ahır hayvanı.
-مُوسَىٰ	136	<m>Musa</m> (özel isim)
-دنو	133	Yakın/aşağı olmak. <m>Dünya.</m>
-قدر	132	Ayarlamak, kısıtlamak. <m>Kader. Miktar.</m>
-نذر	130	Uyarmak. <m>Nezir,</m> adak.
-سال	129	Sormak. <m>Sual.</m>
-نظر	129	Bakmak. Beklemek, gözlemek. <m>Nazar.</m>
-جمع	129	Toplamak. <m>Cuma.</m>
+سلم	140	Barış, <a name="v=:&r=">selam, teslim.</a>
+نعم	140	<a name="v=:&r=">Nimet.</a> Ahır hayvanı.
+مُوسَىٰ	136	<a name="v=:&r=">Musa</a> (özel isim)
+دنو	133	Yakın/aşağı olmak. <a name="v=:&r=">Dünya.</a>
+قدر	132	Ayarlamak, kısıtlamak. <a name="v=:&r=">Kader.</a> <a name="v=:&r=">Miktar.</a>
+نذر	130	Uyarmak. <a name="v=:&r=">Nezir,</a> adak.
+سال	129	Sormak. <a name="v=:&r=">Sual.</a>
+نظر	129	Bakmak. Beklemek, gözlemek. <a name="v=:&r=">Nazar.</a>
+جمع	129	Toplamak. <a name="v=:&r=">Cuma.</a>
 طوع	129	İsteyerek yapmak. Gücü yetmek.
-عظم	128	<m>Azim,</m> yüce. Kemik.
-خلف	127	Ardından gelmek. <m>Halef. Muhtelif.</m>
+عظم	128	<a name="v=:&r=">Azim,</a> yüce. Kemik.
+خلف	127	Ardından gelmek. <a name="v=:&r=">Halef. Muhtelif.</a>
 اهل	127	Ev halkı.
-دخل	126	Girmek. <m>Dahil, ithal.</m>
+دخل	126	Girmek. <a name="v=:&r=">Dahil.</a>
 خوف	124	Korkmak.
-رزق	123	<m>Rızık. Rezzak.</m>
-بشر	123	Müjde. <m>Beşer.</m>
+رزق	123	<a name="v=:&r=">Rızık. Rezzak.</a>
+بشر	123	Müjde. <a name="v=:&r=">Beşer.</a>
 يدي	120	El.
-عزز	119	<m>Aziz,</m> üstün.
-امم	119	Yönelmek. Anne, <m>ümmi. İmam,</m> önder.
-جزي	118	Karşılık, <m>ceza.</m>
-ابو	117	Baba, <m>ebeveyn,</m> ana-baba.
-نهر	113	<m>Nehir.</m>
-نفق	111	Harcamak. <m>İnfak. Nifak.</m>
-حسب	109	<m>Hesap,</m> zan.
+عزز	119	<a name="v=:&r=">Aziz,</a> üstün.
+امم	119	Yönelmek. Anne, <a name="v=:&r=">ümmi. İmam,</a> önder.
+جزي	118	Karşılık, <a name="v=:&r=">ceza.</a>
+ابو	117	Baba, <a name="v=:&r=">ebeveyn,</a> ana-baba.
+نهر	113	<a name="v=:&r=">Nehir.</a>
+نفق	111	Harcamak. <a name="v=:&r=">İnfak.</a> <a name="v=:&r="> Nifak.</a>
+حسب	109	<a name="v=:&r=">Hesap,</a> zan.
 اكل	109	Yemek, yemiş.
-فعل	108	Yapmak, <m>fiil.</m>
-اجر	108	<m>Ücret. Ecir.</m>
+فعل	108	Yapmak, <a name="v=:&r=">fiil.</a>
+اجر	108	<a name="v=:&r=">Ücret. Ecir.</a>
 وجد	107	Bulmak.
 عدو	106	Haddi aşmak. Düşman.
-رجع	104	Dönmek. <m>Rücû.</m>
-فضل	104	<m>Fazl,</m> üstünlük. Erdem.
-صبر	103	<m>Sabır.</m>
-ولد	102	Doğurmak. Doğuran. <m>Veled.</m>
-اذن	102	<m>İzin</m> vermek/istemek, bildirmek. Kulak.
-شدد	102	<m>Şiddetli.</m>
-دين	101	Borç. <m>Din.</m>`
+رجع	104	Dönmek. <a name="v=86:11&r=rjE">Rücû.</a>
+فضل	104	<a name="v=27:40&r=fDl">Fazl,</a> üstünlük. Erdem.
+صبر	103	<a name="v=103:3&r=Sbr">Sabır.</a>
+ولد	102	Doğurmak. Doğuran. <a name="v=112:3&r=wld">Veled.</a>
+اذن	102	<a name="v=5:110&r=A*n">İzin</a> vermek/istemek, bildirmek. Kulak.
+شدد	102	<a name="v=33:11&r=$dd">Şedid,</a> şiddetli.
+دين	101	Borç. <a name="v=1:4&r=dyn">Din.</a>`
 function makeTable() {
   function line(str, i) {
     let [root, count, word] = str.split('\t')
     let buck = toBuckwalter(root)
     return `<tr><th>${i}</th>
-  <td><a href="/Kuran/mujam.html#r=${buck}">${root}</a></td>
+  <td class=root>
+    <a href="/Kuran/mujam.html#r=${buck}">${root}</a></td>
   <td>${count}</td><td class=left>${word}</td>
 </tr>`
   }
@@ -196,5 +197,7 @@ for (let b of document.querySelectorAll('.goBack'))
     b.onclick = goBack
 makeTable()
 </script>
-  </body>
+
+<script src="init.js"></script>
+</body>
 </html>
