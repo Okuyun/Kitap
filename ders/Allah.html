@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2021" />
+    <meta name="description" content="Words from Quran" />
+    <link rel="stylesheet" href="ders.css" media="all">
+    <link rel="icon" href="/Kuran/image/icon.png">
+    <title>Lafza-i Celâl</title>
+  </head>
+
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    padding: 5px 8px;
+    border: 0.5px solid;
+    text-align: center;
+    min-width: 140px;
+  }
+  .left {
+    text-align: left;
+  }
+  th {
+    font-weight: normal;
+    padding-right: 4px;
+  }
+  .head {
+    font-weight: bold;
+  }
+  m { color: blue; }
+</style>
+  <body>
+<h2>Lafza-i Celâl &emsp; <button class=goBack>◀</button></h2>
+
+<p>Kuran-ı Kerim'de en sık geçen kelime açık ara ile Lafza-i Celâl, yani <b>Allah</b> sözüdür. Bu kelimenin kullanıldığı deyimler ve Türkçe anlamları aşağıdaki tabloda görülebilir. Deyimlere tıklayınca ilgili örnek ayet gösterilir.
+</p>
+
+<table id=tablo></table>
+
+<p></p>
+<br>
+<p>Dersler <button class=goBack>◀</button>
+<br><br>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/" 
+  title="YouTube video player" frameborder="0"  allowfullscreen
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+</iframe> -->
+</p>
+<script>
+"use strict";
+const DATA =
+`bismillâh	v=27:30&r=smw	Allah'ın adıyla
+subhânallâh	v=30:17&r=sbH	Allah'ı tesbih
+el-hamdu lillâh	v=1:2&r=Hmd	Hamd Allah'a ait
+lâ ilâhe illallâh	v=47:19&r=Alh	Tanrı ancak Allah
+in şâ allâh	v=48:27&r=$yA	Allah dilerse (olacak)
+mâ şâ allâh	v=18:39&r=$yA	Allah'ın dilediği (olmuş)
+kefâ billâh	v=4:70&r=kfy	Allah yeter
+hasbiyallâh	v=9:129&r=Hsb	Allah bana yeter
+hasbunallâh	v=3:173&r=Hsb	Allah bize yeter
+livechillâh	v=76:9&r=wjh	Allah'ın yüzü (rızası) için
+tebârekallâh	v=7:54&r=brk	Allah'ı yüceltme ve tesbih
+ma'âzallâh	v=12:23&r=Ew*	Allah'a sığınırım
+estagfirullâh	v=2:199&r=gfr	Allah'tan bağışlanma dilerim
+sibgatallâh	v=2:138&r=Sbg	Allah'ın boyası`
+function makeTable() {
+  function line(str, i) {
+    let [word, link, tran] = str.split('\t')
+    return `<td>
+    <a name="${link}&r={ll~ah">${word}</a></td>
+    <td class=left>${tran}</td>
+</tr>`
+  }
+    let a = DATA.split('\n')
+    tablo.innerHTML = `<tr class=head>
+    <td>Deyim</td><td>Anlam</td></tr>`
+        + a.map(line).join('\n')
+}
+function goBack() {
+    location.pathname = "/Kitap/ders/"
+}
+for (let b of document.querySelectorAll('.goBack'))
+    b.onclick = goBack
+makeTable()
+</script>
+
+<script src="init.js"></script>
+</body>
+</html>
