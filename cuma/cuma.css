@@ -1,0 +1,54 @@
+    body {
+        max-width: 600px;
+        padding: 0 10px;
+        margin: auto;
+        font: 15px/1.4 Arial, sans-serif;
+        background: rgb(220, 240, 255);
+    }
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+    /* a:hover { font-weight: bold; } */
+    a:focus, a:hover {
+        background: #ddd;
+    }
+    a:active {
+        background: #282;
+        color: white;
+    }
+    li {
+        margin: 5px;
+    }
+    pre  {
+        font-size: 14px;
+        padding: 2px;
+        background: white;
+        overflow-x: auto;
+    }
+    img  {
+        max-width: 500px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .large  {
+        max-width: 100%;
+    }
+    .center {
+        text-align: center;
+    }
+    .goBack {
+        background: #c9fdfd;
+        cursor: pointer;
+    }
+    h2 .goBack {
+        top: -6px;
+        position: relative;
+    }
+@media screen and (max-width: 500px) {
+    img  {
+        width: 100%;
+    }
+}
+
