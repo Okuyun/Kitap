@@ -9,7 +9,6 @@
         color: blue;
         text-decoration: none;
     }
-    /* a:hover { font-weight: bold; } */
     a:focus, a:hover {
         background: #ddd;
     }
@@ -45,6 +44,11 @@
     h2 .goBack {
         top: -6px;
         position: relative;
+    }
+    .meal {
+        font-family: georgia, serif;
+        font-style: italic;
+        color: darkgreen;
     }
 @media screen and (max-width: 500px) {
     img  {
