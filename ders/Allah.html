@@ -15,10 +15,12 @@
     border-collapse: collapse;
   }
   td {
-    padding: 5px 8px;
+    padding: 6px;
     border: 0.5px solid;
     text-align: center;
-    min-width: 140px;
+  }
+  .wide {
+    min-width: 110px;
   }
   .left {
     text-align: left;
@@ -35,7 +37,7 @@
   <body>
 <h2>Lafza-i Celâl &emsp; <button class=goBack>◀</button></h2>
 
-<p>Kuran-ı Kerim'de en sık geçen kelime açık ara ile Lafza-i Celâl, yani <b>Allah</b> sözüdür. Bu kelimenin kullanıldığı deyimler ve Türkçe anlamları aşağıdaki tabloda görülebilir. Deyimlere tıklayınca ilgili örnek ayet gösterilir.
+<p>Kuran-ı Kerim'de en sık geçen kelime açık ara ile Lafza-i Celâl, yani <b>Allah</b> kelimesidir. Bu kelimenin kullanıldığı deyimler ve Türkçe anlamları aşağıdaki tabloda görülebilir. Deyimlere tıklayınca ilgili örnek ayet gösterilir.
 </p>
 
 <table id=tablo></table>
@@ -52,31 +54,32 @@
 <script>
 "use strict";
 const DATA =
-`bismillâh	v=27:30&r=smw	Allah'ın adıyla
-subhânallâh	v=30:17&r=sbH	Allah'ı tesbih
-el-hamdu lillâh	v=1:2&r=Hmd	Hamd Allah'a ait
-lâ ilâhe illallâh	v=47:19&r=Alh	Tanrı ancak Allah
-in şâ allâh	v=48:27&r=$yA	Allah dilerse (olacak)
-mâ şâ allâh	v=18:39&r=$yA	Allah'ın dilediği (olmuş)
-kefâ billâh	v=4:70&r=kfy	Allah yeter
-hasbiyallâh	v=9:129&r=Hsb	Allah bana yeter
-hasbunallâh	v=3:173&r=Hsb	Allah bize yeter
-livechillâh	v=76:9&r=wjh	Allah'ın yüzü (rızası) için
-tebârekallâh	v=7:54&r=brk	Allah'ı yüceltme ve tesbih
-ma'âzallâh	v=12:23&r=Ew*	Allah'a sığınırım
-estagfirullâh	v=2:199&r=gfr	Allah'tan bağışlanma dilerim
-sibgatallâh	v=2:138&r=Sbg	Allah'ın boyası`
+`bismillâh	3	bisomi {ll~ahi	27:30	Allah'ın adıyla
+subhânallâh	9	fasuboHa%60na {ll~ahi	30:17	Allah'ı tesbih
+el-hamdu lillâh	23	{loHamodu lil~ahi	1:2	Hamd Allah'a ait
+lâ ilâhe illallâh	2	<ila%60ha <il~aA {ll~ahu	47:19	Tanrı ancak Allah
+in şâ allâh	6	<in $aA^'a {ll~ahu	48:27	Allah dilerse (olacak)
+mâ şâ allâh	5	maA $aA^'a {ll~ahu	18:39	Allah'ın dilediği (olmuş)
+kefâ billâh	16	wakafaY%60 bi{ll~ahi	4:70	Allah yeter
+hasbiyallâh	2	HasobiYa {ll~ahu	9:129	Allah bana yeter
+hasbunallâh	2	HasobunaA {ll~ahu	3:173	Allah bize yeter
+livechillâh	2	liwajohi {ll~ahi	76:9	Allah'ın yüzü (rıza) için
+tebârekallâh	3	fatabaAraka {ll~ahu	40:64	Allah'ı yüceltme
+ma'âzallâh	2	maEaA*a {ll~ahi	12:23	Allah'a sığınırım
+estagfirullâh	&ndash;	wa{sotagofiruwA@ {ll~aha	2:199	Allah'tan bağışlanma
+sibgatallâh	1	Sibogapa {ll~ahi	2:138	Allah'ın boyası`
 function makeTable() {
   function line(str, i) {
-    let [word, link, tran] = str.split('\t')
-    return `<td>
-    <a name="${link}&r={ll~ah">${word}</a></td>
-    <td class=left>${tran}</td>
-</tr>`
+    let [word, num, buck, link, tran] = str.split('\t')
+    let out = `<tr><td class=wide>
+      <a name="v=${link}&b=${buck}">${word}</a></td>
+      <td>${num}</td><td class=left>${tran}</td>
+    </tr>`
+    return out
   }
     let a = DATA.split('\n')
     tablo.innerHTML = `<tr class=head>
-    <td>Deyim</td><td>Anlam</td></tr>`
+    <td>Deyim</td><td>Sayı</td><td>Anlam</td></tr>`
         + a.map(line).join('\n')
 }
 function goBack() {
@@ -85,6 +88,21 @@ function goBack() {
 for (let b of document.querySelectorAll('.goBack'))
     b.onclick = goBack
 makeTable()
+
+/* `bismillâh	3	bisomi {ll~ahi	v=27:30&r=smw	Allah'ın adıyla
+subhânallâh	9	suboHa%60na {ll~ahi	v=30:17&r=sbH	Allah'ı tesbih
+el-hamdu lillâh	23	{loHamodu lil~ahi	v=1:2&r=Hmd	Hamd Allah'a ait
+lâ ilâhe illallâh	2	<ila%60ha <il~aA {ll~ahu	v=47:19&r=Alh	Tanrı ancak Allah
+in şâ allâh	6	<in $aA^'a {ll~ahu	v=48:27&r=$yA	Allah dilerse (olacak)
+mâ şâ allâh	5	maA $aA^'a {ll~ahu	v=18:39&r=$yA	Allah'ın dilediği (olmuş)
+kefâ billâh	16	kafaY%60 bi{ll~ahi	v=4:70&r=kfy	Allah yeter
+hasbiyallâh	2	HasobiYa {ll~ahu	v=9:129&r=Hsb	Allah bana yeter
+hasbunallâh	2	HasobunaA {ll~ahu	v=3:173&r=Hsb	Allah bize yeter
+vechillâh	2	wajohi {ll~ahi	v=76:9&r=wjh	Allah'ın yüzü (rızası) için
+tebârekallâh	3	tabaAraka {ll~ahu	v=40:64&r=brk	Allah'ı yüceltme
+ma'âzallâh	2	maEaA*a {ll~ahi	v=12:23&r=Ew*	Allah'a sığınırım
+estagfirullâh	2	{sotagofiruwA@ {ll~aha	v=2:199&r=gfr	Allah'tan bağışlanma
+sibgatallâh	1	Sibogapa {ll~ahi	v=2:138&r=Sbg	Allah'ın boyası` */
 </script>
 
 <script src="init.js"></script>
