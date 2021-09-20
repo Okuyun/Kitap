@@ -15,9 +15,6 @@
     border-collapse: collapse;
     margin: auto;
   }
-  img  {
-    width: 400px;
-  }
   td {
     padding: 6px;
     border: 0.5px solid;
@@ -46,9 +43,8 @@
 
 <table id=tablo></table>
 <p>
-<!-- <img src="https://cdn.islamansiklopedisi.org.tr/gorsel/Hat%20eseri/lafza-i-celal-1.jpg"> -->
 <a href="https://www.aysesolak.com/dt_gallery/hat/i/" target="Kuran">
-<img src="https://www.aysesolak.com/wp-content/uploads/i.jpg">
+<img id=celal src="https://www.aysesolak.com/wp-content/uploads/i.jpg">
 </a>
 </p>
 <p>Dersler <button class=goBack>◀</button>
@@ -95,6 +91,8 @@ function goBack() {
 for (let b of document.querySelectorAll('.goBack'))
     b.onclick = goBack
 makeTable()
+celal.width = tablo.offsetWidth
+console.log(celal.width)
 
 /* `bismillâh	3	bisomi {ll~ahi	v=27:30&r=smw	Allah'ın adıyla
 subhânallâh	9	suboHa%60na {ll~ahi	v=30:17&r=sbH	Allah'ı tesbih
