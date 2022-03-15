@@ -1,0 +1,61 @@
+    body {
+        max-width: 600px;
+        padding: 0 10px;
+        margin: auto;
+        font: 15px/1.4 sans-serif;
+        background: #eee;
+    }
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+    a:hover { font-weight: bold; }
+    a:focus, a:hover {
+        background: #ddd;
+    }
+    a:active {
+        background: #282;
+        color: white;
+    }
+    li {
+        margin: 5px;
+    }
+    pre  {
+        font-size: 14px;
+        padding: 2px;
+        background: white;
+        overflow-x: auto;
+    }
+    figure {
+        max-width: 420px;
+        border: thin #c0c0c0 solid;
+        display: flex;
+        flex-flow: column;
+        padding: 5px;
+        margin: auto;
+    }
+    .narrow  {
+        max-width: 300px;
+    }
+    figcaption {
+        font-size: smaller;
+        padding-top: 5px;
+        text-align: center;
+    }
+    .center {
+        text-align: center;
+    }
+    .goBack {
+        background: #c9fdfd;
+        cursor: pointer;
+    }
+    h2 .goBack {
+        top: -6px;
+        position: relative;
+    }
+@media screen and (max-width: 500px) {
+    figure  {
+        max-width: 100%;
+    }
+}
+
