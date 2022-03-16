@@ -45,17 +45,29 @@
     .center {
         text-align: center;
     }
-    .goBack {
-        background: #c9fdfd;
-        cursor: pointer;
-    }
-    h2 .goBack {
-        top: -6px;
-        position: relative;
-    }
 @media screen and (max-width: 500px) {
     figure  {
         max-width: 100%;
     }
 }
-
+  #contents {
+    position: fixed;
+    right: 8px; top: 8px;
+  }
+  #contents a:hover {
+    font-weight: normal;
+  }
+  #menu1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 12px;
+    background: honeydew;
+    border: 1px solid;
+  }
+  button { cursor: pointer; }
+  li { margin: 8px 0; }
+  xs { font-size: x-small; }
+@media screen and (min-width: 700px) {
+  #buton { display: none; }
+  #menu1 { display: block; }
+}
