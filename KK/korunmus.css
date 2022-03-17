@@ -67,7 +67,7 @@
   button { cursor: pointer; }
   li { margin: 8px 0; }
   xs { font-size: x-small; }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
   #buton { display: none; }
   #menu1 { display: block; }
 }
