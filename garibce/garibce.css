@@ -1,0 +1,68 @@
+    body {
+        max-width: 540px;
+        padding: 0 10px;
+        margin: auto;
+        font: 15px/1.4 Arial, sans-serif;
+        background: rgb(220, 240, 255);
+    }
+    a {
+        color: blue;
+        text-decoration: none;
+    }
+    a:focus, a:hover {
+        background: #ddd;
+    }
+    a:active {
+        background: #282;
+        color: white;
+    }
+    li {
+        margin: 5px;
+    }
+    pre  {
+        font-size: 14px;
+        padding: 2px;
+        background: white;
+        overflow-x: auto;
+    }
+    img  {
+        max-width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .large  {
+        max-width: 100%;
+    }
+    .center {
+        text-align: center;
+    }
+    .goBack {
+        background: #c9fdfd;
+        cursor: pointer;
+    }
+    h2 .goBack {
+        top: -6px;
+        position: relative;
+    }
+    .meal {
+        font-family: georgia, serif;
+        font-style: italic;
+        color: darkgreen;
+    }
+    .it {
+        font: 17px Times, serif;
+        font-style: italic;
+    }
+    .pre {
+        white-space: pre-line;
+    }
+    div a {
+        font-family: georgia, serif;
+    }
+@media screen and (max-width: 400px) {
+    img  {
+        width: 100%;
+    }
+}
+
