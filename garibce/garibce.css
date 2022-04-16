@@ -60,6 +60,12 @@
     div a {
         font-family: georgia, serif;
     }
+    figure { white-space: nowrap; }
+    figcaption {
+        font-size: smaller;
+        padding-top: 5px;
+        text-align: center;
+    }
 @media screen and (max-width: 400px) {
     img  {
         width: 100%;
