@@ -60,7 +60,10 @@
     div a {
         font-family: georgia, serif;
     }
-    figure { white-space: nowrap; }
+    figure {
+        white-space: nowrap;
+        margin: 0;
+    }
     figcaption {
         font-size: smaller;
         padding-top: 5px;
