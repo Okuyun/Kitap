@@ -1,5 +1,7 @@
 function goBack() {
-    location.pathname = "/Kitap/ders/"
+    let p = location.pathname.includes('garibce')?
+            'garibce' : 'ders'
+    location.pathname = '/Kitap/'+p+'/'
 }
 function init() {
     for (let a of document.querySelectorAll('a')) {
