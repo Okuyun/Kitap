@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"    content="width=device-width">
+    <meta name="author"      content="M A Eyler, Istanbul, 2021" />
+    <meta name="description" content="Words from Quran" />
+    <link rel="stylesheet" href="ders.css" media="all">
+    <link rel="icon" href="/Kuran/image/icon.png">
+    <title>Enbiyâ </title>
+  </head>
+
+<style>
+  table {
+    border-collapse: collapse;
+    margin: auto;
+  }
+  td {
+    padding: 6px;
+    border: 0.5px solid;
+    text-align: center;
+  }
+  .wide {
+    min-width: 110px;
+  }
+  .left {
+    text-align: left;
+  }
+  th {
+    font-weight: normal;
+    padding-right: 4px;
+  }
+  .head {
+    font-weight: bold;
+  }
+  m { color: blue; }
+</style>
+  <body>
+<h3>Enbiyâ (Peygamberler) &emsp; <button class=goBack>◀</button></h3>
+
+<p>Kuran-ı Kerim'de adı geçen 25 peygamber:
+</p>
+
+<table id=tablo></table>
+<p>
+<img src="enbiya.png" alt="Nübüvvet şeceresi">
+</p>
+<p>Dersler <button class=goBack>◀</button>
+<br><br>
+</p>
+<p><small>Benzeri bir çalışma 1993'de kağıt üstünde aylarca sürmüştü. Bu sayfa yarım günde, şecere iki saatte yapıldı. Fikrin kaynağı Erkan Türe'ye ve çizimi yapan Yusuf Mercan'a teşekkür ederim. </small><br></p>
+<script>
+"use strict";
+const DATA =
+`Öncekiler
+Âdem	A^dam	2:31 2:33 2:34 2:35 2:37 3:33 3:59 5:27 7:11 7:19 7:26 7:27 7:31 7:35 7:172 17:61 17:70 18:50 19:58 20:115 20:116 20:117 20:120 20:121 36:60
+Nûh	nuwH	3:33 4:163 6:84 7:59 7:69 9:70 10:71 11:25 11:32 11:36 11:42 11:45 11:46 11:48 11:89 14:9 17:3 17:17 19:58 21:76 22:42 23:23 25:37 26:105 26:106 26:116 29:14 33:7 37:75 37:79 38:12 40:5 40:31 42:13 50:12 51:46 53:52 54:9 57:26 66:10 71:1 71:21 71:26
+Hûd	hwd	7:65 11:50 11:53 11:58 11:60 11:89 26:124
+Sâlih	SlH	7:73 7:75 7:77 11:61 11:62 11:66 11:89 26:142 27:45
+Lût	luwT	6:86 7:80 11:70 11:74 11:77 11:81 11:89 15:59 15:61 21:71 21:74 22:43 26:160 26:161 26:167 27:54 27:56 29:26 29:28 29:32 29:33 37:133 38:13 50:13 54:33 54:34 66:10
+Âl-i İbrahim
+İbrâhîm	<iboraAhiym	2:124 2:125 2:126 2:127 2:130 2:132 2:133 2:135 2:136 2:140 2:258 2:260 3:33 3:65 3:67 3:68 3:84 3:95 3:97 4:54 4:125 4:163 6:74 6:75 6:83 6:161 9:70 9:114 11:69 11:74 11:75 11:76 12:6 12:38 14:35 15:51 16:120 16:123 19:41 19:46 19:58 21:51 21:60 21:62 21:69 22:26 22:43 22:78 26:69 29:16 29:31 33:7 37:83 37:104 37:109 38:45 42:13 43:26 51:24 53:37 57:26 60:4 87:19
+İsmâîl	<isomaAEiyl	2:125 2:127 2:133 2:136 2:140 3:84 4:163 6:86 14:39 19:54 21:85 38:48
+İshâk	<isoHaAq	2:133 2:136 2:140 3:84 4:163 6:84 11:71 12:6 12:38 14:39 19:49 21:72 29:27 37:112 37:113 38:45
+Ya‘kûb	yaEoquwb	2:132 2:133 2:136 2:140 3:84 4:163 6:84 11:71 12:6 12:38 12:68 19:6 19:49 21:72 29:27 38:45 3:93 İsrâîl
+Yûsuf	yuwsuf	6:84 12:4 12:7 12:8 12:9 12:10 12:11 12:17 12:21 12:29 12:46 12:51 12:56 12:58 12:69 12:76 12:77 12:80 12:84 12:85 12:87 12:89 12:90 12:94 12:99 40:34
+Sonrakiler
+Şu‘ayb	$uEayob	7:85 7:88 7:90 7:92 11:84 11:87 11:91 11:94 26:177 29:36
+Mûsâ	muwsaY%60	2:51 2:53 2:54 2:55 2:60 2:61 2:67 2:87 2:92 2:108 2:136 2:246 2:248 3:84 4:153 4:164 5:20 5:22 5:24 6:84 6:91 6:154 7:103 7:104 7:115 7:117 7:122 7:127 7:128 7:131 7:134 7:138 7:142 7:143 7:144 7:148 7:150 7:154 7:155 7:159 7:160 10:75 10:77 10:80 10:81 10:83 10:84 10:87 10:88 11:17 11:96 11:110 14:5 14:6 14:8 17:2 17:101 18:60 18:66 19:51 20:9 20:11 20:17 20:19 20:36 20:40 20:49 20:57 20:61 20:65 20:67 20:70 20:77 20:83 20:86 20:88 20:91 21:48 22:44 23:45 23:49 25:35 26:10 26:43 26:45 26:48 26:52 26:61 26:63 26:65 27:7 27:9 27:10 28:3 28:7 28:10 28:15 28:18 28:19 28:20 28:29 28:30 28:31 28:36 28:37 28:38 28:43 28:44 28:48 28:76 29:39 32:23 33:7 33:69 37:114 37:120 40:23 40:26 40:27 40:37 40:53 41:45 42:13 43:46 46:12 46:30 51:38 53:36 61:5 79:15 87:19
+Hârûn	ha%60ruwn	2:248 4:163 6:84 7:122 7:142 10:75 19:28 19:53 20:30 20:70 20:90 20:92 21:48 23:45 25:35 26:13 26:48 28:34 37:114 37:120
+Dâvûd	daAwud	2:251 4:163 5:78 6:84 17:55 21:78 21:79 27:15 27:16 34:10 34:13 38:17 38:22 38:24 38:26 38:30
+Suleymân	sulayoma%60n	2:102 4:163 6:84 21:78 21:79 21:81 27:15 27:16 27:17 27:18 27:30 27:36 27:44 34:12 38:30 38:34
+Diğerleri
+Eyyûb	>ay~uwb	4:163 6:84 21:83 38:41
+Yûnus	yuwnus	4:163 6:86 10:98 37:139 21:85 zunnûn
+İlyâs	<iloyaAs	6:85 37:123 37:130
+İdrîs	<idoriys	19:56 21:85
+Elyesa‘	{loyasaEa	6:86 38:48
+Zulkifl	kfl	21:85 38:48
+Âl-i İmran
+Zekeriyâ	zakariy~aA	3:37 3:38 6:85 19:2 19:7 21:89
+Yahya	yaHoyaY%60	3:39 6:85 19:7 19:12 21:90
+‘İsâ	EiysaY	2:87 2:136 2:253 3:45 3:52 3:55 3:59 3:84 4:157 4:163 4:171 5:46 5:78 5:110 5:112 5:114 5:116 6:85 19:34 33:7 42:13 43:63 57:27 61:6 61:14 <br>5:17 5:72 5:75 9:30 9:31 el-mesîh
+Nebilerin mühürü <a name="v=33:56&r=Slw">SAS<a>
+Muhammed	muHam~ad	3:144 33:40 47:2 48:29 61:6 Ahmed`
+
+function line(str) {
+  let verse = x => x.includes(':')? 
+      `<a name="v=${x}&r=${buck}">${x}</a>` : x;
+  let [word, buck, ref] = str.split('\t')
+  if (!ref) return `<tr class=head><td colspan=2>${word}`
+  let a = ref.split(' ')
+  let v = a.map(verse).join('&ensp;')
+  if (a.length > 10) v = `<small>${v}</small>`
+  return `<tr><td>${word}<td class=left>${v}`
+}
+tablo.innerHTML =
+    //`<tr class=head><td>Nebi<td>Ayetler`
+    DATA.split('\n').map(line).join('\n')
+</script>
+
+<script src="init.js"></script>
+</body>
+</html>
