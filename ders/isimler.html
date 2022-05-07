@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<meta name="viewport"    content="width=device-width">
+<meta name="author"      content="M A Eyler, Istanbul, 2021" />
+<meta name="description" content="Words from Quran" />
+<link rel="stylesheet" href="ders.css" media="all">
+<link rel="icon" href="/Kuran/image/icon.png">
+<title>Özel İsimler </title>
+
+<h3>Özel İsimler &emsp; <button class=goBack>◀</button></h3>
+
+<p>Kuran-ı Kerim'de özel isimler: (Peygamberler hariç) 
+</p>
+
+<table id=tablo></table>
+<p></p>
+<p>Dersler <button class=goBack>◀</button>
+<br><br>
+</p>
+<p><small>Tabloyu hazırlarken corpus.quran.com verilerini kullandık.
+Bazı tutarsızlıklar var: Mesela <b>'Âd</b> türetilmiş sayılırken <b>Semûd</b> özel isim olmuş.  Cennet pınarlarından <b>Selsebil</b> özel, <b>Kevser</b> ve <b>Tesnim</b> cins isim sayılmış, <b>Zencebil</b> ise hiç sayılmamış. Keza <b>tennûr</b> kelimesinin kökü belirsiz.</small><br></p>
+<script>
+"use strict";
+const DATA =
+`'Adn	Eadon	9:72 13:23 16:31 18:31 19:61 20:76 35:33 38:50 40:8 61:12 98:8
+'Arafât	Earafa%60t	2:198
+Âzer	A^zar	6:74
+Bâbil	baAbil	2:102
+Bedr	bador	3:123
+Bekke	bak~ap	3:96
+Câlût	jaAluwt	2:249 2:250 2:251
+Cehennem	jahan~am	2:206 3:12 3:162 3:197 4:55 4:93 4:97 4:115 4:121 4:140 4:169 7:18 7:41 7:179 8:16 8:36 8:37 9:35 9:49 9:63 9:68 9:73 9:81 9:95 9:109 11:119 13:18 14:16 14:29 15:43 16:29 17:8 17:18 17:39 17:63 17:97 18:100 18:102 18:106 19:68 19:86 20:74 21:29 21:98 23:103 25:34 25:65 29:54 29:68 32:13 35:36 36:63 38:56 38:85 39:32 39:60 39:71 39:72 40:49 40:60 40:76 43:74 45:10 48:6 50:24 50:30 52:13 55:43 58:8 66:9 67:6 72:15 72:23 78:21 85:10 89:23 98:6
+Cibrîl	jiboriyl	2:97 2:98 66:4
+Cûdiy	juwdiY~	11:44
+el-Lât	{ll~a%60t	53:19
+el-'Uzzâ	{loEuz~aY%60	53:19
+Firavun	firoEawon	2:49 2:50 3:11 7:103 7:104 7:109 7:113 7:123 7:127 7:130 7:137 7:141 8:52 8:54 10:75 10:79 10:83 10:88 10:90 11:97 14:6 17:101 17:102 20:24 20:43 20:60 20:78 20:79 23:46 26:11 26:16 26:23 26:41 26:44 26:53 27:12 28:3 28:4 28:6 28:8 28:9 28:32 28:38 29:39 38:12 40:24 40:26 40:28 40:29 40:36 40:37 40:45 40:46 43:46 43:51 44:17 44:31 50:13 51:38 54:41 66:11 69:9 73:15 73:16 79:17 85:18 89:10
+Firdevs	firodawos	18:107 23:11
+Hâmân	ha%60ma%60n	28:6 28:8 28:38 29:39 40:24 40:36
+Hârût	ha%60ruwt	2:102
+Huneyn	Hunayon	9:25
+İblîs	<iboliys	2:34 7:11 15:31 15:32 17:61 18:50 20:116 26:95 34:20 38:74 38:75
+'İmrân	Eimora%60n	3:33 3:35 66:12
+İncîl	<injiyl	3:3 3:48 3:65 5:46 5:47 5:66 5:68 5:110 7:157 9:111 48:29 57:27
+İrem	<iram	89:7
+Lazâ	laZaY%60	70:15
+Lukmân	luqoma%60n	31:12 31:13
+Mârût	ma%60ruwt	2:102
+Mecûc	ma>ojuwj	18:94 21:96
+Medyen	madoyan	7:85 9:70 11:84 11:95 20:40 22:44 28:22 28:23 28:45 29:36
+Mekke	mak~ap	48:24
+Menât	manaw%60p	53:20
+Merve	marowap	2:158
+Meryem	maroyam	2:87 2:253 3:36 3:37 3:42 3:43 3:44 3:45 4:156 4:157 4:171 5:17 5:46 5:72 5:75 5:78 5:110 5:112 5:114 5:116 9:31 19:16 19:27 19:34 23:50 33:7 43:57 57:27 61:6 61:14 66:12
+Mesîh	masiyH	3:45 4:157 4:171 4:172 5:17 5:72 5:75 9:30 9:31
+Mîkâl	miykaY%60l	2:98
+Kârûn	qa%60ruwn	28:76 28:79 29:39 40:24
+Kureyş	qurayo$	106:1
+Ramadan	ramaDaAn	2:185
+Rûm	r~uwm	30:2
+Safâ	S~afaA	2:158
+Sebe	saba<	27:22 34:15
+Selsebil	salosabiyl	76:18
+Sakar	saqar	54:48 74:26 74:27 74:42
+Seynâ	sayonaA^'	23:20
+Sînîn	siyniyn	95:2
+Tâlût	TaAluwt	2:247 2:249
+Tevrât	t~aworaY%60p	3:3 3:48 3:50 3:65 3:93 5:43 5:44 5:46 5:66 5:68 5:110 7:157 9:111 48:29 61:6 62:5
+Tubba'	tub~aE	44:37 50:14
+'Uzeyr	Euzayor	9:30
+Semûd	vamuwd	7:73 9:70 11:61 11:68 11:95 14:9 17:59 22:42 25:38 26:141 27:45 29:38 38:13 40:31 41:13 41:17 50:12 51:43 53:51 54:23 69:4 69:5 85:18 89:9 91:11
+Ya'ûk	yaEuwq	71:23
+Yagûs	yaguwv	71:23
+Yahûdiy	yahuwdiy~	2:113 2:120 3:67 5:18 5:51 5:64 5:82 9:30
+Yecûc	ya>ojuwj	18:94 21:96
+Yesrib	yavorib	33:13
+Zeyd	zayod	33:37`
+
+function line(str) {
+  let verse = x => x.includes(':')? 
+      `<a name="v=${x}&r=${buck}">${x}</a>` : x;
+  let [word, buck, ref] = str.split('\t')
+  if (!ref) return `<tr class=head><td>${word}<td>${ref}`
+  let a = ref.split(' ')
+  let v = a.map(verse).join('&ensp;')
+  if (a.length > 10) v = `<small>${v}</small>`
+  return `<tr><td>${word}<td class=left>${v}`
+}
+tablo.innerHTML =
+    //`<tr class=head><td>Nebi<td>Ayetler`
+    DATA.split('\n').map(line).join('\n')
+</script>
+
+<script src="init.js"></script>
