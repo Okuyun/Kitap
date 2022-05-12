@@ -25,6 +25,17 @@
         background: white;
         overflow-x: auto;
     }
+    .pre {
+        white-space: pre-line;
+    }
+    div a {
+        font-family: georgia, serif;
+        font-style: italic;
+    }
+    .it {
+        font: 17px Times, serif;
+        font-style: italic;
+    }
     img  {
         max-width: 500px;
         display: block;
@@ -55,4 +66,3 @@
         width: 100%;
     }
 }
-
