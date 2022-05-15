@@ -45,6 +45,10 @@
     .center {
         text-align: center;
     }
+    .it {
+        font: 17px Times, serif;
+        font-style: italic;
+    }
 @media screen and (max-width: 500px) {
     figure  {
         max-width: 100%;
