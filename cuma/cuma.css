@@ -28,7 +28,7 @@
     .pre {
         white-space: pre-line;
     }
-    div a {
+    a[name] {
         font-family: georgia, serif;
         font-style: italic;
     }
