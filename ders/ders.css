@@ -5,9 +5,11 @@
         font: 15px/1.4 sans-serif;
         background: #eee;
     }
+    h3 { margin-top: 1.5em; }
     a {
         color: blue;
         text-decoration: none;
+        font-weight: normal;
     }
     a:hover { font-weight: bold; }
     a:focus, a:hover {
