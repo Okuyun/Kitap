@@ -22,6 +22,8 @@
     div img {
         display: inline;
     }
+    img.narrow { width: 250px; }
+    img.full { width: 100%; }
     .preWrap {
         white-space: pre-wrap;
     }
