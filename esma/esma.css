@@ -1,9 +1,9 @@
     body {
-        max-width: 600px;
+        max-width: 550px;
         padding: 0 10px;
         margin: auto;
         font: 15px/1.4 sans-serif;
-        background: #dfd;
+        background: #eef;
     }
     pre  {
         font-size: 14px;
