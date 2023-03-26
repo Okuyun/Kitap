@@ -43,6 +43,10 @@
     .center {
         text-align: center;
     }
+    .caption {
+        text-align: center;
+        font-size: small;
+    }
     .goBack {
         background: #c9fdfd;
         cursor: pointer;
