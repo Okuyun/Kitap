@@ -47,13 +47,16 @@
         text-align: center;
         font-size: small;
     }
-    .goBack {
+    .goBack, .goNext {
+        position: relative;
         background: #c9fdfd;
         cursor: pointer;
     }
     h2 .goBack {
         top: -6px;
-        position: relative;
+    }
+    .goNext {
+        top: -16px;
     }
 @media screen and (max-width: 500px) {
     img  {
