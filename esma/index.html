@@ -33,11 +33,15 @@
     p {
       margin-top: 4px;
     }
-    #bir li:nth-child(n+9) {
+    #bir li:nth-child(n+10) {
         color: lightgray;
     }
     #iki li {
         color: lightgray;
+    }
+    div.nav {
+        align-items: center;
+        display: flex;
     }
   @media screen and (max-width: 500px) {
     ol  {
@@ -47,8 +51,11 @@
   </style>
   <body>
 
-<h3>Esmâ-i Husnâ</h3>
-<p>Hicri 1444 (2023) Ramazan ayında her gün iki güzel isim hatırlayalım ve Kitap'taki yerini bulalım.
+<h3>Esmâ-i Husnâ &emsp;<button id=dersler>◀</button></h3>
+<script>
+  dersler.onclick = () => {location.pathname = "/Kitap/ders/"}
+</script>
+<p>Hicri 1444 (2023) Ramazan ayında her gün iki güzel isim hatırlayalım, güzel levhalarda nasıl yazıldıklarını görelim, Kitap'taki yerlerini bulalım.
 </p>
 <ol id="bir">
   <li><a href="/Kitap/esma/Allah.html"><b>Allâh</b> celle celâluh</a>
@@ -58,8 +65,8 @@
   <li>4. <a href="/Kitap/esma/Mumin.html">el-Mumin, el-Muheymin</a>
   <li>5. <a href="/Kitap/esma/Cebbar.html">el-Cebbâr, el-Mutekebbir</a>
   <li>6. <a href="/Kitap/esma/Hallak.html">el-Hâlık, el-Hallâk</a>
-  <li>7. el-Bâri, el-Musavvir
-  <li>8. el-Azîz, el-Hakîm
+  <li>7. <a href="/Kitap/esma/Bari.html">el-Bâri, el-Musavvir</a>
+  <li>8. <a href="/Kitap/esma/Aziz.html"></a>el-Azîz, el-Hakîm
   <li>9. el-Alîm, el-Halîm
   <li>10. el-Âlim, el-Allâm
   <li>11. el-Aliyy, el-Azîm

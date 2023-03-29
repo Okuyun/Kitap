@@ -55,8 +55,9 @@
     h2 .goBack {
         top: -6px;
     }
-    .goNext {
-        top: -16px;
+    div.nav {
+        align-items: center;
+        display: flex;
     }
 @media screen and (max-width: 500px) {
     img  {

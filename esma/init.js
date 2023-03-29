@@ -5,7 +5,7 @@ function getIndex() {
 }
 function goNext() {
     let n = getIndex()
-    if (n<0 || n>=14) goBack();
+    if (n>=14) goBack(); // NAMES.length-1
     else location.pathname = "/Kitap/esma/"+NAMES[n+1]
 }
 function goBack() {
@@ -25,6 +25,7 @@ function init() {
       a.target = "iqra"
     }
     let div = document.createElement('div')
+    div.className = 'nav'
     div.innerHTML = LINKS
     document.body.append(div)
     for (let b of document.querySelectorAll('.goBack'))
