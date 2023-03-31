@@ -62,7 +62,7 @@ Cebbar.html
 Hallak.html
 Bari.html
 Aziz.html
-Alim.html
+Halim.html
 Allam.html
 Aliyy.html
 Gafur.html
