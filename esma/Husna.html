@@ -8,7 +8,7 @@
 <style>
   body {
     max-width: 600px;
-    background: #bee;
+    background: #59b;
     margin: auto;
   }
   #container {
@@ -46,7 +46,7 @@
     <div id=text></div>
     <button id=next>▶</button>
     <div id=div></div>
-    <img id=img src="">
+    <a id=anchor><img id=img src=""></a>
 </div>
 
 <script>
@@ -57,6 +57,8 @@ function show_slide(i) {
   // adjust index at two ends
   if (index > FILES.length - 1) index = 0 ;
   if (index < 0) index = FILES.length - 1;
+  anchor.href = "/Kuran/reader.html#"+LINKS[index]
+  anchor.target = "iqra"
   img.src = "image/"+FILES[index]
   text.name = FILES[index]
   text.innerText = "???"
@@ -77,58 +79,64 @@ document.onkeydown = evt => {
   }
 }
 
-const FILES = 
-`Alahussamed.jpg
-Allah-Allam.jpg
-Batanay_besmele.jpg
-Kuddûs-Selâm.jpg
-Rahman.jpg
-afuvv gafur.jpg
-al-bari.png
-al-khaliq.jpg
-al-khallaq.jpg
-al-musavvir.jpg
-al-qahhar.jpg
-al-wahid.jpg
-allamul-guyub.jpg
-ar-razzaq.jpg
-cebbar.jpg
-el-Aziz.jpg
-el-Mumin.jpg
-el-Mumin.png
-el-alim.jpg
-el-aliyy.png
-el-azizul-hakim.jpg
-el-gafur.jpg
-el-halikul-bari.jpg
-el-halim.jpg
-er-rauf.jpg
-errahman errahim.png
-es-Selâm.jpg
-es-samed.jpg
-es-sekur.jpg
-fesebbih.jpg
-gaffar.jpg
-huvallahu ahad.jpg
-inneniy enallah.jpg
-kane tevvaba.jpg
-kul huvallah.jpg
-la tuzig qulubana.jpg
-lekad caekum.jpg
-lem yelid.jpg
-limenil-mulk.jpg
-maliki yevmiddin.jpg
-malikul-mulk.jpg
-melikul-hakkul-mubin.jpg
-mutekebbir.png
-sayfa 547.png
-subhanallahil-azim.jpg
-tevvab.jpg
-vehuvel-aliyyul-azîm.jpg
-vemen yagfiru.jpg
-vezkur rabbeke.jpg
-vezkurullahe.jpg
-ya vehhab.jpg`.split('\n')
+const DATA = 
+`Batanay_besmele.jpg	Rahman	v=1:1&r=rHm
+Rahman.jpg	Rahman	v=55:1&r=rHm&r=Elm&r=qrA
+errahman errahim.png		
+inneniy enallah.jpg	Allah	v=20:14
+vezkur rabbeke.jpg	Allah	v=3:41&r=*kr&r=rbb&r=kvr
+vezkurullahe.jpg		
+malikul-mulk.jpg	Malik	v=3:26&r=mlk
+maliki yevmiddin.jpg	Malik	v=1:4&r=mlk&r=ywm
+melikul-hakkul-mubin.jpg	Malik	v=23:116&r=mlk&r=Hqq
+sayfa 547.png	Selam	p=547&r={ll~ah&r=smw&r=Hsn
+Kuddûs-Selâm.jpg	Selam	v=59:23&r=mlk&r=qds&r=slm
+es-Selâm.jpg	Selam	v=10:25&r=dwr&r=slm
+el-Mumin.jpg	Mumin	v=59:23&r=Amn&r=hmn
+el-Mumin.png	Mumin	v=5:48&r=ktb&r=hmn
+cebbar.jpg	Cebbar	v=59:23&r=kbr&r=jbr
+mutekebbir.png	Cebbar	v=40:35&r=kbr&r=jbr
+al-khaliq.jpg	Hallak	v=59:24&r=xlq&r=Elm
+al-khallaq.jpg	Hallak	v=36:81&r=xlq&r=Elm
+al-bari.png	Bari	v=2:54&r=xyr&r=brA
+al-musavvir.jpg	Bari	v=7:11&r=xlq&r=Swr
+el-halikul-bari.jpg	Bari	v=59:24&r=xlq&r=brA&r=Swr
+el-Aziz.jpg	Aziz	v=3:18&r=Ezz&r=Hkm
+el-azizul-hakim.jpg	Aziz	v=59:24&r=Ezz&r=Hkm
+el-halim.jpg	Alim	v=22:59&r=Hlm&r=Elm
+el-alim.jpg	Alim	v=33:51&r=Hlm&r=Elm
+allamul-guyub.jpg	Allam	v=9:78&r=Elm&r=gyb
+Allah-Allam.jpg	Allam	v=34:48&r=Elm&r=gyb
+vehuvel-aliyyul-azîm.jpg	Aliyy	v=2:255&r=Elw&r=EZm
+el-aliyy.png	Aliyy	v=42:4&r=Elw&r=EZm
+fesebbih.jpg	Aliyy	v=56:96&r=smw&r=EZm
+subhanallahil-azim.JPG		
+el-gafur.jpg	Gafur	v=42:23&r=gfr&r=$kr
+vemen yagfiru.jpg	Gafur	v=3:135&r=gfr&r=*nb
+es-sekur.jpg	Gafur	v=42:23&r=gfr&r=$kr
+gaffar.jpg	Tevvab	v=71:10&r=gfr
+tevvab.jpg	Tevvab	v=2:37&r=twb&r=rHm
+kane tevvaba.jpg	Tevvab	v=110:3&r=gfr&r=twb
+lekad caekum.jpg	Afuv	v=9:128&r=rAf&r=rHm
+afuvv gafur.jpg	Afuv	#v=4:99&r=Efw&r=gfr
+er-rauf.jpg	Afuv	v=24:20&r=rAf&r=rHm
+huvallahu ahad.jpg	Ehad	v=112:1&r=AHd&r=Smd&r=wld
+kul huvallah.jpg	Ehad	v=112:1&r=AHd&r=Smd&r=wld
+lem yelid.jpg	Ehad	v=112:3&r=AHd&r=Smd&r=wld
+Alahussamed.jpg	Ehad	v=112:2&r=AHd&r=Smd&r=wld
+al-wahid.jpg	Vahid	v=12:39&r=wHd&r=qhr
+al-qahhar.jpg	Vahid	v=12:39&r=wHd&r=qhr
+limenil-mulk.jpg	Vahid	v=40:16&r=wHd&r=qhr
+ya vehhab.jpg	Vehhab	v=51:58&r=rzq
+ar-razzaq.jpg	Vehhab	v=51:58&r=rzq
+la tuzig qulubana.jpg	Vehhab	v=51:58&r=rzq`.split('\n')
+
+const FILES = [], NAMES = [], LINKS = [];
+for (let d of DATA) {
+    let [file, name, link] = d.split('\t')
+    if (!link) continue
+    FILES.push(file); NAMES.push(name); LINKS.push(link)
+}
 
 show_slide(0)
 </script>
