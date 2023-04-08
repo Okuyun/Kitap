@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="/Kuran/image/icon.png">
+<title>Esmâ-i Husnâ Levhaları</title>
+    
+<style>
+  body {
+    max-width: 600px;
+    background: #bee;
+    margin: auto;
+  }
+  #container {
+    position: relative;    
+  }
+  div, h2 { text-align: center; }
+  img {
+    max-width: 100%;
+    margin-top: 6px;
+  }
+  #prev, #next {  
+    cursor: pointer;
+    padding: 3px 6px;
+    color: gray;
+    user-select: none;
+    font-size: large;
+  }
+  #prev{ left: 0; }
+  #next{ right: 0; }
+  button:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #text{
+    cursor: pointer;
+    background: #eee;
+    display: inline-block;
+    width: 200px;
+    padding: 6px;
+  }
+</style>
+
+<h2 id=title></h2>
+<div id=container>
+    <button id=prev>◀</button>
+    <div id=text></div>
+    <button id=next>▶</button>
+    <div id=div></div>
+    <img id=img src="">
+</div>
+
+<script>
+"use strict";
+var index = 0;
+function show_slide(i) {
+  index = i;
+  // adjust index at two ends
+  if (index > FILES.length - 1) index = 0 ;
+  if (index < 0) index = FILES.length - 1;
+  img.src = "image/"+FILES[index]
+  text.name = FILES[index]
+  text.innerText = "???"
+}
+title.innerText = document.title;
+prev.onclick = () => show_slide(index-1)
+next.onclick = () => show_slide(index+1)
+text.onclick = () => text.innerText = FILES[index]
+document.onkeydown = evt => {
+  if (!evt.key) return
+  switch (evt.key.toUpperCase()) {
+    case 'ARROWUP': case 'ARROWLEFT': 
+      prev.onclick(); break
+    case 'ARROWDOWN': case 'ARROWRIGHT':
+      next.onclick(); break
+    case 'ESCAPE': 
+      text.innerText = "???"; break
+  }
+}
+
+const FILES = 
+`Alahussamed.jpg
+Allah-Allam.jpg
+Batanay_besmele.jpg
+Kuddûs-Selâm.jpg
+Rahman.jpg
+afuvv gafur.jpg
+al-bari.png
+al-khaliq.jpg
+al-khallaq.jpg
+al-musavvir.jpg
+al-qahhar.jpg
+al-wahid.jpg
+allamul-guyub.jpg
+ar-razzaq.jpg
+cebbar.jpg
+el-Aziz.jpg
+el-Mumin.jpg
+el-Mumin.png
+el-alim.jpg
+el-aliyy.png
+el-azizul-hakim.jpg
+el-gafur.jpg
+el-halikul-bari.jpg
+el-halim.jpg
+er-rauf.jpg
+errahman errahim.png
+es-Selâm.jpg
+es-samed.jpg
+es-sekur.jpg
+fesebbih.jpg
+gaffar.jpg
+huvallahu ahad.jpg
+inneniy enallah.jpg
+kane tevvaba.jpg
+kul huvallah.jpg
+la tuzig qulubana.jpg
+lekad caekum.jpg
+lem yelid.jpg
+limenil-mulk.jpg
+maliki yevmiddin.jpg
+malikul-mulk.jpg
+melikul-hakkul-mubin.jpg
+mutekebbir.png
+sayfa 547.png
+subhanallahil-azim.jpg
+tevvab.jpg
+vehuvel-aliyyul-azîm.jpg
+vemen yagfiru.jpg
+vezkur rabbeke.jpg
+vezkurullahe.jpg
+ya vehhab.jpg`.split('\n')
+
+show_slide(0)
+</script>
