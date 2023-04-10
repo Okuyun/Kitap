@@ -8,12 +8,14 @@
 <style>
   body {
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 600px;
+    max-width: 900px;
     background: #59b;
-    margin: auto;
   }
-  #container {
-    position: relative;    
+  .aligned {
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
     user-select: none;
   }
   div, h3 {
@@ -28,7 +30,13 @@
     padding: 2px 5px;
     color: gray;
     font-size: large;
-    height: 30px;
+    border: none;
+  }
+  #prev {
+    border-radius:  50% 0 0 50%;
+  }
+  #next {
+    border-radius:  0 50% 50% 0;
   }
   button:hover {
     background: rgba(0, 0, 0, 0.5);
@@ -39,7 +47,7 @@
     display: inline-block;
     font-size: small;
     width: 170px;
-    padding: 6px;
+    padding: 5px;
   }
   #explain {
     margin: 20px 10px;
@@ -54,12 +62,13 @@
 </style>
 
 <h3 id=title></h3>
-<div id=container>
+<div class=aligned>
     <button id=prev>◀</button>
     <button><a id=esma>E</a></button>
     <div id=text></div>
     <button id=next>▶</button>
-    <div id=div></div>
+</div>
+<div>
     <a id=anchor><img id=img src=""></a>
 </div>
 <p id=explain>
