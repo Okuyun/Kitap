@@ -26,28 +26,32 @@
     margin-top: 6px;
   }
   button {  
-    cursor: pointer;
     padding: 2px 5px;
     color: gray;
     font-size: large;
     border: none;
   }
   #prev {
-    border-radius:  50% 0 0 50%;
+    border-radius: 10px 0 0 10px;
   }
   #next {
-    border-radius:  0 50% 50% 0;
+    border-radius: 0 10px 10px 0;
   }
-  button:hover {
+  button:hover, .aligned a:hover {
+    color: #eee;
     background: rgba(0, 0, 0, 0.5);
   }
-  #text{
-    cursor: pointer;
+  #text {
     background: #eee;
     display: inline-block;
     font-size: small;
     width: 170px;
     padding: 5px;
+  }
+  button, #text {
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 26px;
   }
   #explain {
     margin: 20px 10px;
@@ -66,6 +70,7 @@
     <button id=prev>◀</button>
     <button><a id=esma>E</a></button>
     <div id=text></div>
+    <button><a id=check>✔</a></button>
     <button id=next>▶</button>
 </div>
 <div>
@@ -84,11 +89,12 @@
 "use strict";
 var index, current;
 function show_slide(i) {
-  index = i; let max = FILES.length - 1;
+  let max = FILES.length - 1
   // adjust index at two ends
-  if (index > max) index = 0
-  if (index < 0) index = max
-  current = FILES[index]; explain.hidden = index
+  if (i > max) i = 0
+  if (i < 0) i = max
+  index = i; current = FILES[i]
+  explain.hidden = i //hidden if i>0
   anchor.href = "/Kuran/reader.html#"+current.link
   anchor.target = "iqra"
   img.src = "image/"+current.file
@@ -96,11 +102,7 @@ function show_slide(i) {
   // text.name = current.file
   text.innerText = "???"
 }
-title.innerText = document.title;
-prev.onclick = () => show_slide(index-1)
-next.onclick = () => show_slide(index+1)
-text.onclick = () => text.innerText = current.file
-document.onkeydown = evt => {
+function doKey(evt) {
   if (!evt.key) return
   switch (evt.key.toUpperCase()) {
     case 'ARROWUP': case 'ARROWLEFT': 
@@ -110,6 +112,18 @@ document.onkeydown = evt => {
     case 'ESCAPE': 
       text.innerText = "???"; break
   }
+}
+function doText() {
+  text.innerText = current.file
+}
+function init() {
+  title.innerText = document.title;
+  parent.document.title = document.title;
+  readData(); show_slide(0); shuffle()
+  prev.onclick = () => show_slide(index-1)
+  next.onclick = () => show_slide(index+1)
+  text.onclick = doText
+  document.onkeydown = doKey
 }
 
 const DATA = 
@@ -136,8 +150,8 @@ al-musavvir.jpg	Bari	v=7:11&r=xlq&r=Swr
 el-halikul-bari.jpg	Bari	v=59:24&r=xlq&r=brA&r=Swr
 el-Aziz.jpg	Aziz	v=3:18&r=Ezz&r=Hkm
 el-azizul-hakim.jpg	Aziz	v=3:6&r=Ezz&r=Hkm
-el-halim.jpg	Alim	v=22:59&r=Hlm&r=Elm
-el-alim.jpg	Alim	v=33:51&r=Hlm&r=Elm
+el-halim.jpg	Halim	v=22:59&r=Hlm&r=Elm
+el-alim.jpg	Halim	v=33:51&r=Hlm&r=Elm
 allamul-guyub.jpg	Allam	v=9:78&r=Elm&r=gyb
 Allah-Allam.jpg	Allam	v=34:48&r=Elm&r=gyb
 vehuvel-aliyyul-azîm.jpg	Aliyy	v=2:255&r=Elw&r=EZm
@@ -171,10 +185,12 @@ el-latif.jpg	Latif	v=67:14&r=lTf&r=xbr
 el-habir.png	Latif	v=35:14&r=nbA&r=xbr`
 
 const FILES = []
-for (let d of DATA.split('\n')) {
+function readData() {
+  for (let d of DATA.split('\n')) {
     let [file, name, link] = d.split('\t')
     if (!link) continue
     FILES.push({file, name, link})
+  }
 }
 
 function shuffle() {
@@ -184,6 +200,5 @@ function shuffle() {
     [FILES[i], FILES[j]] = [FILES[j], FILES[i]];
   }
 }
-show_slide(0); shuffle()
-
+init()
 </script>
