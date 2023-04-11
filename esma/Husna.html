@@ -90,6 +90,7 @@
 <script>
 "use strict";
 var index;
+const FILES = []
 const QUEST = "???"
 function show_slide(i) {
   let max = FILES.length - 1
@@ -103,6 +104,8 @@ function show_slide(i) {
   img.src = "image/"+c.file
   esma.href = c.name+".html"
   index = i; doQuestion()
+  let time = Date.now()
+  setStorage('esma_state', {time, index})
 }
 function doKey(evt) {
   if (!evt.key) return
@@ -128,10 +131,31 @@ function doCheck() {
 function doClick() {
   question.innerText = FILES[index].file
 }
+function getStorage(q) {
+  let e = localStorage[q]
+  if (!e) return
+  return JSON.parse(e)
+}
+function setStorage(q, x) {
+  localStorage[q] = JSON.stringify(x)
+}
 function init() {
+  const DELAY = 3600*1000 //one hour
   title.innerText = document.title;
   parent.document.title = document.title;
-  readData(); show_slide(0); shuffle()
+  try {
+    let x = getStorage('esma_state')
+    let d = Date.now() - x.time
+    if (d > DELAY) throw "too long "+(d/1000)
+    for (let t of getStorage('esma_files'))
+      FILES.push(t)
+    console.log(x.index, "of", FILES.length)
+    show_slide(x.index)
+  } catch (error) {
+    console.log(error, "readData")
+    readData(); show_slide(0); shuffle()
+    setStorage('esma_files', FILES)
+  }
   prev.onclick = () => show_slide(index-1)
   next.onclick = () => show_slide(index+1)
   question.onclick = doClick
@@ -205,7 +229,6 @@ el-gafur-el-vedud.jpg	Vedud	v=85:14&r=gfr&r=wdd
 ya-vedud.jpg	Vedud	v=11:90&r=rHm&r=wdd
 el-mecid.jpg	Vedud	v=11:73&r=Hmd&r=mjd`
 
-const FILES = []
 function readData() {
   for (let d of DATA.split('\n')) {
     let [file, name, link] = d.split('\t')
