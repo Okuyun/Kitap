@@ -79,29 +79,30 @@
 </div>
 <p id=explain>
   Esmâ-i Husnâ sayfalarında kullanılan hat eserlerine buradan erişilir. Levhaların ve diğer eserlerin referansları ilgili sayfalarda bulunur. <br>
-  * E butonuna tıklayınca ilgili Esma sayfasına gider. <br>
-  * Soru işaretine tıklayınca, ipucu olarak dosyanın adı çıkar. <br>
-  * Tik işaretine tıklayınca ipuçlarını sürekli gösterir. <br>
-  * Hat resmine tıklayınca, ayeti mushaf içinde gösterir. <br>
+  * E butonu: ilgili Esma sayfasına git <br>
+  * Soru işareti: ipucu olarak dosya adını göster <br>
+  * Tik işareti: ipuçlarını sürekli göster/gizle <br>
+  * Hat resmi: ayeti mushaf içinde göster <br>
   <br>
   Mobil cihazlarda ekranı yan tutmak daha iyi okunmayı sağlar.
 </p>
 
 <script>
 "use strict";
-var index, current;
+var index;
+const QUEST = "???"
 function show_slide(i) {
   let max = FILES.length - 1
   // adjust index at two ends
   if (i > max) i = 0
   if (i < 0) i = max
-  index = i; current = FILES[i]
+  let c = FILES[i]
   explain.hidden = i //hidden if i>0
-  anchor.href = "/Kuran/reader.html#"+current.link
+  anchor.href = "/Kuran/reader.html#"+c.link
   anchor.target = "iqra"
-  img.src = "image/"+current.file
-  esma.href = current.name+".html"
-  question.innerText = "???"
+  img.src = "image/"+c.file
+  esma.href = c.name+".html"
+  index = i; doQuestion()
 }
 function doKey(evt) {
   if (!evt.key) return
@@ -111,18 +112,21 @@ function doKey(evt) {
     case 'ARROWDOWN': case 'ARROWRIGHT':
       next.onclick(); break
     case 'ESCAPE': 
-      question.innerText = "???"; break
+      question.innerText = QUEST; break
   }
 }
 function doQuestion() {
-  question.innerText = current.file
+  let checked = check.innerText !== '?'
+  question.innerText = 
+    checked? QUEST : FILES[index].file
 }
 function doCheck() {
-  if (check.textContent == '?') {
-    check.textContent = '✔'
-  } else {
-    check.textContent = '?'
-  }
+  let checked = check.innerText !== '?'
+  check.innerText = checked? '?' : '✔'
+  doQuestion()
+}
+function doClick() {
+  question.innerText = FILES[index].file
 }
 function init() {
   title.innerText = document.title;
@@ -130,9 +134,14 @@ function init() {
   readData(); show_slide(0); shuffle()
   prev.onclick = () => show_slide(index-1)
   next.onclick = () => show_slide(index+1)
-  question.onclick = doQuestion
+  question.onclick = doClick
   check.onclick = doCheck
   document.onkeydown = doKey
+  prev.title = "önceki resim"
+  next.title = "sonraki resim"
+  esma.title = "ilgili Esma sayfasına git"
+  question.title = "ipucu göster: dosya adı"
+  check.title = "ipuçlarını göster/gizle"
 }
 
 const DATA = 
@@ -204,7 +213,6 @@ function readData() {
     FILES.push({file, name, link})
   }
 }
-
 function shuffle() {
   //https://javascript.info/task/shuffle
   for (let i = FILES.length - 1; i > 1; i--) {
