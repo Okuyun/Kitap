@@ -104,8 +104,8 @@ function show_slide(i) {
   img.src = "image/"+c.file
   esma.href = c.name+".html"
   index = i; doQuestion()
-  let time = Date.now()
-  setStorage('esma_state', {time, index})
+  let time = Date.now(), quest = check.innerText
+  setStorage('esma_state', {time, index, quest})
 }
 function doKey(evt) {
   if (!evt.key) return
@@ -151,6 +151,9 @@ function init() {
       FILES.push(t)
     console.log(x.index, "of", FILES.length)
     show_slide(x.index)
+    if (x.quest) {
+      check.innerText = x.quest; doQuestion()
+    }
   } catch (error) {
     console.log(error, "readData")
     readData(); show_slide(0); shuffle()
@@ -227,7 +230,10 @@ el-latif.jpg	Latif	v=67:14&r=lTf&r=xbr
 el-habir.png	Latif	v=35:14&r=nbA&r=xbr
 el-gafur-el-vedud.jpg	Vedud	v=85:14&r=gfr&r=wdd
 ya-vedud.jpg	Vedud	v=11:90&r=rHm&r=wdd
-el-mecid.jpg	Vedud	v=11:73&r=Hmd&r=mjd`
+el-mecid.jpg	Vedud	v=11:73&r=Hmd&r=mjd
+yuhricul hayye.jpg	Muhyi	v=30:19&r=mwt&r=Hyy
+el-muhyi.png	Muhyi	v=30:50&r=mwt&r=Hyy
+el-mumit.png	Muhyi	v=40:68&r=mwt&r=Hyy`
 
 function readData() {
   for (let d of DATA.split('\n')) {
