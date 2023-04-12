@@ -5,7 +5,7 @@ function getIndex() {
 }
 function goNext() {
     let n = getIndex()
-    if (n >= 20) goBack(); // NAMES.length-1
+    if (n >= 24) goBack(); // NAMES.length-1
     else location.pathname = "/Kitap/esma/"+NAMES[n+1]
 }
 function goBack() {
