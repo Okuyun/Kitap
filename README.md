@@ -6,3 +6,4 @@
 * 2020 [Ramazan Notları](https://okuyun.github.io/Kuran/#m=index)
 * 2021 [Kuran Kelimeleri](https://okuyun.github.io/Kuran/#d=index)
 * 2022 [Korunmuşluk örnekleri](https://okuyun.github.io/Kitap/KK/korunmus.html)
+* 2023 [Esmâ-i Husnâ](https://okuyun.github.io/Kuran/#e=index)
