@@ -15,14 +15,16 @@
     display: flex;   
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 3px; margin: 4px;
     user-select: none;
   }
   div, h3 {
     text-align: center;
+    margin: 0;
   }
   img {
     max-width: 100%;
+    max-height: 85vh;
     margin-top: 6px;
   }
   button {  
@@ -42,20 +44,22 @@
     color: #eee;
     background: rgba(0, 0, 0, 0.5);
   }
-  #question {
+  #hint {
     background: #eee;
     display: inline-block;
     font-size: small;
     width: 170px;
     padding: 5px;
   }
-  button, #question {
+  button, #hint {
     cursor: pointer;
     box-sizing: border-box;
     height: 26px;
   }
   #explain {
-    margin: 20px 10px;
+    width: 360px;
+    box-sizing: border-box;
+    margin: 20px auto;
     padding: 6px;
     background: wheat;
     line-height: 1.3;
@@ -70,7 +74,7 @@
 <div class=aligned>
     <button id=prev>◀</button>
     <button tabindex=-1><a id=esma>E</a></button>
-    <div id=question></div>
+    <div id=hint></div>
     <button><a id=check>✔</a></button>
     <button id=next>▶</button>
 </div>
@@ -103,7 +107,7 @@ function show_slide(i) {
   anchor.target = "iqra"
   img.src = "image/"+c.file
   esma.href = c.name+".html"
-  index = i; doQuestion()
+  index = i; //onload=doHint
   let time = Date.now(), quest = check.innerText
   setStorage('esma_state', {time, index, quest})
 }
@@ -115,21 +119,23 @@ function doKey(evt) {
     case 'ARROWDOWN': case 'ARROWRIGHT':
       next.onclick(); break
     case 'ESCAPE': 
-      question.innerText = QUEST; break
+      doCheck(); break
   }
 }
-function doQuestion() {
-  let checked = check.innerText !== '?'
-  question.innerText = 
-    checked? QUEST : FILES[index].file
+function doHint() {
+  let checked = check.innerText !== '?';
+  hint.innerText = 
+    checked? QUEST : FILES[index].file;
+  if (index == 0) scrollTo(0, 0)
+  else img.scrollIntoView()
 }
 function doCheck() {
   let checked = check.innerText !== '?'
   check.innerText = checked? '?' : '✔'
-  doQuestion()
+  doHint()
 }
 function doClick() {
-  question.innerText = FILES[index].file
+  hint.innerText = FILES[index].file
 }
 function getStorage(q) {
   let e = localStorage[q]
@@ -152,7 +158,7 @@ function init() {
     console.log(x.index, "of", FILES.length)
     show_slide(x.index)
     if (x.quest) {
-      check.innerText = x.quest; doQuestion()
+      check.innerText = x.quest; doHint()
     }
   } catch (error) {
     console.log(error, "readData")
@@ -161,13 +167,14 @@ function init() {
   }
   prev.onclick = () => show_slide(index-1)
   next.onclick = () => show_slide(index+1)
-  question.onclick = doClick
+  hint.onclick = doClick
   check.onclick = doCheck
+  img.onload = doHint
   document.onkeydown = doKey
   prev.title = "önceki resim"
   next.title = "sonraki resim"
   esma.title = "ilgili Esma sayfasına git"
-  question.title = "ipucu göster: dosya adı"
+  hint.title = "ipucu göster: dosya adı"
   check.title = "ipuçlarını göster/gizle"
 }
 
@@ -191,7 +198,7 @@ mutekebbir.png	Cebbar	v=40:35&r=kbr&r=jbr
 al-khaliq.jpg	Hallak	v=59:24&r=xlq&r=Elm
 al-khallaq.jpg	Hallak	v=36:81&r=xlq&r=Elm
 al-bari.png	Bari	v=2:54&r=xyr&r=brA
-al-musavvir.jpg	Bari	v=7:11&r=xlq&r=Swr
+al-musavvir.png	Bari	v=7:11&r=xlq&r=Swr
 el-halikul-bari.jpg	Bari	v=59:24&r=xlq&r=brA&r=Swr
 el-Aziz.jpg	Aziz	v=3:18&r=Ezz&r=Hkm
 el-azizul-hakim.jpg	Aziz	v=3:6&r=Ezz&r=Hkm
@@ -233,7 +240,10 @@ ya-vedud.jpg	Vedud	v=11:90&r=rHm&r=wdd
 el-mecid.jpg	Vedud	v=11:73&r=Hmd&r=mjd
 yuhricul hayye.jpg	Muhyi	v=30:19&r=mwt&r=Hyy
 el-muhyi.png	Muhyi	v=30:50&r=mwt&r=Hyy
-el-mumit.png	Muhyi	v=40:68&r=mwt&r=Hyy`
+el-mumit.png	Muhyi	v=40:68&r=mwt&r=Hyy
+anetil-vucuh.jpg	Hayy	v=20:111&r=Hyy&r=qwm
+el-hayy.jpg	Hayy	v=2:255&r=Hyy&r=qwm
+el-Mumit.jpg	Hayy	v=3:2&r=Hyy&r=qwm`
 
 function readData() {
   for (let d of DATA.split('\n')) {

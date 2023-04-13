@@ -13,7 +13,8 @@
         margin: 1em 0;
     }
     img  {
-        width: 400px;
+        max-width: 400px;
+        max-height: 90vh;
         border: 0;
         display: block;
         margin-top: 8px;
@@ -23,8 +24,8 @@
     div img {
         display: inline;
     }
-    img.narrow { width: 250px; }
-    img.full { width: 100%; }
+    img.narrow { max-width: 250px; }
+    img.full { max-width: 100%; }
     .preWrap {
         white-space: pre-wrap;
     }
