@@ -82,7 +82,7 @@
     <a id=anchor><img id=img src=""></a>
 </div>
 <p id=explain>
-  Esmâ-i Husnâ sayfalarında kullanılan hat eserlerine buradan erişilir. Levhaların ve diğer eserlerin referansları ilgili sayfalarda bulunur. <br>
+  Esmâ-i Husnâ sayfalarında kullanılan <span id=count>70</span> adet hat eserine buradan erişilir. Levhaların ve diğer eserlerin referansları, ilgili sayfalarda bulunur. <br>
   * E butonu: ilgili Esma sayfasına git <br>
   * Soru işareti: ipucu olarak dosya adını göster <br>
   * Tik işareti: ipuçlarını sürekli göster/gizle <br>
@@ -176,6 +176,7 @@ function init() {
   esma.title = "ilgili Esma sayfasına git"
   hint.title = "ipucu göster: dosya adı"
   check.title = "ipuçlarını göster/gizle"
+  count.innerText = FILES.length
 }
 
 const DATA = 
@@ -258,15 +259,16 @@ el-muktedir.jpg	Kadir	v=54:55&r=mlk&r=qdr
 vehuve ala.jpg	Kadir	v=67:1&r=qdr&r=$yA
 nurus-semavat.jpg	Nur	v=24:35&r=nwr&r=smw
 nurun ala nur.jpg	Nur	v=33:43&r=Zlm&r=nwr
-el-hadî.jpg	Nur	v=25:31&r=hdy&r=nSr`
-/*
+el-hadî.jpg	Nur	v=25:31&r=hdy&r=nSr
 ya-kerim.jpg	Kebir	v=82:6&r=rbb&r=krm
 eyyuhel-insan.jpg	Kebir	v=82:6&r=rbb&r=krm
-
+entumul-fuqara.jpg	Gani	v=47:38&r=gny&r=fqr
+Allah ganiy.jpg	Gani	v=47:38&r=gny&r=fqr
+al-hamid.jpg	Gani	v=35:15&r=gny&r=fqr&r=Hmd
 zul-celali vel-ikram.jpg	Celal	v=55:27&r=wjh&r=jll&r=krm
 zul-celal.jpg	Celal	v=55:27&r=wjh&r=jll&r=krm
-vechu rabbik.jpg	Celal	v=55:27&r=wjh&r=jll&r=krm
-*/
+vechu rabbik.jpg	Celal	v=55:27&r=wjh&r=jll&r=krm`
+
 function readData() {
   for (let d of DATA.split('\n')) {
     let [file, name, link] = d.split('\t')
