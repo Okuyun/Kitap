@@ -21,13 +21,12 @@ function setTitle() {
 }
 function init() {
     for (let a of document.querySelectorAll('a[name]')) {
-      // if (!a.name) continue
       a.href = "/Kuran/reader.html#"+a.name
       a.target = "iqra"
     }
     let div = document.createElement('div')
-    div.className = 'nav'
-    div.innerHTML = LINKS
+    div.innerHTML = `&emsp; <button class=goBack>◀</button>
+                <button class=goNext>▶</button><br> &emsp;`;
     document.body.append(div)
     for (let b of document.querySelectorAll('.goBack'))
       b.onclick = goBack
@@ -38,6 +37,7 @@ function init() {
 }
 onload = init
 
+/* this code is removed
 const LINKS = `<br><b>Paylaşalım lutfen:</b>&ensp;
 <a href="https://groups.google.com/g/okuyun5/about"  target="Kuran"><img alt="https://groups.google.com/g/okuyun5" src="/Kitap/icon/email.png" style="width: 36px" /></a>
 &ensp;
@@ -51,9 +51,7 @@ const LINKS = `<br><b>Paylaşalım lutfen:</b>&ensp;
 <a href="https://youtube.com/playlist?list=PLBDiqooDrruv0MDNyRbG-JBLH2CnfNxAd"  target="Kuran"><img alt="https://youtube.com/" src="/Kitap/icon/youtube.png" style="width: 38px" /></a> -->
 &ensp;
 <a href="https://github.com/Okuyun/"  target="Kuran"><img alt="https://github.com/Okuyun/" src="/Kitap/icon/github.webp" style="width: 40px" /></a>
-&emsp;
-<button class=goNext>▶</button>
-`;
+` */
 const NAMES = `Allah.html
 Rahman.html
 Malik.html
