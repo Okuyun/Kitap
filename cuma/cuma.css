@@ -61,6 +61,17 @@
         font-style: italic;
         color: darkgreen;
     }
+    .ayet { 
+        font-family: Zekr, serif;
+        font-size: 19px;
+        line-height: 1.87;
+        text-align: justify;
+        direction: rtl;
+      }
+    @font-face {
+        font-family: Zekr;
+        src: url("/Rehber/style/ZEKRQURAN.TTF");
+    }
 @media screen and (max-width: 500px) {
     img  {
         width: 100%;
