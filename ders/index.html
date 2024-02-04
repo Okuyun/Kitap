@@ -9,12 +9,42 @@
 <title>Arapça Dersler</title>
 
 <style>
-  p, ol { margin: 8px 0; }
+  h2 { margin-bottom: -10px; margin-top: 10px; }
+  h3 { margin-bottom: 8px; }
+  p, ul, ol { margin: 8px 0; }
+  .narrow, .gap {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .narrow { width: 46%; }
+  .gap { width: 6%; }
+@media screen and (max-width: 550px) {
+  .narrow { width: 100%; }
+}
 </style>
 
 <body>
-<h2>Iqra &ndash; Dersler</h2>
+<h2>Iqra &ndash; Dersler &emsp;<button id=dersler>◀</button></h2>
+<script>
+  dersler.onclick = () => {location.pathname = "/Kitap/"}
+</script>
 
+<div class=narrow>
+<h3>Kur'an Kelimeleri</h3>
+<p>Yüce Kitabımızda kelime analizleri</p>
+<ul>
+  <li><a href="Allah.html">Lafza-i Celâl</a>
+  <li><a href="enbiya.html">Peygamberler</a>
+  <li><a href="yaygin.html">Sık geçen kelimeler</a>
+  <li><a href="isimler.html">Özel isimler</a>
+  <li><a href="huruf.html">Şifreli Harfler</a>
+  <li><a href="sunum4.2.html">Benzerlik V4.2</a>
+  <li><a href="/Kuran/benzerlik.html" target=KK>Benzerlik örnekleri</a>
+  <li><a href="/Kitap/KK/korunmus.html" target=KK>Korunmuşluk örnekleri</a>
+</ul>
+</div>
+<div class=gap> </div>
+<div class=narrow>
 <h3>Arapça Dersler</h3>
 <p>Kuran’dan alınmış örneklerle Arapça</p>
 <ol>
@@ -32,5 +62,6 @@ href="https://maeyler.github.io/JS/api/YouTube#PLBDiqooDrruuxXBQfIcHErlGbFcD21YQ
 <a target=KK
 href="https://maeyler.github.io/JS/api/YouTube#PLqPY2DLsMnVALLfBK-QjhOhvbj8miw399">
 2022</a></p>
+</div>
 
 </body>
