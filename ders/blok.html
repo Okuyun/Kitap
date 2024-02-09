@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<meta name="viewport"    content="width=device-width">
+<meta name="author"      content="M A Eyler, Istanbul, 2021" />
+<meta name="description" content="Words from Quran" />
+<link rel="stylesheet" href="ders.css" media="all">
+<link rel="icon" href="/Kuran/image/icon.png">
+<title>Benzerlik Blokları </title>
+<style>
+    pre {
+        text-wrap: wrap;
+    }
+</style>
+<h3>Benzerlik Blokları &emsp; <button class=goBack>◀</button></h3>
+
+<p>Sure:Ayet <input type=text id=inp size=10 />&ensp;
+<button onclick="out.innerText=''">Sil</button>
+<pre id=out></pre>
+<p>
+<script src="/Kuran/code/utilities.js"></script>
+<script>
+"use strict";
+function getBlock(cv) {
+    function addVerse(cv) {
+        let i = cvToIndex(cv); m[cv] = Number(i)
+        let s = parent.iqra.Q.simi._data[i]
+        if (s) for (let x of s.split(' ')) {
+            if (!m[x]) addVerse(x)
+        }
+    }
+    let m = {}; addVerse(cv)
+    let a = []; for (let x in m) a.push(m[x])
+    return (a.length<2? null : a) 
+}
+function report() {
+    function toCVstr(i) {
+        let c = toChapter(i);
+        return c+':'+(i-last[c-1])
+    }
+    function toText(a) {
+        if (!a) return cv+" benzeri yok"
+        a = a.sort((x,y) => x-y).map(toCVstr)
+        return cv+' -- '+a.length+' ayet\n'+a.join(' ')
+    }
+    let cv = inp.value
+    let s = toText(getBlock(cv))
+    out.innerText += s+'\n'
+    // console.log(cv, s)
+}
+inp.onchange = report
+inp.value = '37:76'; report()
+</script>
+
+<script src="init.js"></script>
