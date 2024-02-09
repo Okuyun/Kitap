@@ -23,7 +23,7 @@
 "use strict";
 function getBlock(cv) {
     function addVerse(cv) {
-        let i = cvToIndex(cv); m[cv] = Number(i)
+        let i = cvToIndex(cv); m[cv] = i
         let s = parent.iqra.Q.simi._data[i]
         if (s) for (let x of s.split(' ')) {
             if (!m[x]) addVerse(x)
@@ -35,8 +35,10 @@ function getBlock(cv) {
 }
 function report() {
     function toCVstr(i) {
-        let c = toChapter(i);
-        return c+':'+(i-last[c-1])
+        let c = toChapter(i)
+        let v = c+':'+(i-last[c-1])
+        return `<a href="/Kuran/reader.html#v=${v}"
+                 target="iqra">${v}</a>`
     }
     function toText(a) {
         if (!a) return cv+" benzeri yok"
@@ -45,8 +47,7 @@ function report() {
     }
     let cv = inp.value
     let s = toText(getBlock(cv))
-    out.innerText += s+'\n'
-    // console.log(cv, s)
+    out.innerHTML += s+'\n'
 }
 inp.onchange = report
 inp.value = '37:76'; report()
