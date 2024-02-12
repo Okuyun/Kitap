@@ -14,13 +14,21 @@
 </style>
 <h3>Benzerlik Blokları &emsp; <button class=goBack>◀</button></h3>
 
-<p>Sure:Ayet <input type=text id=inp size=10 />&ensp;
-<button onclick="out.innerText=''">Sil</button>
+<p>Sure:Ayet <input type=search id=inp size=10 />&ensp;
+<button onclick="report()">Bul</button>&ensp;
+<button onclick="out.innerText=''">Sil</button>&ensp;
+<button onclick="undo()">&lt;</button>&ensp;
 <pre id=out></pre>
-<p>
+<p>Örnek olarak seçilen 37:76 ayeti, buna benzeyen diğer iki ayetle birlikte üçlü bir blok içinde bulunur. Blokların çoğu ayet çiftleri olmakla birlikte, yüzlerce ayet içeren benzerlik blokları var. 
+<p>Küçük blok örnekleri: <br>
+    İkili --  <a href="/Kuran/reader.html#v=21:7" target="iqra">21:7</a><br>
+    Beşli --  <a href="/Kuran/reader.html#v=17:2" target="iqra">17:2</a><br>
+    Yedili -- <a href="/Kuran/reader.html#v=43:1" target="iqra">43:1</a><br>
+    Onlu --   <a href="/Kuran/reader.html#v=36:4" target="iqra">36:4</a><br>
 <script src="/Kuran/code/utilities.js"></script>
 <script>
 "use strict";
+var data = []
 function getBlock(cv) {
     function addVerse(cv) {
         let i = cvToIndex(cv); m[cv] = i
@@ -46,8 +54,20 @@ function report() {
         return cv+' -- '+a.length+' ayet\n'+a.join(' ')
     }
     let cv = inp.value
-    let s = toText(getBlock(cv))
-    out.innerHTML += s+'\n'
+    if (!/\d+:\d+/.test(cv)) { //Normalize
+        let [c, v] = cv.split(/\D/)
+        cv = c+':'+v
+    }
+    if (data.length > 9) data.shift()
+    data.push(toText(getBlock(cv)))
+    showData()
+}
+function undo() {
+    if (data.length > 0) data.pop()
+    showData()
+}
+function showData() {
+    out.innerHTML = data.join('\n')
 }
 inp.onchange = report
 inp.value = '37:76'; report()
