@@ -15,9 +15,9 @@
 <h3>Benzerlik Blokları &emsp; <button class=goBack>◀</button></h3>
 
 <p>Sure:Ayet <input type=search id=inp size=10 />&ensp;
-<button onclick="report()">Bul</button>&ensp;
-<button onclick="out.innerText=''">Sil</button>&ensp;
-<button onclick="undo()">&lt;</button>&ensp;
+<button id=bul>Bul</button>&ensp;
+<button id=sil>Sil</button>&ensp;
+<button id=und>&lt;</button>&ensp;
 <pre id=out></pre>
 <p>Örnek olarak seçilen 37:76 ayeti, buna benzeyen diğer iki ayetle birlikte üçlü bir blok içinde bulunur. Blokların çoğu ayet çiftleri olmakla birlikte, yüzlerce ayet içeren benzerlik blokları var. 
 <p>Küçük blok örnekleri: <br>
@@ -62,14 +62,18 @@ function report() {
     data.push(toText(getBlock(cv)))
     showData()
 }
-function undo() {
-    if (data.length > 0) data.pop()
-    showData()
-}
 function showData() {
     out.innerHTML = data.join('\n')
 }
-inp.onchange = report
+sil.onclick = () => {
+    data.length = 0
+    showData()
+}
+und.onclick = () => {
+    if (data.length > 0) data.pop()
+    showData()
+}
+inp.onchange = bul.onclick = report
 inp.value = '37:76'; report()
 </script>
 
