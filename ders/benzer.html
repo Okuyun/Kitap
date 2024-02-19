@@ -13,54 +13,96 @@
     }
 </style>
 <h3>Benzerlik Öbekleri &emsp; <button class=goBack>◀</button></h3>
-
-<p>Sure:Ayet <input type=search id=inp size=10 />&ensp;
-<button id=bul>Bul</button>&ensp;
-<button id=sil>Sil</button>&ensp;
-<button id=und>&lt;</button>&ensp;
+<div id=buttons hidden>
+    <p>Sure:Ayet <input type=search id=inp size=10 />&ensp;
+    <button id=bul>Bul</button>&ensp;
+    <button id=sil>Sil</button>&ensp;
+    <button id=und>&lt;</button>&ensp;
+</div>
 <pre id=out></pre>
-<p>Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçlü bir öbek içinde bulunur. Benzerlik öbeklerinin çoğu ayet çiftleri olmakla birlikte, yüzlerce ayet içeren bir öbek de var. 
+<p>Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçlü bir öbek içinde bulunur. Benzerlik öbeklerinin çoğu ayet çiftleri olmakla birlikte, 40'tan fazla ayet içeren bir öbek de mevcut. 
 <p>Küçük benzerlik öbekleri: <br>
     İkili --  <a href="/Kuran/reader.html#v=21:7" target="iqra">21:7</a><br>
     Üçlü --   <a href="/Kuran/reader.html#v=78:6" target="iqra">78:6</a><br>
-    Beşli --  <a href="/Kuran/reader.html#v=17:2" target="iqra">17:2</a><br>
+    Dörtlü -- <a href="/Kuran/reader.html#v=17:2" target="iqra">17:2</a><br>
     Yedili -- <a href="/Kuran/reader.html#v=43:1" target="iqra">43:1</a><br>
-    Onlu --   <a href="/Kuran/reader.html#v=36:4" target="iqra">36:4</a><br>
+    Dokuzlu -- <a href="/Kuran/reader.html#v=36:4" target="iqra">36:4</a><br>
 <script src="/Kuran/code/utilities.js"></script>
 <script>
 "use strict";
-var data = []
-function getBlock(cv) {
-    function addVerse(cv) {
-        let i = cvToIndex(cv); m[cv] = i
+var data = []  //previous data used in report()
+var simi = {}  //Array of verses similar to 'c:v'
+function init() {
+    if (!parent.iqra) {
+        let err = "This code works only within Iqra"
+        let link = "Open: okuyun.github.io/Kuran/#d=benzer"
+        out.innerText = err+'\n'+link
+        throw err
+    }
+    function addToMap(x) {
+        let m = simi[x] 
+        if (!m) {
+           m = new Set(); m.add(x); simi[x] = m
+        }
+        return m
+    }
+    for (let i in parent.iqra.Q.simi._data) {
         let s = parent.iqra.Q.simi._data[i]
-        if (s) for (let x of s.split(' ')) {
-            if (!m[x]) addVerse(x)
+        let mm = addToMap(new Verse(i).cv)
+        for (let x of s.split(' ')) {
+            mm.add(x); simi[x] = mm
+            // if (x=='36:4') console.log(s, m)
         }
     }
-    let m = {}; addVerse(cv)
-    let a = []; for (let x in m) a.push(m[x])
-    return (a.length<2? null : a) 
+    console.log(Object.getOwnPropertyNames(simi).length)
+    for (let cv in simi) {
+        //convert Set to Array and sort each entry in idx
+        let a = [...simi[cv]].map(Verse.fromCV)
+        simi[cv] = a.sort((x,y) => x.idx-y.idx)
+    }
+    console.log(simi['36:4'])
+}
+class Verse {
+    constructor(i, c, v) {
+        this.idx = i
+        if (!c) [c, v] = toCV(i)
+        this.chap = c
+        this.verse = v
+    }
+    get cv() {
+        return this.chap+':'+this.verse
+    }
+    toHTML() {
+        return `<a href="/Kuran/reader.html#v=${this.cv}" 
+            target="iqra">${this.cv}</a>`
+    }
+    toString() {
+        return this.cv
+    }
+    static fromNumbers(c, v) {
+        return new Verse(indexOf(c, v), c, v)
+    }
+    static fromCV(cv) {
+        let [c, v] = cv.split(':')
+        if (isNaN(v)) return null
+        return Verse.fromNumbers(Number(c), Number(v))
+    }
 }
 function report() {
-    function toCVstr(i) {
-        let c = toChapter(i)
-        let v = c+':'+(i-last[c-1])
-        return `<a href="/Kuran/reader.html#v=${v}"
-                 target="iqra">${v}</a>`
-    }
     function toText(a) {
+        let convert = v => v.toHTML()
         if (!a) return cv+" benzeri yok"
-        a = a.sort((x,y) => x-y).map(toCVstr)
-        return cv+' -- '+a.length+' ayet\n'+a.join(' ')
+        return cv+' -- '+a.length+' ayet\n'
+                 +a.map(convert).join(' ')
     }
     let cv = inp.value
     if (!/\d+:\d+/.test(cv)) { //Normalize
         let [c, v] = cv.split(/\D/)
+        if (!cv || !v) return
         cv = c+':'+v
     }
     if (data.length > 9) data.shift()
-    data.push(toText(getBlock(cv)))
+    data.push(toText(simi[cv]))
     showData()
 }
 function showData() {
@@ -74,6 +116,7 @@ und.onclick = () => {
     if (data.length > 0) data.pop()
     showData()
 }
+init(); buttons.hidden = false
 inp.onchange = bul.onclick = report
 inp.value = '37:76'; report()
 </script>
