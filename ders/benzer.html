@@ -11,22 +11,39 @@
     pre {
         text-wrap: wrap;
     }
+    .column {
+        display: inline-block;
+        width: 160px;
+    }
 </style>
 <h3>Benzerlik Öbekleri &emsp; <button class=goBack>◀</button></h3>
 <div id=buttons hidden>
     <p>Sure:Ayet <input type=search id=inp size=10 />&ensp;
-    <button id=bul>Bul</button>&ensp;
+    <button id=bul>Öbek</button>&ensp;
     <button id=sil>Sil</button>&ensp;
     <button id=und>&lt;</button>&ensp;
 </div>
 <pre id=out></pre>
 <p>Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçlü bir öbek içinde bulunur. Benzerlik öbeklerinin çoğu ayet çiftleri olmakla birlikte, 40'tan fazla ayet içeren bir öbek de mevcut. 
-<p>Küçük benzerlik öbekleri: <br>
-    İkili --  <a href="/Kuran/reader.html#v=21:7" target="iqra">21:7</a><br>
-    Üçlü --   <a href="/Kuran/reader.html#v=78:6" target="iqra">78:6</a><br>
-    Dörtlü -- <a href="/Kuran/reader.html#v=17:2" target="iqra">17:2</a><br>
-    Yedili -- <a href="/Kuran/reader.html#v=43:1" target="iqra">43:1</a><br>
-    Dokuzlu -- <a href="/Kuran/reader.html#v=36:4" target="iqra">36:4</a><br>
+<div class=column>
+<p>Küçük öbekler: <br>
+    İkili --  <a href="#" class=action>21:7</a><br>
+    Üçlü --   <a href="#" class=action>78:6</a><br>
+    Dörtlü -- <a href="#" class=action>17:2</a><br>
+   Dokuzlu -- <a href="#" class=action>36:4</a><br>
+</div>
+<div class=column>
+<p>En büyük öbekler: <br>
+    34'lü --  <a href="#" class=action>2:8</a><br>
+    35'li --  <a href="#" class=action>2:32</a><br>
+    36'lı --  <a href="#" class=action>3:1</a><br>
+    44'lü --  <a href="#" class=action>3:5</a><br>
+</div>
+<p>Benzerlik ne işe yarar?<br>
+<ul>
+    <li>Ayetleri anlamakta yardımcı olur
+    <li>Korunmuşluğun göstergesidir
+</ul>
 <script src="/Kuran/code/utilities.js"></script>
 <script>
 "use strict";
@@ -51,7 +68,6 @@ function init() {
         let mm = addToMap(new Verse(i).cv)
         for (let x of s.split(' ')) {
             mm.add(x); simi[x] = mm
-            // if (x=='36:4') console.log(s, m)
         }
     }
     console.log(Object.getOwnPropertyNames(simi).length)
@@ -88,14 +104,13 @@ class Verse {
         return Verse.fromNumbers(Number(c), Number(v))
     }
 }
-function report() {
+function report(cv=inp.value) {
     function toText(a) {
         let convert = v => v.toHTML()
         if (!a) return cv+" benzeri yok"
         return cv+' -- '+a.length+' ayet\n'
                  +a.map(convert).join(' ')
     }
-    let cv = inp.value
     if (!/\d+:\d+/.test(cv)) { //Normalize
         let [c, v] = cv.split(/\D/)
         if (!cv || !v) return
@@ -117,8 +132,10 @@ und.onclick = () => {
     showData()
 }
 init(); buttons.hidden = false
-inp.onchange = bul.onclick = report
+inp.onchange = bul.onclick = (evt) => report()
 inp.value = '37:76'; report()
+for (let b of document.querySelectorAll('.action'))
+    b.onclick = (evt) => report(b.textContent)
 </script>
 
 <script src="init.js"></script>
