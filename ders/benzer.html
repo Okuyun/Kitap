@@ -14,35 +14,49 @@
     .column {
         display: inline-block;
         width: 160px;
+        margin: 0 15px;
+    }
+    button {
+        border: 2px solid;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 3px 6px;
+    }
+    .action {
+        width: 50px;
+        margin: 4px;
     }
 </style>
-<h3>Benzerlik Öbekleri &emsp; <button class=goBack>◀</button></h3>
+<h2>Benzerlik Öbekleri &emsp;
+    <button class=goBack title="Derslere git">◀</button></h2>
 <div id=buttons hidden>
-    <p>Sure:Ayet <input type=search id=inp size=10 />&ensp;
-    <button id=bul>Öbek</button>&ensp;
-    <button id=sil>Sil</button>&ensp;
-    <button id=und>&lt;</button>&ensp;
+    Sure:Ayet <input type=search id=inp size=10 />&ensp;
+    <button id=bul title="Ayetin benzerlerini bul">Öbek</button>&ensp;
+    <button id=sil title="Bütün satırları sil">Sil</button>&ensp;
+    <button id=und title="Son satırı geri al">&lt;</button>&ensp;
 </div>
 <pre id=out></pre>
 <p>Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçlü bir öbek içinde bulunur. Benzerlik öbeklerinin çoğu ayet çiftleri olmakla birlikte, 40'tan fazla ayet içeren bir öbek de mevcut. 
 <div class=column>
-<p>Küçük öbekler: <br>
-    İkili --  <a href="#" class=action>21:7</a><br>
-    Üçlü --   <a href="#" class=action>78:6</a><br>
-    Dörtlü -- <a href="#" class=action>17:2</a><br>
-   Dokuzlu -- <a href="#" class=action>36:4</a><br>
+<p><b>Küçük öbekler:</b> <p>
+    İkili &ensp;  <button class=action>21:7</button><br>
+    Üçlü &ensp;   <button class=action>78:6</button><br>
+    Dörtlü &ensp; <button class=action>17:2</button><br>
+   Dokuzlu &ensp; <button class=action>36:4</button><br>
 </div>
 <div class=column>
-<p>En büyük öbekler: <br>
-    34'lü --  <a href="#" class=action>2:8</a><br>
-    35'li --  <a href="#" class=action>2:32</a><br>
-    36'lı --  <a href="#" class=action>3:1</a><br>
-    44'lü --  <a href="#" class=action>3:5</a><br>
+<p><b>En büyük öbekler:</b> <p>
+    34'lü &ensp;  <button class=action>2:8</button><br>
+    35'li &ensp;  <button class=action>2:32</button><br>
+    36'lı &ensp;  <button class=action>3:1</button><br>
+    44'lü &ensp;  <button class=action>3:5</button><br>
 </div>
-<p>Benzerlik ne işe yarar?<br>
+<h3>Benzerlik ne işe yarar?</h3>
 <ul>
-    <li>Ayetleri anlamakta yardımcı olur
-    <li>Korunmuşluğun göstergesidir
+    <li>Ayetleri anlamakta yardımcı olur: Bir kelime dizisinin farklı bağlamlardaki anlamı da ilişkili olmalı. Böyle bir ayete anlam verirken, benzer ayetlerin anlamı göz önüne alınmalı. <br>
+    <a href="/Kuran/benzerlik.html" target=KK>Benzerlik örnekleri</a>
+    <li>Korunmuşluğun göstergesidir: Aynı kelime dizisi, farklı ayetlerde farklı edat ya da bağlaçlarla geçiyorsa, bu ayrıntının 1400 yıl korunması Kuran'ın bir mucizesidir. <br>
+    <a href="/Kitap/KK/korunmus.html" target=KK>Korunmuşluk örnekleri</a>
 </ul>
 <script src="/Kuran/code/utilities.js"></script>
 <script>
