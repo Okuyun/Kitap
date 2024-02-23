@@ -50,6 +50,11 @@ Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçl
     <button class=action>13:1</button>&ensp; 36'lı <br>
     <button class=action>11:4</button>&ensp; 44'lü <br>
 </div>
+<br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a06e2TbkRiY" 
+  title="YouTube video player" frameborder="0"  allowfullscreen
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+</iframe>
 <h3>Benzerlik ne işe yarar?</h3>
 <ul>
     <li>Ayetleri anlamakta yardımcı olur: Bir kelime dizisinin farklı bağlamlardaki anlamı da ilişkili olmalı. Böyle bir ayete anlam verirken, benzer ayetlerin anlamı göz önüne alınmalı. <br>
@@ -83,13 +88,13 @@ function init() {
             mm.add(x); simi[x] = mm
         }
     }
-    console.log(Object.getOwnPropertyNames(simi).length)
+    let n = Object.getOwnPropertyNames(simi).length
+    console.log(n+" verses have similarity")
     for (let cv in simi) {
         //convert Set to Array and sort each entry in idx
         let a = [...simi[cv]].map(Verse.fromCV)
         simi[cv] = a.sort((x,y) => x.idx-y.idx)
     }
-    console.log(simi['36:4'])
 }
 class Verse {
     constructor(i, c, v) {
