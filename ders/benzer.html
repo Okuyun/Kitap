@@ -35,16 +35,17 @@
     <button id=und title="Son satırı geri al">&lt;</button>&ensp;
 </div>
 <pre id=out></pre>
-Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçlü bir öbek içinde bulunur. Benzerlik öbeklerinin çoğu ayet çiftleri olmakla birlikte, 40'tan fazla ayet içeren bir öbek de mevcut. <br>
+Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçlü bir öbek oluşturuyor. Yukarıdaki ayet numaralarına dokunarak Iqra yazılımı içinde ayeti görebilirsiniz. Benzeri olan ayetlerin numarası mavi işaretli bir menüdür, bu menüden benzer ayetlere geçilebilir.
+<p>Benzerlik öbeklerinin çoğu ayet çiftleri olmakla birlikte, 40'tan fazla ayet içeren bir öbek de mevcut.</p>
 <div class=column>
-<p><b>Küçük öbekler:</b> <p>
+    <b>Küçük öbekler:</b> <br>
     <button class=action>21:7</button>&ensp; İkili <br>
     <button class=action>16:29</button>&ensp; Üçlü <br>
     <button class=action>40:53</button>&ensp; Dörtlü <br>
     <button class=action>36:4</button>&ensp; Dokuzlu <br>
 </div>
 <div class=column>
-<p><b>En büyük öbekler:</b> <p>
+    <b>En büyük öbekler:</b> <br>
     <button class=action>2:33</button>&ensp; 34'lü <br>
     <button class=action>2:32</button>&ensp; 35'li <br>
     <button class=action>13:1</button>&ensp; 36'lı <br>
@@ -59,9 +60,21 @@ Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçl
 <ul>
     <li>Ayetleri anlamakta yardımcı olur: Bir kelime dizisinin farklı bağlamlardaki anlamı da ilişkili olmalı. Böyle bir ayete anlam verirken, benzer ayetlerin anlamı göz önüne alınmalı. <br>
     <a href="/Kuran/benzerlik.html" target=KK>Benzerlik örnekleri</a>
-    <li>Korunmuşluğun göstergesidir: Aynı kelime dizisi, farklı ayetlerde farklı edat ya da bağlaçlarla geçiyorsa, bu ayrıntının 1400 yıl korunması Kuran'ın bir mucizesidir. <br>
+    <li>Korunmuşluğun göstergesidir: Aynı kelime dizisi, farklı ayetlerde farklı edat ya da bağlaçlarla geçiyorsa, bu ayrıntının 1400 yıl korunmuş olması Kuran-ı Kerim'in açık bir mucizesidir. <br>
     <a href="/Kitap/KK/korunmus.html" target=KK>Korunmuşluk örnekleri</a>
 </ul>
+<p>Yukarıdaki ilk madde, Kitabımızı anlamak için elbette daha önemli. Lakin, yazılımda kullanılan "mavi işaretli ayetler" anlam yönünde çok fayda sağlamadı. Öte yandan, ikinci maddedeki korunmuşluğun göstergesi olan bir çok örneği bu yöntemle buldum. <br>
+
+<h3>Benzerlik nasıl bulunur?</h3>
+<p>A Rajab'in FSMV Üniversitesinde mezuniyet projesi olarak yaptığı <b>Rehber</b> yazılımının <b>Simi</b> modülü verilen bir ayetin benzerlerini bulur. Örnek olarak seçilen ayetin benzerlerini şu linkte görebilirsiniz: <br>
+<a href="https://okuyun.github.io/Rehber/simi#39:72" target=simi>okuyun.github.io/Rehber/simi#39:72</a>
+<p>Iqra içinde, <b>Simi</b> modülünün hazırladığı benzerlik dosyası kullanılıyor:<br>
+<a href="https://okuyun.github.io/Kuran/data/simi.txt" target=KK>okuyun.github.io/Kuran/data/simi.txt</a><br>
+Bu dosyada bulunan ayetlerin numarası, Iqra yazılımımnda mavi renkle gösterilen bir menü olarak çalışır. Bir uygulama kısıtı: eleman sayısını 12 ile sınırladık. Benzer ayetler varsa, bu menüden kolayca seçilir. Mesela Neml suresinin 30. ayetinden 3 farklı yere gidebiliriz:<br>
+    <img src="/Kitap/KK/neml 30.png">
+<p>Metin benzerliği alanında iyi bilinen <a href="https://en.wikipedia.org/wiki/Cosine_similarity" target=KK>kosinüs ölçüsünü</a> kullandık. Her ayette geçen isim, sıfat ve fiillerin kökleri ile bir vektör yaptık. İki ayetin benzerliği, vektörlerin arasındaki açının kosinüsü olarak tanımlandı. Deneme-yanılma ile bulunan 0.8 gibi sabit bir değerin üstündeki ayet çiftleri benzerlik dosyasına eklendi.
+<p>Bu şekilde tanımlanan benzerlik bağıntısı simetriktir: A B'ye benziyorsa, B A'ya benzer. Fakat geçişli (transitive) değildir: A B'ye ve B C'ye benziyorsa, A C'ye benzemek zorunda değil. Benzerlik öbeklerini "transitive closure" olarak görebiliriz. Lakin, uygulamada mavi menülerdeki ayet sayısına koyduğumuz 12 sınırı, bazı yerlerde simetriyi bozuyor. Bu nedenle, öbekler denklik bağıntısı üretmiyor, bazı ayetlerden başlayınca öbeğin tamamı görülmüyor.
+<br> &emsp;
 <script src="/Kuran/code/utilities.js"></script>
 <script>
 "use strict";
