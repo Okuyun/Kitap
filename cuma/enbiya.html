@@ -26,11 +26,11 @@
   }
 </style>
 
-<h2>Enbiyanın Sözleri &emsp;<button onclick="mixData()">Karıştır</button></h2>
+<h2>Enbiyanın Sözleri &emsp;<button id="mixer">Karıştır</button></h2>
 
-<p>Büyük insanların sözleri de büyük olur. Aşağıda verilen ipuçlarını kullanarak, Kitabımızda adı geçen bazı nebilerin önemli sözlerini hatırlayalım. Bildiğimiz kadarı ile, sözleri tarih sırasında sunuyorum.
+<p>Büyük insanların sözleri de büyük olur. Aşağıda verilen ipuçlarını kullanarak, Kitabımızda adı geçen bazı nebilerin önemli sözlerini hatırlayalım. Bildiğimiz kadarı ile, sözleri tarih sırasında sunuyorum. Yukarıdaki "Karıştır" butonu ile sırayı değiştirebilirsiniz.
 </p>
-<p>Bunların çoğunda, ilgili peygamber dua makamında Rabbine yalvarıyor, diğerlerinde etrafındakilere sesleniyor. Ayete dokununca ilk seviye açılır, sözün sahibi ve mushaftaki yeri görünür. Peygamberin adına dokununca ayetin meali açılır.
+<p>Seçilen sözlerin çoğunda, ilgili peygamber dua makamında Rabbine yalvarıyor, diğerlerinde etrafındakilere sesleniyor. Ayete dokununca ilk seviye açılır, sözün sahibi ve mushaftaki yeri görünür. Peygamberin adına dokununca ayetin meali açılır.
 </p>
 <div id=main>
 <div>Arafat'ta pişmanlıkla tevbe eden iki kişi
@@ -57,14 +57,6 @@
         <span class="trans">Gemiye binin, yüzdüren ve durduran Allah’ın adıyla</span>
     </details>
 </details></div>
-<div>Büyük bir işi tamamlayanların duası
-<details>
-    <summary class="verse">rabbenâ tekabbel minnâ inneke entes-semî’ul-’alîm</summary>
-    <details>
-        <summary>Hz İbrahim &emsp; <a name="v=2:127">2:127</a></summary>
-        <span class="trans">Rabbimiz, bunu kabul et; Sensin her şeyi bilen, her şeyi duyan</span>
-    </details>
-</details></div>
 <div>Bir nebi kendisi için dua ediyor
 <details>
     <summary class="verse">rabbi heb lî hukmen veelhiknî bis-sâlihîn</summary>
@@ -87,6 +79,14 @@
     <details>
         <summary>Hz İsmail &emsp; <a name="v=37:102">37:102</a></summary>
         <span class="trans">Babacığım, sana emredileni yap</span>
+    </details>
+</details></div>
+<div>Büyük bir işi tamamlayanların duası
+<details>
+    <summary class="verse">rabbenâ tekabbel minnâ inneke entes-semî’ul-’alîm</summary>
+    <details>
+        <summary>Hz İbrahim &emsp; <a name="v=2:127">2:127</a></summary>
+        <span class="trans">Rabbimiz, bunu kabul et; Sensin her şeyi bilen, her şeyi duyan</span>
     </details>
 </details></div>
 <div>Kimi kime şikayet edelim?
@@ -156,13 +156,13 @@
 <div>Nimetleri göndereni hatırlamak
 <details>
     <summary class="verse">hâżâ min fadli rabbî</summary>
-    <img src="/Kitap/rama/minfadliRabbi.jpg" width=340>
-    <div class="center">
-        <a href="http://www.ozcay.com/mehmed/galeri#94" target="Kuran">Mehmed Özçay</a> 
-    </div>
     <details>
         <summary>Hz Süleyman &emsp; <a name="v=27:40">27:40</a></summary>
         <span class="trans">Şüphesiz ki bu, Rabbimin lütfundandır</span>
+        <img src="/Kitap/rama/minfadliRabbi.jpg" width=340>
+        <div class="center">
+            <a href="http://www.ozcay.com/mehmed/galeri#94" target="Kuran">Mehmed Özçay</a> 
+        </div>
     </details>
 </details></div>
 <div>Nimetleri neden severiz?
@@ -173,12 +173,12 @@
         <span class="trans">Rabbimi hatırlatmaları nedeniyle iyi şeylerden hoşlanırım</span>
     </details>
 </details></div>
-<div>Daha önce kimsenin yapmadığı bir zenginlik duası
+<div>Şükür ve başarı duasının ardından...
 <details>
-    <summary class="verse">rabbi-ġfir lî veheb lî mulken lâ yenbeġî liahadin min ba’dî</summary>
+    <summary class="verse">veedḣilnî birahmetike fî ‘ibâdikes-sâlihîn</summary>
     <details>
-        <summary>Hz Süleyman &emsp; <a name="v=38:35">38:35</a></summary>
-        <span class="trans">Rabbim, beni bağışla, benden sonra kimsenin ulaşamayacağı bir mülk ver</span>
+        <summary>Hz Süleyman &emsp; <a name="v=27:19">27:19</a></summary>
+        <span class="trans">Rahmetinle beni salih kullarının arasına kat!</span>
     </details>
 </details></div>
 <div>En zorlu dertler içinde bile şikayet yok
@@ -195,6 +195,10 @@
     <details>
         <summary>Hz Yunus &emsp; <a name="v=21:87">21:87</a></summary>
         <span class="trans">Senden başka tanrı yok, subhâneke, gerçekten haksızlık yaptım</span>
+        <img src="/Kitap/image/illa ente.jpg" width=340>
+        <div class="center">
+            <a href="https://tr.pinterest.com/pin/833869687226417394/" target="Kuran">Osman Özçay</a> 
+        </div>
     </details>
 </details></div>
 <div>Yaşlanmış bir nebi çocuk sahibi olmak istiyor
@@ -224,10 +228,10 @@
 <div>Mağarada iki kişi, biri diğerini teskin ediyor
 <details>
     <summary class="verse">lâ tahzen innallâhe ma’anâ</summary>
-    <img src="https://i.pinimg.com/originals/a4/aa/6d/a4aa6d2defba2dec0ccd97b3e6856702.jpg" width=340>
     <details>
         <summary>Hz Muhammed &emsp; <a name="v=9:40">9:40</a></summary>
         <span class="trans">Üzülme, şüphesiz ki Allah bizimledir</span>
+        <img src="https://i.pinimg.com/originals/a4/aa/6d/a4aa6d2defba2dec0ccd97b3e6856702.jpg" width=340>
     </details>
 </details></div>
 <div>Kıyamet gününde söylenecek bir söz
@@ -260,10 +264,18 @@ function shuffle(data) {
   }
 }
 function mixData() {
-    let d = [...main.children]
-    shuffle(d); main.innerHTML = ""
+    let d = [...sortedList] //copy
+    if (mixer.innerText == "Karıştır") {
+        shuffle(d); 
+        mixer.innerText = "Sırala"
+    } else {
+        mixer.innerText = "Karıştır"
+    }
+    main.innerHTML = ""
     for (let x of d) main.append(x)
 }
+var sortedList = [...main.children] 
+mixer.onclick = mixData
 function openAll(b) {
     main.querySelectorAll("details").forEach(x=>x.open=b)
 }
