@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<meta name="viewport"    content="width=device-width">
+<meta name="author"      content="M A Eyler, Istanbul, 2024" />
+<meta name="description" content="The oldest sheets of Quran" />
+<link rel="stylesheet" href="ders.css" media="all">
+<link rel="icon" href="/Kuran/image/icon.png">
+<title>Mesâhif-i Kadîme</title>
+<style>
+    table { font-size: small;}
+    td { min-width: 50px; }
+</style>
+
+<h2>Mesâhif-i Kadîme &emsp; <button class=goBack>◀</button></h2>
+
+<p>Dr Tayyar Altıkulaç'ın baş eseri olan <b>Mesâhif-i Kadîme</b>, en eski mushaflar hakkında bilgi verirken, Kur'ân-ı Kerim'in korunmuşluğunu gösteriyor.</p>
+<p>Hz Osman'ın aslından çoğaltarak 5 önemli merkeze gönderdiği (hepsi kaybolmuş) mushaflar arasında 44 adet harf farkı olduğu eskiden beri biliniyordu. Toplam 77.000 kelime içinde, anlamı değiştirmeyen 44 fark, binde yarım eder. Altıkulaç, 13 eski mushafı bu farklar açısından değerlendirerek her birinin hangi orijinalden kopyalandığını tahmin etmiş. Kitaptaki son tablo olarak, dünyada en çok basılmış "Matbu Fehd mushafı" da bu 44 fark üstünden değerlendirilmiş.</p>
+
+<table id=tablo></table>
+<p>Yukarıda ilk satırda, 2:116 ayetindeki <b>veqâlû</b> kelimesinin Şam mushafında vav olmadan yazıldığını okuyoruz. Bunun gibi, 6:63 ayetindeki <b>encânâ</b> kelimesi, Kûfe dışındaki 4 mushafta <b>enceytenâ</b> olarak yazılmış.</p>
+
+<p>Dersler <button class=goBack>◀</button>
+<br><br>
+</p>
+<script>
+"use strict";
+const DATA =
+`2:116	qwl	Ş	vav eksik	veqâlû	qâlû
+2:132	wSy	Ş D	elif fazla	vevassâ	veevsâ
+3:133	srE	Ş D	vav eksik	vesâri'û	sâri'û
+3:184	zbr	Ş	bi fazla	vez-zuburi	vebiz-zuburi
+4:66	qll	Ş	elif fazla	qalîl	qalîlen
+5:53	qwl	Ş M D	vav eksik	veyaqûlu	yaqûlu
+5:54	rdd	Ş D	dal çift	yertedde	
+6:32	dwr	Ş	lam tek 	veled-dâru	
+6:63	njw	Ş B M D	te fazla	encânâ	enceytenâ
+6:137	$rk	Ş	vav > hemze	şurekâuhum	
+7:3 	*kr	Ş	ye fazla	tezekkerûn	yetezekkerûn
+7:43	kwn	Ş	vav eksik	vemâ kunnâ	mâ kunnâ
+7:75	qwl	Ş	vav fazla	qâlel-meleu	veqâlel-meleu
+7:141	nje	Ş	nun > elif	enceynâkum	encâkum
+9:100	tHt	M	min fazla	tahtehâ	min tahtihâ
+9:107	Ax*	Ş D	vav eksik	vellezîne	ellezîne
+10:22	syr	Ş	sin > şin	yuseyyirukum	yenşurukum
+17:93	qwl	Ş M	elif fazla	qul 	qâle
+18:36	xyr	Ş M D	hâ > humâ	minhâ	minhumâ
+18:95	mkn	M	nun çift	mekkenniy	
+21:4	qwl	Ş B M D	elif eksik	qâle	qul
+21:30	rAy	M	vav eksik	evelem	elem
+23:87	qwl	B	elif fazla	lillâh	allâh`
+function makeTable() {
+  function line(str, i) {
+    let [verse, root, mushaf, diff, w1, w2] = str.split('\t')
+    let [c, v] = verse.split(':')
+    let url = "https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
+    let out = `<tr>
+      <td><a name="v=${verse}&r=${root}">${verse}</a></td>
+      <td><a href="${url}" target=Kuran>${w1}</a></td>
+      <td>${mushaf}</td><td>${w2}</td>
+      <td class=left>${diff}</td>
+    </tr>`
+    return out
+  }
+    let a = DATA.split('\n')
+    tablo.innerHTML = `<tr class=head>
+    <td>Ayet</td><td>Kelime</td><td>Mushaf</td><td>Kelime</td><td>Fark</td></tr>`
+        + a.map(line).join('\n')
+}
+function goBack() {
+    location.pathname = "/Kitap/ders/"
+}
+for (let b of document.querySelectorAll('.goBack'))
+    b.onclick = goBack
+makeTable()
+</script>
+
+<script src="init.js"></script>
