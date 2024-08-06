@@ -6,22 +6,22 @@
 <meta name="description" content="The oldest sheets of Quran" />
 <link rel="stylesheet" href="ders.css" media="all">
 <link rel="icon" href="/Kuran/image/icon.png">
-<title>Mesâhif-i Kadîme</title>
+<title>Matbu Fehd mushafı</title>
 <style>
     table { font-size: small;}
     td:nth-child(1) { width: 45px; }
     td:nth-child(2) { width: 82px; }
 </style>
 
-<h2>Mesâhif-i Kadîme &emsp; <button class=goBack>◀</button></h2>
+<h2>Matbu Fehd mushafı (*) &emsp; <button class=goBack>◀</button></h2>
 
 <p>Dr Tayyar Altıkulaç'ın baş eseri olan 
-<a href="https://korunmuskitap.blogspot.com/2024/07/mesahif.html" target=Kuran>Mesâhif-i Kadîme</a>, 
-en eski mushaflar hakkında bilgi verirken, Kur'ân-ı Kerim'in korunmuşluğunu gösteriyor. Kitaptaki son çizelge, dünyada standard haline gelmiş olan "Matbu Fehd mushafı"nı ilk mushaflarla kıyaslıyor. Söz konusu çizelgenin kopyası 
+<a href="https://korunmuskitap.blogspot.com/2024/07/mesahif.html" target=Kuran>Mesâhif-i Kadîm</a>, 
+en eski mushaflar hakkında bilgi verirken, Kur'ân-ı Kerim'in korunmuşluğunu gösteriyor. Kitaptaki son çizelge, dünyada standart haline gelmiş olan "Matbu Fehd mushafı"nı Osmanî mushaflarla kıyaslıyor. Söz konusu çizelgenin kopyası 
 <a href="Matbu Fehd mushafi.pdf" target=Kuran>burada</a> görülebilir</p>
-<p>Aşağıda üç parça halinde verilen çizelgede kullanılan kısaltmalar:<br>
+<p>Hz Osman'ın aslından çoğaltarak 5 önemli merkeze gönderdiği mushaflar arasında 44 adet harf farkı olduğu eskiden beri biliniyordu. Bu sayfada üç parça halinde verilen çizelgede kullanılan kısaltmalar, söz konusu merkezleri simgeliyor:<br>
 D Medine, M Mekke, K Kûfe, B Basra, Ş Şam </p>
-
+<p>Tabloların her satırında ayet numarasına dokununca, ayet <b>Iqra</b> yazılımda gösterilir. Kelimenin okunuşuna dokununca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
 <details>
   <p>Aşağıda ilk satırda, 2:116 ayetindeki <b>veqâlû</b> kelimesinin Şam mushafında <b>vav</b> olmadan yazıldığını görüyoruz. Bunun gibi, 6:63 ayetindeki <b>encânâ</b> kelimesi, Kûfe dışındaki 4 mushafta <b>enceytenâ</b> olarak yazılmış.</p>
   <summary>Birinci tablo: Bakara-Tevbe</summary>
@@ -38,9 +38,13 @@ D Medine, M Mekke, K Kûfe, B Basra, Ş Şam </p>
   <table id=tablo3></table>
 </details>
 <p>Söz konusu matbu mushafın Osmanî mushaflarlarla fark sayısı şöyle özetlenebilir:<br>
-  Medine 17, Mekke 27, Kûfe 3, Basra 9, Şam 33<br>
-Yani, bugün dünyanın her yerinde standard haline gelmiş olan Fehd mushafının, Hz Osman tarafından Kûfe'ye gönderilen el yazmasından sadece 3 farkı var: 77.000 kelime içinde on binde yarım bile değil!
+  Medine 17, Mekke 27, Kûfe 3, Basra 9, Şam 33
+</p><p>
+Yani, bugün (Türkiye hariç) dünyanın her yerinde okunmakta olan Fehd mushafı ile Hz Osman tarafından Kûfe'ye gönderilen el yazması arasında sadece 3 harf farkı var: 77.000 kelime içinde on binde yarım bile değil!
 </p><br>
+<p>(*) Matbu Fehd mushafının daha çok bilinen adı "Medine mushafı"dır, 1985'den beri 
+    <a target=Kuran href="https://en.wikipedia.org/wiki/King_Fahd_Complex_for_the_Printing_of_the_Holy_Quran#Production">her yıl milyonlarca</a> 
+basılmaktadır. Osmanî mushafla karışmasın diye, Altıkulaç'ın bu kitapta uygun gördüğü terimi kullandık.</p><br>
 <p>Dersler <button class=goBack>◀</button>
 <br>
 </p>
@@ -97,7 +101,8 @@ function makeTable(tablo, DATA) {
   function line(str, i) {
     let [verse, root, mushaf, diff, w1, w2] = str.split('\t')
     let [c, v] = verse.split(':')
-    let url = "https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
+    let url = //"https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
+  "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
     let out = `<tr>
       <td><a name="v=${verse}&r=${root}">${verse}</a></td>
       <td><a href="${url}" target=Kuran>${w1}</a></td>
