@@ -27,7 +27,7 @@
   }
 </style>
 
-<h2>İmlâ farkları &emsp; <button class=goBack>◀</button></h2>
+<h2>İmlâ farkları &emsp; <button><a href="kadime.html">◀</a></button></h2>
 
 <p>Kuran-ı Kerim'de <a href="./kiraat.html" target="finder">kıraat farklarının</a> varlığı ve bu farkların ne olduğu tevatür derecesinde bilinmektedir. Evet, pek çoğu için imlâ değişmiyor, ama 40 kadar ayette harf farkları var. Aşağıda tamamı verilen listenin sarı işaretlenen bir satırında kelimenin değiştiğini görüyoruz, diğerleri hep harf farkı.</p>
 <p>Kıraat konusunu anlamayan bazı şarkiyatçılar, mushaflarda olabilecek imlâ farklarını "yazıcı hatası" olarak görüyorlar. İslam alimleri ise, Hz Osman devrinde çoğaltılan ilk mushaflarda hata kabul etmiyor; sahabenin çok sıkı kontrolünden geçtiği için az sayıdaki bu farkların "tevatürle bilinen" kıraat farkı olduğunu söylüyor.</p>
@@ -66,7 +66,7 @@ erken dönem mushaflar hakkında bilgi verirken, Kur'ân-ı Kerim'in korunmuşlu
 <p>Hz Osman'ın aslından çoğaltarak 5 önemli merkeze gönderdiği mushaflar arasındaki harf farkları eskiden beri biliniyordu. Aşağıdaki tabloda kullanılan kısaltmalar, söz konusu merkezleri simgeliyor:<br>
 M Medine, C Mekke, K Kûfe, B Basra, S Şam/Suriye <br>
 (Şarkiyatçıların kullandığı kısaltma harfleri)</p>
-<p>Tablonunın her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
+<p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
 <p>Tablonun ilk satırında, 2:116 ayetindeki <b>veqâlû</b> kelimesinin Şam mushafında <b>vav</b> olmadan yazıldığını görüyoruz. Bunun gibi, 9. satırdaki (6:63) <b>encânâ</b> kelimesi, Kûfe dışındaki 4 mushafta <b>enceytenâ</b> olarak yazılmış.</p>
 
   <table id=tablo1></table>
@@ -91,7 +91,7 @@ Yani, bugün dünyanın her yerinde okunmakta olan mushaflar ile Hz Osman taraf�
     target=Kuran">Different spellings of the Qur’anic words</a> (Khazer Al Majali) 2004, s.100
 </ul>
 <br>
-<p>Dersler <button class=goBack>◀</button> &emsp; Temmuz 2024
+<p>Dersler <button><a href="kadime.html">◀</a></button> &emsp; Temmuz 2024
 </p>
 <script>
 "use strict";
@@ -120,8 +120,8 @@ const DATA1 =
 21:30	rAy	C	vav ⊖	evelem	elem
 23:87	qwl	B	⊕ elif	lillâh	allâh
 23:89	qwl	B	⊕ elif	lillâh	allâh
-23:112	qwl	S B C M	⊕ elif	qâle	qul	pink
-23:114	qwl	S B C M	⊕ elif	qâle	qul	pink
+23:112	qwl	S B C M	⊕ elif	qâle	qâle	pink
+23:114	qwl	S B C M	⊕ elif	qâle	qâle	pink
 25:25	nzl	C	⊕ nun	venuzzile	venunzilu
 26:217	wkl	S M	ve > fe	vetevekkel	fetevekkel
 27:21	Aty	C	⊕ nun	ye-tiyenniy	ye-tiyenneniy
@@ -160,11 +160,6 @@ function makeTable(tablo, DATA) {
     <th>Ayet</th><th>Standart</th><th>Belde</th><th>Değişik</th><th>Fark</th></tr>`
         + a.map(line).join('\n')
 }
-function goBack() {
-    location.pathname = "/Kitap/ders/"
-}
-for (let b of document.querySelectorAll('.goBack'))
-    b.onclick = goBack
 makeTable(tablo1, DATA1)
 </script>
 
