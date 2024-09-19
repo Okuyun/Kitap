@@ -59,9 +59,9 @@ Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçl
 <h3>Benzerlik ne işe yarar?</h3>
 <ul>
     <li>Ayetleri anlamakta yardımcı olur: Bir kelime dizisinin farklı bağlamlardaki anlamı da ilişkili olmalı. Böyle bir ayete anlam verirken, benzer ayetlerin anlamı göz önüne alınmalı. <br>
-    <a href="/Kuran/benzerlik.html" target=KK>Benzerlik örnekleri</a>
+    <a href="/Kuran/benzerlik.html" target=Kuran>Benzerlik örnekleri</a>
     <li>Korunmuşluğun göstergesidir: Aynı kelime dizisi, farklı ayetlerde farklı edat ya da bağlaçlarla geçiyorsa, bu ayrıntının 1400 yıl korunmuş olması Kuran-ı Kerim'in açık bir mucizesidir. <br>
-    <a href="/Kitap/KK/korunmus.html" target=KK>Korunmuşluk örnekleri</a>
+    <a href="/Kitap/KK/korunmus.html" target=Kuran>Korunmuşluk örnekleri</a>
 </ul>
 <p>Yukarıdaki ilk madde, Kitabımızı anlamak için elbette daha önemli. Lakin, yazılımda kullanılan "mavi işaretli ayetler" anlam yönünde çok fayda sağlamadı. Öte yandan, ikinci maddedeki korunmuşluğun göstergesi olan bir çok örneği bu yöntemle buldum. <br>
 
@@ -69,10 +69,10 @@ Burada seçilen 37:76 ayeti, kendisine benzeyen diğer iki ayetle birlikte üçl
 <p>A Rajab'in FSMV Üniversitesinde mezuniyet projesi olarak yaptığı <b>Rehber</b> yazılımının <b>Simi</b> modülü verilen bir ayetin benzerlerini bulur. Örnek olarak seçilen ayetin benzerlerini şu linkte görebilirsiniz: <br>
 <a href="https://okuyun.github.io/Rehber/simi#39:72" target=simi>okuyun.github.io/Rehber/simi#39:72</a>
 <p>Iqra içinde, <b>Simi</b> modülünün hazırladığı benzerlik dosyası kullanılıyor:<br>
-<a href="https://okuyun.github.io/Kuran/data/simi.txt" target=KK>okuyun.github.io/Kuran/data/simi.txt</a><br>
+<a href="https://okuyun.github.io/Kuran/data/simi.txt" target=Kuran>okuyun.github.io/Kuran/data/simi.txt</a><br>
 Bu dosyada bulunan ayetlerin numarası, Iqra yazılımımnda mavi renkle gösterilen bir menü olarak çalışır. Bir uygulama kısıtı: eleman sayısını 12 ile sınırladık. Benzer ayetler varsa, bu menüden kolayca seçilir. Mesela Neml suresinin 30. ayetinden 3 farklı yere gidebiliriz:<br>
     <img src="/Kitap/KK/neml 30.png">
-<p>Metin benzerliği alanında iyi bilinen <a href="https://en.wikipedia.org/wiki/Cosine_similarity" target=KK>kosinüs ölçüsünü</a> kullandık. Her ayette geçen isim, sıfat ve fiillerin kökleri ile bir vektör yaptık. İki ayetin benzerliği, vektörlerin arasındaki açının kosinüsü olarak tanımlandı. Deneme-yanılma ile bulunan 0.8 gibi sabit bir değerin üstündeki ayet çiftleri benzerlik dosyasına eklendi.
+<p>Metin benzerliği alanında iyi bilinen <a href="https://en.wikipedia.org/wiki/Cosine_similarity" target=Kuran>kosinüs ölçüsünü</a> kullandık. Her ayette geçen isim, sıfat ve fiillerin kökleri ile bir vektör yaptık. İki ayetin benzerliği, vektörlerin arasındaki açının kosinüsü olarak tanımlandı. Deneme-yanılma ile bulunan 0.8 gibi sabit bir değerin üstündeki ayet çiftleri benzerlik dosyasına eklendi.
 <p>Bu şekilde tanımlanan benzerlik bağıntısı simetriktir: A B'ye benziyorsa, B A'ya benzer. Fakat geçişli (transitive) değildir: A B'ye ve B C'ye benziyorsa, A C'ye benzemek zorunda değil. Benzerlik öbeklerini "transitive closure" olarak görebiliriz. Lakin, uygulamada mavi menülerdeki ayet sayısına koyduğumuz 12 sınırı, bazı yerlerde simetriyi bozuyor. Bu nedenle, öbekler denklik bağıntısı üretmiyor, bazı ayetlerden başlayınca öbeğin tamamı görülmüyor.
 <br> &emsp;
 <script src="/Kuran/code/utilities.js"></script>
