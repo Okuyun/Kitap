@@ -12,6 +12,7 @@
     .pink { background-color: #edd; }
     blockquote, table { font-size: small; }
     table { position: relative; }
+    td { margin: 3px; }
     td:nth-child(2) { width: 45px; }
     td:nth-child(3) { width: 82px; }
     th {
@@ -22,7 +23,8 @@
     }
     .yellow { background-color: #ffb; }
     .pink { background-color: #edd; }
-  @media screen and (max-width: 460px) {
+    .düz { font-weight: normal; }
+  @media screen and (max-width: 400px) {
     table  { margin: -8px;}
   }
 </style>
@@ -34,7 +36,7 @@
 <p>Dr Tayyar Altıkulaç'ın baş eseri olan 
 <a href="https://korunmuskitap.blogspot.com/2024/07/mesahif.html" target=Kuran>Mesâhif-i Kadîme</a>, 
 erken dönem mushaflar hakkında bilgi verirken, Kur'ân-ı Kerim'in korunmuşluğunu gösteriyor. Kitaptaki son çizelge, hicretin 30. yılında yazılan Hz Osman mushaflarını, dünyada standart haline gelmiş olan "Matbu Fehd mushafı" (*) ile kıyaslıyor. Söz konusu çizelgenin kopyası 
-<a href="img/Matbu Fehd mushafi.pdf" target=Kuran>burada</a> görülebilir.</p>
+<a href="https://korunmuskitap.blogspot.com/2024/09/tablo.html" target=Kuran>burada</a> görülebilir.</p>
 <blockquote>
   (*) Matbu Fehd mushafının daha çok bilinen adı "Medine mushafı"dır, 1985'den beri 
   <a target=Kuran href="https://en.wikipedia.org/wiki/King_Fahd_Complex_for_the_Printing_of_the_Holy_Quran#Production">her yıl milyonlarca</a> basılmaktadır, muhtemelen dünyada en çok okunan kitaptır. 
@@ -96,68 +98,68 @@ Yani, bugün dünyanın her yerinde okunmakta olan mushaflar ile Hz Osman taraf�
 <script>
 "use strict";
 const DATA1 =
-`2:116	qwl	S	vav ⊖	veqâlû	qâlû
-2:132	wSy	S M	⊕ elif	vevassâ	veevsâ
-3:133	srE	S M	vav ⊖	vesâri'û	sâri'û
-3:184	zbr	S	⊕ be	vez-zuburi	vebiz-zuburi
-4:66	qll	S	⊕ elif	qalîlun	qalîlen
-5:53	qwl	S C M	vav ⊖	veyaqûlu	yaqûlu
-5:54	rdd	S M	⊕ dal	yertedde	yertedid
-6:32	dwr	S	lam ⊖ 	veled-dâru	veledâru
-6:63	njw	S B C M	⊕ te	encânâ	enceytenâ
-6:137	$rk	S	vav ⊖	şurekâuhum	şurekâihim
-7:3 	*kr	S	⊕ ye	tezekkerûn	yetezekkerûn
-7:43	kwn	S	vav ⊖	vemâ kunnâ	mâ kunnâ
-7:75	qwl	S	⊕ vav	qâle	veqâle
-7:141	nje	S	nun > elif	enceynâkum	encâkum
-9:100	tHt	C	⊕ <b>min</b>	tahtehâ	min tahtihâ
-9:107	Ax*	S M	vav ⊖	vellezîne	ellezîne
-10:22	syr	S	syr > nşr	<small>yuseyyirukum</small>	yenşurukum	yellow
-17:93	qwl	S C	⊕ elif	qul 	qâle	pink
-18:36	xyr	S C M	⊕ mim	minhâ	minhumâ
-18:95	mkn	C	⊕ nun	mekkenniy	mekkeneniy
-21:4	qwl	S B C M	elif ⊖	qâle	qul	pink
-21:30	rAy	C	vav ⊖	evelem	elem
-23:87	qwl	B	⊕ elif	lillâh	allâh
-23:89	qwl	B	⊕ elif	lillâh	allâh
-23:112	qwl	S B C M	⊕ elif	qâle	qâle	pink
-23:114	qwl	S B C M	⊕ elif	qâle	qâle	pink
-25:25	nzl	C	⊕ nun	venuzzile	venunzilu
-26:217	wkl	S M	ve > fe	vetevekkel	fetevekkel
-27:21	Aty	C	⊕ nun	ye-tiyenniy	ye-tiyenneniy
-28:37	qwl	C	vav yok	veqâle	qâle
-36:35	Eml	K	he ⊖	'amilethu	'amilet
-39:64	Amr	S	⊕ nun	te-murunniy	te-murûneniy
-40:21	$dd	S	he > kef	minhum	minkum
-40:26	Zhr	S B C M	ev > ve	ev en	veen
-42:30	ksb	S M	fe ⊖	febimâ	bimâ
-43:68	Ebd	S M	⊕ ye	yâ'ibâdi	yâ'ibâdiy
-43:71	$hw	B K C	he ⊖	teştehîhi	teştehî
-46:15	Hsn	S B C M	elif ⊖	ihsânen	husnen
-47:18	Aty	K C	ye ⊖	te-tiyehum	te-tihim
-55:12	ESf	S	vav > elif	zul-'asfi	zel-'asfi
-55:78	jll	S	ye > vav	zil-celâli	zul-celâli
-57:10	kll	S	elif ⊖	vekullen	vekullun
-57:24	gny	S M	<b>huve</b> ⊖	huvel-ganiy	el-ganiy
-91:15	xwf	S M	ve > fe	velâ	felâ`
+`2:116	qwl	S	vav 		veqâlû	qâlû
+2:132	wSy	S M		 elif	vevassâ	veevsâ
+3:133	srE	S M	vav 		vesâri'û	sâri'û
+3:184	zbr	S		 be	vez-zuburi	vebiz-zuburi
+4:66	qll	S		 elif	qalîlun	qalîlen
+5:53	qwl	S C M	vav 		veyaqûlu	yaqûlu
+5:54	rdd	S M		 dal	yertedde	yertedid
+6:32	dwr	S	lam 	 	veled-dâru	veledâru
+6:63	njw	SBCM		 te	encânâ	enceytenâ
+6:137	$rk	S	vav 		şurekâuhum	şurekâihim
+7:3 	*kr	S		 ye	tezekkerûn	yetezekkerûn
+7:43	kwn	S	vav 		vemâ kunnâ	mâ kunnâ
+7:75	qwl	S		 vav	qâle	veqâle
+7:141	nje	S	nun	elif	enceynâkum	encâkum
+9:100	tHt	C		 min	tahtehâ	min tahtihâ
+9:107	Ax*	S M	vav 		vellezîne	ellezîne
+10:22	syr	S	(syr)	(nşr)	<small>yuseyyirukum</small>	yenşurukum	yellow
+17:93	qwl	S C		 elif	qul 	qâle	pink
+18:36	xyr	S C M		 mim	minhâ	minhumâ
+18:95	mkn	C		 nun	mekkenniy	mekkeneniy
+21:4	qwl	SBCM	elif 		qâle	qul	pink
+21:30	rAy	C	vav 		evelem	elem
+23:87	qwl	B		 elif	lillâh	allâh
+23:89	qwl	B		 elif	lillâh	allâh
+23:112	qwl	SBCM		 elif	qâle	qâle	pink
+23:114	qwl	SBCM		 elif	qâle	qâle	pink
+25:25	nzl	C		 nun	venuzzile	venunzilu
+26:217	wkl	S M	ve	fe	vetevekkel	fetevekkel
+27:21	Aty	C		 nun	ye-tiyenniy	ye-tiyenneniy
+28:37	qwl	C	vav		veqâle	qâle
+36:35	Eml	K	he 		'amilethu	'amilet
+39:64	Amr	S		 nun	te-murunniy	te-murûneniy
+40:21	$dd	S	he	kef	minhum	minkum
+40:26	Zhr	SBCM	elif		ev en	veen
+42:30	ksb	S M	fe 		febimâ	bimâ
+43:68	Ebd	S M		 ye	yâ'ibâdi	yâ'ibâdiy
+43:71	$hw	B K C	he 		teştehîhi	teştehî
+46:15	Hsn	SBCM	elif 		ihsânen	husnen
+47:18	Aty	K C	ye 		te-tiyehum	te-tihim
+55:12	ESf	S	vav	elif	zul-'asfi	zel-'asfi
+55:78	jll	S	ye	vav	zil-celâli	zul-celâli
+57:10	kll	S	elif 		vekullen	vekullun
+57:24	gny	S M	huve 		huvel-ganiy	el-ganiy
+91:15	xwf	S M	ve	fe	velâ	felâ`
 function makeTable(tablo, DATA) {
   function line(str, i) {
-    let [verse, root, city, diff, w1, w2, col] = str.split('\t')
+    let [verse, root, city, minus, plus, w1, w2, col] = str.split('\t')
     let [c, v] = verse.split(':')
     let color = col? `class=${col}` : ""
     let url = //"https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
   "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
-    let out = `<tr><td>${i+1}</td>
-      <td><a name="v=${verse}&r=${root}">${verse}</a></td>
-      <td><a href="${url}" target=Kuran>${w1}</a></td>
-      <td>${city}</td><td ${color}>${w2}</td>
-      <td class=left>${diff}</td>
+    let out = `<tr><td>${i+1}
+      <td><a name="v=${verse}&r=${root}">${verse}</a>
+      <td><a href="${url}" target=Kuran>${w1}</a>
+      <td>${city}<td ${color}>${w2}
+      <td>${minus}<td>${plus}
     </tr>`
     return out
   }
     let a = DATA.split('\n')
-    tablo.innerHTML = `<tr><th>No</th>
-    <th>Ayet</th><th>Standart</th><th>Belde</th><th>Değişik</th><th>Fark</th></tr>`
+    tablo.innerHTML = `<tr><th>No
+    <th>Ayet<th>Standart<th>Belde<th>Değişik<th class=düz>Eksik<th class=düz>Fazla</tr>`
         + a.map(line).join('\n')
 }
 makeTable(tablo1, DATA1)
