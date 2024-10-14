@@ -160,7 +160,7 @@ function makeTable(tablo, DATA) {
   }
     let a = DATA.split('\n')
     tablo.innerHTML = `<tr><th>No
-    <th>Ayet<th>Standart<th>Belde<th>Değişik<th class=düz>Eksik<th class=düz>Fazla</tr>`
+    <th>Ayet<th>Standart<th>Belde<th>Varyant<th class=düz>Eksik<th class=düz>Fazla</tr>`
         + a.map(line).join('\n')
 }
 makeTable(tablo1, DATA1)

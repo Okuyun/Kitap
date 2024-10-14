@@ -47,23 +47,26 @@
 <script>
 "use strict";
 function makeTable() {
-    let a = [], i = 0
-    let kk = Object.getOwnPropertyNames(VD._data)
-    kk.pop() // remove length (last key in kk)
-    for (let k of kk) {
-      let {cv, num, rdr, word, rgn, rasm} = VD._data[k]
-      if (rgn && rgn !== '*') continue
+  function addVariant(x) {
+      let {cv, num, rdr, word, rgn, rasm} = x
+      if (rgn && rgn !== '*') return
       let [c, v] = cv.split(':')
       let url = 
 "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
       a.push(`<td>${++i}
         <td><a target=iqra href="/Kuran/reader.html#v=${cv}">${cv}</a>
-        <td>${rdr}<td><a target=Kuran href="${url}">${word}</a>\n`)
+        <td>${rdr}<td><a target=Kuran href="${url}">${word}</a>\n`)   
+  }
+    let a = [], i = 0
+    let kk = Object.getOwnPropertyNames(VD._data)
+    kk.pop() // remove length (last key in kk)
+    for (let k of kk) {
+      let d = VD.variants(k)
+      if (d) d.forEach(addVariant)
     }
-    console.log(i, "entries in VariantData")
+    console.log(i+" entries in the table")
     tablo.innerHTML 
-    = `<tr><th>No<th>Ayet<th>Kari<th>Değişik<tr>`
-        + a.join('\n<tr>')
+    = `<tr><th>No<th>Ayet<th>Kari<th>Varyant<tr>`+ a.join('\n<tr>')
 }
 let VD  = new VariantData('/Kuran/data/variants.txt', makeTable)
 </script>
