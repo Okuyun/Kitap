@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<meta name="viewport"    content="width=device-width">
+<meta name="author"      content="M A Eyler, Istanbul, 2024" />
+<meta name="description" content="The oldest sheets of Quran" />
+<link rel="stylesheet" href="ders.css" media="all">
+<link rel="icon" href="/Kuran/image/icon.png">
+<title>Iqra fark listesi</title>
+<style>
+    img { max-width: 400px; }
+    blockquote, table { font-size: small; }
+    table {
+      position: relative;
+      background-color: white;
+    }
+    td {  padding: 6px 10px; }
+    th {
+      background-color: #eee; /* A Rajab */
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+    }
+    .yellow { background-color: #ffb; }
+    .pink { background-color: #edd; }
+    .düz { font-weight: normal; }
+  @media screen and (max-width: 400px) {
+    table  { margin: -8px;}
+  }
+</style>
+
+<h2>Iqra fark listesi &emsp; <button><a href="kadime.html">◀</a></button></h2>
+
+<p>Hicretten 3 asır sonra 900'lü yıllarda, Abbasi İslam devletinin merkezi olan Bağdat'ta Kurân'ın farklı okunuşları hakkında çok önemli bir tasnif çalışması yapıldı: İbn Mücâhid, belirli beş merkezden (Medine, Mekke, Basra, Şam, Kûfe) seçtiği yedi imamın kıraatini ilk defa bir araya getirerek <b>Kitâbus-Sebʿa fil-ḳırâʾât</b> (Yedi Kıraat) adlı eserini yazdı. Bundan bir asır sonra Endülüs'te Ebû ʿAmr ed-Dânî, <b>Teysir</b> isimli meşhur kitabında söz konusu yedi kıraati kolayca takip edilir bir hale getirdi. </p>
+<p>1930 senesinde bu eser, Pretzl isimli Alman şarkiyatçı tarafından İstanbul'da tekrar yayınladı. Yaklaşık bir asır sonra da, Hollanda'lı M van Putten aynı kitabı İngilizce'ye çevirdi ve ön bilgiler ekleyerek genel kullanıma sundu. Aşağıdaki tablo Putten'in bu kıymetli çalışmasından süzülmüştür, <a target=Kuran href="https://okuyun.github.io/Kuran/guideQ.html#tesekkur">teşekkür ederiz</a>.</p>
+
+  <table id=tablo></table>
+<blockquote></blockquote>
+
+<p></p>
+<br>
+<p>Mesâhif <button><a href="kadime.html">◀</a></button> &emsp; Ekim 2024
+</p>
+<script src="/Kuran/code/common.js"></script>
+<script src="/Kuran/code/model.js"></script>
+<script src="/Kuran/code/utilities.js"></script>
+<script>
+"use strict";
+function makeTable() {
+    let a = [], i = 0
+    let kk = Object.getOwnPropertyNames(VD._data)
+    kk.pop() // remove length (last key in kk)
+    for (let k of kk) {
+      let {cv, num, rdr, word, rgn, rasm} = VD._data[k]
+      if (rgn && rgn !== '*') continue
+      let [c, v] = cv.split(':')
+      let url = 
+"https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
+      a.push(`<td>${++i}
+        <td><a target=iqra href="/Kuran/reader.html#v=${cv}">${cv}</a>
+        <td>${rdr}<td><a target=Kuran href="${url}">${word}</a>\n`)
+    }
+    console.log(i, "entries in VariantData")
+    tablo.innerHTML 
+    = `<tr><th>No<th>Ayet<th>Kari<th>Değişik<tr>`
+        + a.join('\n<tr>')
+}
+let VD  = new VariantData('/Kuran/data/variants.txt', makeTable)
+</script>
+
+<!-- <script src="init.js"></script> fails to run, because of async -->
