@@ -69,7 +69,7 @@ erken dönem mushaflar hakkında bilgi verirken, Kur'ân-ı Kerim'in korunmuşlu
 <p>Hz Osman'ın aslından çoğaltarak 5 önemli merkeze gönderdiği mushaflar arasındaki harf farkları eskiden beri biliniyordu. Aşağıdaki tabloda kullanılan kısaltmalar, söz konusu merkezleri simgeliyor:<br>
 M Medine, C Mekke, B Basra, S Şam/Suriye, K Kûfe <br>
 (Şarkiyatçıların kullandığı kısaltma harfleri)</p>
-<p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
+<p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
 <p>Tablonun ilk satırında, 2:116 ayetindeki <b>veqâlû</b> kelimesinin Şam mushafında <b>vav</b> olmadan yazıldığını görüyoruz. Bunun gibi, 9. satırdaki (6:63) <b>encânâ</b> kelimesi, Kûfe dışındaki 4 mushafta <b>enceytenâ</b> olarak yazılmış.</p>
 
   <table id=tablo1></table>
@@ -151,16 +151,16 @@ function makeTable(tablo, DATA) {
     let url = //"https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
   "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
     let out = `<tr><td>${i+1}
-      <td><a name="v=${verse}&r=${root}">${verse}</a>
-      <td><a href="${url}" target=Kuran>${w1}</a>
-      <td>${city}<td ${color}>${w2}
+      <td><a name="v=${verse}">${verse}</a>
+      <td ${color}>${w1}<td>${city}
+      <td><a href="${url}" target=Kuran>${w2}</a>
       <td>${minus}<td>${plus}
     </tr>`
     return out
   }
     let a = DATA.split('\n')
     tablo.innerHTML = `<tr><th>No
-    <th>Ayet<th>Standart<th>Belde<th>Varyant<th class=düz>Eksik<th class=düz>Fazla</tr>`
+    <th>Ayet<th>Standart<th>Bölge<th>Varyant<th class=düz>Eksik<th class=düz>Fazla</tr>`
         + a.map(line).join('\n')
 }
 makeTable(tablo1, DATA1)

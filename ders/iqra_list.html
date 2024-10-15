@@ -31,11 +31,23 @@
 
 <h2>Iqra fark listesi &emsp; <button><a href="kadime.html">◀</a></button></h2>
 
-<p>Hicretten 3 asır sonra 900'lü yıllarda, Abbasi İslam devletinin merkezi olan Bağdat'ta Kurân'ın farklı okunuşları hakkında çok önemli bir tasnif çalışması yapıldı: İbn Mücâhid, belirli beş merkezden (Medine, Mekke, Basra, Şam, Kûfe) seçtiği yedi imamın kıraatini ilk defa bir araya getirerek <b>Kitâbus-Sebʿa fil-ḳırâʾât</b> (Yedi Kıraat) adlı eserini yazdı. Bundan bir asır sonra Endülüs'te Ebû ʿAmr ed-Dânî, <b>Teysir</b> isimli meşhur kitabında söz konusu yedi kıraati kolayca takip edilir bir hale getirdi. </p>
+<p>Hicretten 3 asır sonra 900'lü yıllarda, Abbasi İslam devletinin merkezi olan Bağdat'ta Kurân'ın farklı okunuşları hakkında çok önemli bir tasnif çalışması yapıldı: İbn Mücâhid, belirli beş merkezden (Medine, Mekke, Basra, Şam, Kûfe) seçtiği yedi imamın kıraatini ilk defa bir araya getirerek <b>Kitâbus-Sebʿa fil-ḳırâʾât</b> (Yedi Kıraat) adlı eserini yazdı. Bundan bir asır sonra Endülüs'te Ebû ʿAmr ed-Dânî, <b>et-Teysīr</b> isimli meşhur kitabında söz konusu yedi kıraati kolayca takip edilir bir hale getirdi. </p>
 <p>1930 senesinde bu eser, Pretzl isimli Alman şarkiyatçı tarafından İstanbul'da tekrar yayınladı. Yaklaşık bir asır sonra da, Hollanda'lı M van Putten aynı kitabı İngilizce'ye çevirdi ve ön bilgiler ekleyerek genel kullanıma sundu. Aşağıdaki tablo Putten'in bu kıymetli çalışmasından süzülmüştür, <a target=Kuran href="https://okuyun.github.io/Kuran/guideQ.html#tesekkur">teşekkür ederiz</a>.</p>
+<p>Kıraat varyantlarının pek çoğu söyleyiş (lehçe) ve hareke farklarıdır, değişen bir harf yoksa tabloda göstermedim. Harf farklarının imlâya yansımadığı farklarıdır aşağıdaki tabloya aldım, imlâ farklarını <a href="./mesahif.html" target="finder">başka bir tabloda</a> gösterdim.</p>
+<pre>et-Teysīr'de <a href="https://islamansiklopedisi.org.tr/kiraat--ilim" target=Kuran>kıraat imamları</a>:
+1 Nāfi`      Medine
+2 Ibn Kesīr  Mekke
+3 Ebū `Amr   Basra
+4 Ibn `Āmir  Şam
+5 `Āsım      Kûfe
+6 Hamza      Kûfe
+7 el-Kisā'ī  Kûfe
+</pre>
+<p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
+<p>Tablonun ilk satırında, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Bunun gibi, 2:49 ayetindeki <b>naġfir</b> kelimesini iki imam biraz farklı okumuş.</p>
 
   <table id=tablo></table>
-<blockquote></blockquote>
+<blockquote class=yellow>Tablo henüz tamam değil</blockquote>
 
 <p></p>
 <br>
@@ -48,14 +60,14 @@
 "use strict";
 function makeTable() {
   function addVariant(x) {
-      let {cv, num, rdr, word, rgn, rasm} = x
+      let {cv, num, rdr, word, rgn, rasm, std} = x
       if (rgn && rgn !== '*') return
       let [c, v] = cv.split(':')
       let url = 
 "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
       a.push(`<td>${++i}
         <td><a target=iqra href="/Kuran/reader.html#v=${cv}">${cv}</a>
-        <td>${rdr}<td><a target=Kuran href="${url}">${word}</a>\n`)   
+        <td>${std}<td>${rdr}<td><a target=Kuran href="${url}">${word}</a>\n`)
   }
     let a = [], i = 0
     let kk = Object.getOwnPropertyNames(VD._data)
@@ -66,7 +78,8 @@ function makeTable() {
     }
     console.log(i+" entries in the table")
     tablo.innerHTML 
-    = `<tr><th>No<th>Ayet<th>Kari<th>Varyant<tr>`+ a.join('\n<tr>')
+    = `<tr><th>No<th>Ayet<th>Standart<th>Kıraat<th>Varyant<tr>`
+      + a.join('\n<tr>')
 }
 let VD  = new VariantData('/Kuran/data/variants.txt', makeTable)
 </script>
