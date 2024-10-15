@@ -33,7 +33,7 @@
 
 <p>Hicretten 3 asır sonra 900'lü yıllarda, Abbasi İslam devletinin merkezi olan Bağdat'ta Kurân'ın farklı okunuşları hakkında çok önemli bir tasnif çalışması yapıldı: İbn Mücâhid, belirli beş merkezden (Medine, Mekke, Basra, Şam, Kûfe) seçtiği yedi imamın kıraatini ilk defa bir araya getirerek <b>Kitâbus-Sebʿa fil-ḳırâʾât</b> (Yedi Kıraat) adlı eserini yazdı. Bundan bir asır sonra Endülüs'te Ebû ʿAmr ed-Dânî, <b>et-Teysīr</b> isimli meşhur kitabında söz konusu yedi kıraati kolayca takip edilir bir hale getirdi. </p>
 <p>1930 senesinde bu eser, Pretzl isimli Alman şarkiyatçı tarafından İstanbul'da tekrar yayınladı. Yaklaşık bir asır sonra da, Hollanda'lı M van Putten aynı kitabı İngilizce'ye çevirdi ve ön bilgiler ekleyerek genel kullanıma sundu. Aşağıdaki tablo Putten'in bu kıymetli çalışmasından süzülmüştür, <a target=Kuran href="https://okuyun.github.io/Kuran/guideQ.html#tesekkur">teşekkür ederiz</a>.</p>
-<p>Kıraat varyantlarının pek çoğu söyleyiş (lehçe) ve hareke farklarıdır, değişen bir harf yoksa tabloda göstermedim. Harf farklarının imlâya yansımadığı farklarıdır aşağıdaki tabloya aldım, imlâ farklarını <a href="./mesahif.html" target="finder">başka bir tabloda</a> gösterdim.</p>
+<p>Kıraat varyantlarının pek çoğu söyleyiş (lehçe) ve hareke farklarıdır, değişen bir harf yoksa bunları tabloda göstermedim. Harf farklarının imlâya yansımadığı durumları aşağıdaki tabloda, imlâ farklarını <a href="./mesahif.html#tablo1">başka bir tabloda</a> gösterdim.</p>
 <pre>et-Teysīr'de <a href="https://islamansiklopedisi.org.tr/kiraat--ilim" target=Kuran>kıraat imamları</a>:
 1 Nāfi`      Medine
 2 Ibn Kesīr  Mekke
@@ -44,9 +44,9 @@
 7 el-Kisā'ī  Kûfe
 </pre>
 <p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
-<p>Tablonun ilk satırında, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Bunun gibi, 2:49 ayetindeki <b>naġfir</b> kelimesini iki imam biraz farklı okumuş.</p>
+<p>Aşağıda ilk satırda, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Bunun gibi, 2:49 ayetindeki <b>naġfir</b> kelimesini iki imam biraz farklı okumuş.</p>
 
-  <table id=tablo></table>
+  <table id=tablo1></table>
 <blockquote class=yellow>Tablo henüz tamam değil</blockquote>
 
 <p></p>
@@ -63,6 +63,7 @@ function makeTable() {
       let {cv, num, rdr, word, rgn, rasm, std} = x
       if (rgn && rgn !== '*') return
       let [c, v] = cv.split(':')
+      if (rdr.length > 7) rdr = rdr.replaceAll(' ','')
       let url = 
 "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
       a.push(`<td>${++i}
@@ -77,7 +78,7 @@ function makeTable() {
       if (d) d.forEach(addVariant)
     }
     console.log(i+" entries in the table")
-    tablo.innerHTML 
+    tablo1.innerHTML 
     = `<tr><th>No<th>Ayet<th>Standart<th>Kıraat<th>Varyant<tr>`
       + a.join('\n<tr>')
 }
