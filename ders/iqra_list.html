@@ -43,12 +43,23 @@
 6 Hamza      Kûfe
 7 el-Kisā'ī  Kûfe
 </pre>
+<p>Bütün kıraat farkları beş grupta toplanabilir. Bunların dördü, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farklı imlâ gerektiren beşinci grubu ayrı bir sayfada anlattım:
+<ol>
+    <li>Şive/lehçe farkları
+    <li>Hareke farkları
+    <li>Farklı harf, aynı kelime
+    <li>Farklı kelime, aynı imlâ
+    <li><a href="./mesahif.html#tablo1">Farklı imlâ</a>
+</ol>
+<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Üçüncü ve dördüncü grupta kıraat farkı olan (yaklaşık 200) ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için sarı renkle işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
 <p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
-<p>Aşağıda ilk satırda, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Bunun gibi, 2:49 ayetindeki <b>naġfir</b> kelimesini iki imam biraz farklı okumuş.</p>
+<p>Aşağıda ilk satırda, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Hemen altında, 2:58 ayetinde <b>naġfir</b> kelimesinin iki farklı okunuşu görülüyor.</p>
 
   <table id=tablo1></table>
-<blockquote class=yellow>Tablo henüz tamam değil</blockquote>
-
+<blockquote>
+  Sarı işaretli satırlar, kelime farkı olan 13 ayet.
+</blockquote>
+<p class=yellow><b>Tablo henüz tamam değil</b></p>
 <p></p>
 <br>
 <p>Mesâhif <button><a href="kadime.html">◀</a></button> &emsp; Ekim 2024
@@ -63,12 +74,14 @@ function makeTable() {
       let {cv, num, rdr, word, rgn, rasm, std} = x
       if (rgn && rgn !== '*') return
       let [c, v] = cv.split(':')
+      let color = (rgn == '*')? 'class=yellow' : ''
       if (rdr.length > 7) rdr = rdr.replaceAll(' ','')
       let url = 
 "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
       a.push(`<td>${++i}
         <td><a target=iqra href="/Kuran/reader.html#v=${cv}">${cv}</a>
-        <td>${std}<td>${rdr}<td><a target=Kuran href="${url}">${word}</a>\n`)
+        <td ${color}>${std}<td>${rdr}
+        <td><a target=Kuran href="${url}">${word}</a>\n`)
   }
     let a = [], i = 0
     let kk = Object.getOwnPropertyNames(VD._data)
