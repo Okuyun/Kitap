@@ -1,0 +1,18 @@
+    img { max-width: 400px; }
+    blockquote, table { font-size: small; }
+    table {
+      position: relative;
+      background-color: white;
+    }
+    th {
+      background-color: #eee; /* A Rajab */
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+    }
+    .yellow { background-color: #ffb; }
+    .pink { background-color: #edd; }
+    .düz { font-weight: normal; }
+  @media screen and (max-width: 400px) {
+    table  { margin: -8px;}
+  }

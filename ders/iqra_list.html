@@ -5,29 +5,9 @@
 <meta name="author"      content="M A Eyler, Istanbul, 2024" />
 <meta name="description" content="The oldest sheets of Quran" />
 <link rel="stylesheet" href="ders.css" media="all">
+<link rel="stylesheet" href="variants.css" media="all">
 <link rel="icon" href="/Kuran/image/icon.png">
 <title>Iqra fark listesi</title>
-<style>
-    img { max-width: 400px; }
-    blockquote, table { font-size: small; }
-    table {
-      position: relative;
-      background-color: white;
-    }
-    td {  padding: 6px 10px; }
-    th {
-      background-color: #eee; /* A Rajab */
-      font-weight: bold;
-      position: sticky;
-      top: 0;
-    }
-    .yellow { background-color: #ffb; }
-    .pink { background-color: #edd; }
-    .düz { font-weight: normal; }
-  @media screen and (max-width: 400px) {
-    table  { margin: -8px;}
-  }
-</style>
 
 <h2>Iqra fark listesi &emsp; <button><a href="kadime.html">◀</a></button></h2>
 
@@ -67,35 +47,11 @@
 <script src="/Kuran/code/common.js"></script>
 <script src="/Kuran/code/model.js"></script>
 <script src="/Kuran/code/utilities.js"></script>
+<script src="./variants.js"></script>
 <script>
-"use strict";
-function makeTable() {
-  function addVariant(x) {
-      let {cv, num, rdr, word, rgn, rasm, std} = x
-      if (rgn && rgn !== '*') return
-      let [c, v] = cv.split(':')
-      let color = (rgn == '*')? 'class=yellow' : ''
-      if (rdr.length > 7) rdr = rdr.replaceAll(' ','')
-      let url = 
-"https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
-      a.push(`<td>${++i}
-        <td><a target=iqra href="/Kuran/reader.html#v=${cv}">${cv}</a>
-        <td ${color}>${std}<td>${rdr}
-        <td><a target=Kuran href="${url}">${word}</a>\n`)
-  }
-    let a = [], i = 0
-    let kk = Object.getOwnPropertyNames(VD._data)
-    kk.pop() // remove length (last key in kk)
-    for (let k of kk) {
-      let d = VD.variants(k)
-      if (d) d.forEach(addVariant)
-    }
-    console.log(i+" entries in the table")
-    tablo1.innerHTML 
-    = `<tr><th>No<th>Ayet<th>Standart<th>Kıraat<th>Varyant<tr>`
-      + a.join('\n<tr>')
+function filter(x) {
+    return (x.rgn && x.rgn !== '*')
 }
-let VD  = new VariantData('/Kuran/data/variants.txt', makeTable)
 </script>
 
 <!-- <script src="init.js"></script> fails to run, because of async -->
