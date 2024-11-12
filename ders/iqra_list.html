@@ -13,7 +13,6 @@
 
 <p>Hicretten 3 asır sonra 900'lü yıllarda, Abbasi İslam devletinin merkezi olan Bağdat'ta Kurân'ın farklı okunuşları hakkında çok önemli bir tasnif çalışması yapıldı: İbn Mücâhid, belirli beş merkezden (Medine, Mekke, Basra, Şam, Kûfe) seçtiği yedi imamın kıraatini ilk defa bir araya getirerek <b>Kitâbus-Sebʿa fil-ḳırâʾât</b> (Yedi Kıraat) adlı eserini yazdı. Bundan bir asır sonra Endülüs'te Ebû ʿAmr ed-Dânî, <b>et-Teysīr</b> isimli meşhur kitabında söz konusu yedi kıraati kolayca takip edilir bir hale getirdi. </p>
 <p>1930 senesinde bu eser, Pretzl isimli Alman şarkiyatçı tarafından İstanbul'da tekrar yayınladı. Yaklaşık bir asır sonra da, Hollanda'lı M van Putten aynı kitabı İngilizce'ye çevirdi ve ön bilgiler ekleyerek genel kullanıma sundu. Aşağıdaki tablo Putten'in bu kıymetli çalışmasından süzülmüştür, <a target=Kuran href="https://okuyun.github.io/Kuran/guideQ.html#tesekkur">teşekkür ederiz</a>.</p>
-<p>Kıraat varyantlarının pek çoğu söyleyiş (lehçe) ve hareke farklarıdır, değişen bir harf yoksa bunları tabloda göstermedim. Harf farklarının imlâya yansımadığı durumları aşağıdaki tabloda, imlâ farklarını <a href="./mesahif.html#tablo1">başka bir tabloda</a> gösterdim.</p>
 <pre>et-Teysīr'de <a href="https://islamansiklopedisi.org.tr/kiraat--ilim" target=Kuran>kıraat imamları</a>:
 1 Nāfi`      Medine
 2 Ibn Kesīr  Mekke
@@ -23,21 +22,24 @@
 6 Hamza      Kûfe
 7 el-Kisā'ī  Kûfe
 </pre>
-<p>Bütün kıraat farkları beş grupta toplanabilir. Bunların dördü, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farklı imlâ gerektiren beşinci grubu ayrı bir sayfada anlattım:
+<p>Bütün kıraat varyantları beş grupta toplanabilir. Bunların pek çoğu söyleyiş (lehçe) ve hareke farklarıdır, değişen bir sessiz harf yoksa bunları tabloda göstermedim. Kelime farkları içeren dördüncü grubu sarı renkle, farklı imlâ gerektiren beşinci grubu pembe renkle işaretledim:</p>
 <ol>
     <li>Şive/lehçe farkları
     <li>Hareke farkları
     <li>Farklı harf, aynı kelime
-    <li>Farklı kelime, aynı imlâ
-    <li><a href="./mesahif.html#tablo1">Farklı imlâ</a>
+    <li>Farklı kelime (sarı)
+    <li>Farklı imlâ (pembe)
 </ol>
-<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Üçüncü ve dördüncü grupta kıraat farkı olan (yaklaşık 200) ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için sarı renkle işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
+<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Üçüncü ve dördüncü grupta harf farkı olan (yaklaşık 200) ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için sarı renkle işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
+<p>Beşinci grupta dışındaki bütün farklar, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farkların imlâya yansıdığı 40 ayeti daha önce <a href="./mesahif.html#tablo1">başka bir tabloda</a> göstermiştim.</p>
 <p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
 <p>Aşağıda ilk satırda, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Hemen altında, 2:58 ayetinde <b>naġfir</b> kelimesinin iki farklı okunuşu görülüyor.</p>
 
   <table id=tablo1></table>
 <blockquote>
-  Sarı işaretli satırlar, kelime farkı olan 13 ayet.
+  İşaretsiz satırlar tek harf farkı olan <span id=count></span> ayet <br>
+  Sarı işaretli satırlar, kelime farkı olan 13 ayet <br>
+  Pembe işaretli satırlar, imlâ farkı olan 40 ayet
 </blockquote>
 <p class=yellow><b>Tablo henüz tamam değil</b></p>
 <p></p>
@@ -50,7 +52,11 @@
 <script src="./variants.js"></script>
 <script>
 function filter(x) {
-    return (x.rgn && x.rgn !== '*')
+    return false //display all
+    //(x.rgn && x.rgn !== '*') don't skip spelling variants
+}
+function callLater() {
+    count.innerText = VD._keys.length - 53
 }
 </script>
 
