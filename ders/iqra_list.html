@@ -42,7 +42,7 @@
   Pembe işaretli satırlar, imlâ farkı olan 40 ayet
 </blockquote>
 <p class=yellow><b>Tablo henüz tamam değil</b></p>
-<p></p>
+<p>Kıyaslanan kıraat imamı: <select id=qari></select></p>
 <br>
 <p>Mesâhif <button><a href="kadime.html">◀</a></button> &emsp; Ekim 2024
 </p>
@@ -52,12 +52,29 @@
 <script src="./variants.js"></script>
 <script>
 function filter(x) {
-    return false //display all
-    //(x.rgn && x.rgn !== '*') don't skip spelling variants
+  switch (qari.selectedIndex) {
+    case 0:
+      return false //compare to NONE
+    case 8: 
+      return x.rdr.length != 14 //full length -- ALL
+    default:  //compare to selected qari
+      return !x.rdr.includes(qari.selectedIndex)
+  }
+//return (x.rgn && x.rgn !== '*') //skip spelling variants
 }
 function callLater() {
     count.innerText = VD._keys.length - 53
 }
+function initMenu() {
+    let labels = ['None']
+    for (let i=1; i<=7; i++)
+        labels.push(i+'. '+READER[i])
+    labels.push('All but Hafs')
+    labels[5] = '5a. Šuʿbah'  //special case
+    qari.innerHTML = '<option>'+labels.join('<option>')
+    qari.onchange = makeTable
+}
+initMenu()
 </script>
 
 <!-- <script src="init.js"></script> fails to run, because of async -->
