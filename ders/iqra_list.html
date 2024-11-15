@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="ders.css" media="all">
 <link rel="stylesheet" href="variants.css" media="all">
 <link rel="icon" href="/Kuran/image/icon.png">
-<title>Iqra fark listesi</title>
+<title>Harf farkları listesi</title>
 
-<h2>Iqra fark listesi &emsp; <button><a href="kadime.html">◀</a></button></h2>
+<h2>Harf farkları listesi &emsp; <button><a href="kadime.html">◀</a></button></h2>
 
 <p>Hicretten 3 asır sonra 900'lü yıllarda, Abbasi İslam devletinin merkezi olan Bağdat'ta Kurân'ın farklı okunuşları hakkında çok önemli bir tasnif çalışması yapıldı: İbn Mücâhid, belirli beş merkezden (Medine, Mekke, Basra, Şam, Kûfe) seçtiği yedi imamın kıraatini ilk defa bir araya getirerek <b>Kitâbus-Sebʿa fil-ḳırâʾât</b> (Yedi Kıraat) adlı eserini yazdı. Bundan bir asır sonra Endülüs'te Ebû ʿAmr ed-Dânî, <b>et-Teysīr</b> isimli meşhur kitabında söz konusu yedi kıraati kolayca takip edilir bir hale getirdi. </p>
 <p>1930 senesinde bu eser, Pretzl isimli Alman şarkiyatçı tarafından İstanbul'da tekrar yayınladı. Yaklaşık bir asır sonra da, Hollanda'lı M van Putten aynı kitabı İngilizce'ye çevirdi ve ön bilgiler ekleyerek genel kullanıma sundu. Aşağıdaki tablo Putten'in bu kıymetli çalışmasından süzülmüştür, <a target=Kuran href="https://okuyun.github.io/Kuran/guideQ.html#tesekkur">teşekkür ederiz</a>.</p>
@@ -30,14 +30,14 @@
     <li>Farklı kelime (sarı)
     <li>Farklı imlâ (pembe)
 </ol>
-<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Üçüncü ve dördüncü grupta harf farkı olan (yaklaşık 200) ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için sarı renkle işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
-<p>Beşinci grupta dışındaki bütün farklar, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farkların imlâya yansıdığı 40 ayeti daha önce <a href="./mesahif.html#tablo1">başka bir tabloda</a> göstermiştim.</p>
+<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Diğer üç grupta harf farkı olan <span id=count1>300</span> ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için sarı renkle işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
+<p>Beşinci grup dışındaki bütün farklar, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farkların imlâya yansıdığı 40 ayeti daha önce <a href="./mesahif.html#tablo1">başka bir tabloda</a> göstermiştim.</p>
 <p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
 <p>Aşağıda ilk satırda, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Hemen altında, 2:58 ayetinde <b>naġfir</b> kelimesinin iki farklı okunuşu görülüyor.</p>
 
   <table id=tablo1></table>
 <blockquote>
-  İşaretsiz satırlar tek harf farkı olan <span id=count></span> ayet <br>
+  İşaretsiz satırlar tek harf farkı olan <span id=count2>300</span> ayet <br>
   Sarı işaretli satırlar, kelime farkı olan 13 ayet <br>
   Pembe işaretli satırlar, imlâ farkı olan 40 ayet
 </blockquote>
@@ -63,7 +63,8 @@ function filter(x) {
 //return (x.rgn && x.rgn !== '*') //skip spelling variants
 }
 function callLater() {
-    count.innerText = VD._keys.length - 53
+    let verses = VD._keys.length - 53
+    count1.innerText = count2.innerText = verses
 }
 function initMenu() {
     let labels = ['None']

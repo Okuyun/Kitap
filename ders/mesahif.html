@@ -78,9 +78,11 @@ M Medine, C Mekke, B Basra, S Şam/Suriye, K Kûfe <br>
 </blockquote>
 
 <p>Günümüzde kullanılan standart mushafın Osmanî mushaflarla farkı:<br>
-  Medine 17, Mekke 17, Basra 9, Şam 33, <b>Kûfe 3</b>
+  Medine 14, Mekke 13, Basra 6, Şam 29, <b>Kûfe 3</b> <br>
+  (Bu sayılarda ve kıyaslamada pembe satırlar dikkate alınmadı) <br>
+  Kıyaslanan bölge: <select id=belde></select>
 </p><p>
-Yani, bugün dünyanın her yerinde okunmakta olan mushaflar ile Hz Osman tarafından Kûfe'ye gönderilen el yazması arasında (yukarıda K ile gösterilen) sadece 3 harf farkı var: 77.000 kelime içinde on binde yarım!
+Yani, bugün dünyanın her yerinde okunmakta olan mushaflar ile Hz Osman tarafından Kûfe'ye gönderilen el yazması arasında (yukarıda K ile gösterilen) sadece 3 harf farkı var.
 </p>
 <ul><b>Kaynaklar:</b>
   <li>
@@ -143,9 +145,10 @@ const DATA1 =
 57:10	kll	S	elif 		vekullen	vekullun
 57:24	gny	M S	<b>huve</b> 		huvel-ganiy	el-ganiy
 91:15	xwf	M S	ve	fe	velâ	felâ`
-function makeTable(tablo, DATA) {
+function makeTable() {
   function line(str, i) {
     let [verse, root, city, minus, plus, w1, w2, col] = str.split('\t')
+    if (filter(city, col)) return ''
     let [c, v] = verse.split(':')
     let color = col? `class=${col}` : ""
     let url = //"https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
@@ -155,15 +158,35 @@ function makeTable(tablo, DATA) {
       <td ${color}>${w1}<td>${city}
       <td><a href="${url}" target=Kuran>${w2}</a>
       <td>${minus}<td>${plus}
-    </tr>`
+    </tr>\n`
     return out
   }
-    let a = DATA.split('\n')
-    tablo.innerHTML = `<tr><th>No
-    <th>Ayet<th>Standart<th>Bölge<th>Varyant<th class=düz>Eksik<th class=düz>Fazla</tr>`
-        + a.map(line).join('\n')
+    let a = DATA1.split('\n')
+    tablo1.innerHTML = `<tr><th>No<th>Ayet<th>Standart<th>Bölge
+    <th>Varyant<th class=düz>Eksik<th class=düz>Fazla</tr>`
+        + a.map(line).join('')
 }
-makeTable(tablo1, DATA1)
+
+const labels = 
+['Hiçbiri', 'M Medine', 'C Mekke', 'B Basra', 'S Şam', 'K Kûfe']
+function filter(city, color) {
+  const pink = (color == 'pink')
+  switch (belde.selectedIndex) {
+    case 0:
+      return false //compare to NONE
+    // case 6: 
+    //   return city != 'MCBS' || pink
+    default:  //compare to selected belde
+      let c = labels[belde.selectedIndex]
+      return !city.includes(c[0]) || pink
+  }
+}
+function initMenu() {
+    // labels.push('K hariç')
+    belde.innerHTML = '<option>'+labels.join('<option>')
+    belde.onchange = makeTable
+}
+initMenu(); makeTable()
 </script>
 
 <script src="init.js"></script>
