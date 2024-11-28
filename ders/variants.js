@@ -7,14 +7,20 @@ function makeTable() {
       let color = rgn? (rgn=='*'? 'yellow' : 'pink') : ''
       let cls = color? 'class='+color : ''
       if (rdr.length > 7) rdr = rdr.replaceAll(' ','')
+      if (cv == prev.cv && num == prev.num) {
+        a.pop() //remove last entry and use it in the next
+        rdr  = prev.rdr  +'<br>'+ rdr
+        word = prev.word +'<br>'+ word
+      } else i++
       let url = 
 "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
-      a.push(`<td>${++i}
+      a.push(`<td>${i}
         <td><a target=iqra href="/Kuran/reader.html#v=${cv}">${cv}</a>
         <td ${cls}>${std}<td>${rdr}
         <td><a target=Kuran href="${url}">${word}</a>\n`)
+      prev = x
   }
-    let a = [], i = 0
+    let a = [], i = 0, prev = {cv:'', num:0}
     for (let k of VD._keys) {
       let d = VD.variants(k)
       if (d) d.forEach(addVariant)
