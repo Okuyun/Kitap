@@ -47,22 +47,22 @@ erken dönem mushaflar hakkında bilgi verirken, Kur'ân-ı Kerim'in korunmuşlu
 <h3>Önemli farklar</h3>
 <p>Altıkulaç'ın verdiği çizelgedeki imlâ farklarını daha basit bir tabloya aktardım. Öncelikle, tablodaki en önemli üç satırın kıraatine bakalım. Her örnekte, sarı çizginin altında günümüzde standart olan Asım/Hafs rivayetini, üstünde de farklı kıraati görebilirsiniz.
 </p>
-<p>Hadid <a name="v=57:24&b=huwa">57:24</a> &mdash;
+<p>Hadid <a target=iqra href="/Kuran/reader.html#v=57:24&b=huwa">57:24</a> &mdash;
   <b>huvel-ganiy</b> ⇒ <a href="https://corpuscoranicum.de/en/verse-navigator/sura/57/verse/24/variants" target=Kuran>el-ganiy</a>
   <img src="img/Hadid 24.png">
   İki kıraat imamı "huve" kelimesini okumamış. Anlam değişmiyor ama metin farklı.
 </p>
-<p>Yasin <a name="v=36:35&r=Eml">36:35</a> &mdash;
+<p>Yasin <a target=iqra href="/Kuran/reader.html#v=36:35&r=Eml">36:35</a> &mdash;
   <b>'amilethu</b> ⇒ <a href="https://corpuscoranicum.de/en/verse-navigator/sura/36/verse/35/variants" target=Kuran>'amilet</a> 
   <img src="img/Yasin 35.png">
-  Kûfe'nin üç imamı "hu" ekini okumamış, ama Hafs (Kûfe'li olduğu halde) çoğunluğa uymuş. Bu ayetin iki okunuşu anlam zenginliğine yol açıyor: <br>
+  Kûfe'nin üç imamı "hu" ekini okumamış, ama Hafs (Kûfe'li olduğu halde) "hu" ile okumuş. Bu ayetin iki okunuşu anlam zenginliğine yol açıyor: <br>
   <img src="img/Yasin 35 meal.png">
   Standart kıraate göre <b>mâ</b> olumsuzluk edatı, diğer okuyuşa göre zamir oluyor. <a href="https://kuranmeali.com/AyetKarsilastirma.php?sure=36&ayet=35" target=Kuran>Mealler</a>
 </p>
-<p>Yunus <a name="v=10:22&r=syr">10:22</a> &mdash;
+<p>Yunus <a target=iqra href="/Kuran/reader.html#v=10:22&r=syr">10:22</a> &mdash;
   <b>yuseyyirukum</b> ⇒ <a href="https://corpuscoranicum.de/en/verse-navigator/sura/10/verse/22/variants" target=Kuran>yenşurukum</a> 
   <img src="img/Yunus 22.png">
-  Bu ayeti bir kıraat imamı, anlamı çok yakın olan farklı bir kelime ile okumuş. Çoğunluğun seçimi olan se-ye-ra kökü yeryüzünde dolaşmayı, ne-şe-ra kökü iki ise yayılmayı anlatır. Kûfi yazıda fark kolayca görülmüyor. Tablodaki 44 ayet içinde kelimenin değiştiği tek yer bu, aşağıda sarı işaretli.
+  Bu ayeti bir kıraat imamı, anlamı çok yakın olan farklı bir kelime ile okumuş. Çoğunluğun seçimi olan se-ye-ra kökü yeryüzünde dolaşmayı, ne-şe-ra kökü iki ise yayılmayı anlatır. Kûfi yazıda fark kolayca görülmüyor. Tablodaki 44 ayet içinde kelime farkı olan tek yer bu, aşağıda sarı işaretli.
 </p>
 
 <h3>Kayıtlı imlâ farklarının tamamı</h3>
@@ -154,9 +154,9 @@ function makeTable() {
     let url = //"https://kuranmeali.com/AyetKarsilastirma.php?sure="+c+"&ayet="+v
   "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
     let out = `<tr><td>${i+1}
-      <td><a name="v=${verse}">${verse}</a>
+      <td><a target=iqra href="/Kuran/reader.html#v=${verse}">${verse}</a>
       <td ${color}>${w1}<td>${city}
-      <td><a href="${url}" target=Kuran>${w2}</a>
+      <td><a target=Kuran href="${url}">${w2}</a>
       <td>${minus}<td>${plus}
     </tr>\n`
     return out
@@ -189,4 +189,4 @@ function initMenu() {
 initMenu(); makeTable()
 </script>
 
-<script src="init.js"></script>
+<!-- <script src="init.js"></script> NOT USED -->
