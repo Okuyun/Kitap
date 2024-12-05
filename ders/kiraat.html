@@ -127,7 +127,7 @@ Bu ayette "Mûsâ" kelimesinin yerel şive farkından gelen üç farklı okunuş
 <p><b>Kaynak:</b><br>
     <a href="https://journals.ku.edu.kw/jsis/index.php/jsis/article/view/1491" 
     target=Kuran">Eleven words whose spelling is the same</a> (Khazer Al Majali) 2003, s.87<br>
-    Başlıkta "11 kelime" diyor ama imlâsı farklı olan bir kelimeyi 5. bölüme alınca burada 10 kelime kaldı. Ayrıca iki kelimenin ikişer adet tekrarı ile tabloda 14 kelime var.
+    Başlıkta "11 kelime" diyor ama iki kelimenin ikişer adet tekrarı ile tabloda 15 kelime var. Pembe işaretli kelimenin kıraat farkı imlâya da yansıyor.
 </p>
 
 <h3>5. <a href="./mesahif.html">Farklı imlâ</a></h3>
@@ -144,6 +144,9 @@ Bu ayette "Mûsâ" kelimesinin yerel şive farkından gelen üç farklı okunuş
 <script src="./variants.js"></script>
 <script>
 function filter(x) {
-    return (!x.rgn || x.rgn !== '*')
+    return (!x.rgn || (x.rgn != '*' && x.cv != '10:22'))
+}
+function callLater() {
+    //do nothing
 }
 </script>

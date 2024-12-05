@@ -5,6 +5,7 @@
 <meta name="author"      content="M A Eyler, Istanbul, 2024" />
 <meta name="description" content="The oldest sheets of Quran" />
 <link rel="stylesheet" href="ders.css" media="all">
+<link rel="stylesheet" href="variants.css" media="all">
 <link rel="icon" href="/Kuran/image/icon.png">
 <title>Korunmuş unsurlar</title>
 <style>
@@ -50,17 +51,33 @@
 <p><b>Kıraat farkları</b> imamların okuyuş tercihleri ya da hataları değil, çok sayıda okuyucunun sahabeden rivayetine dayanıyor. Hepsi nesilden nesile hafızalarda saklanmış.</p>
 <p><b>İmlâ farkları</b> da yazıcıların rastgele tercihleri veya hataları değil, bölgesel kıraat farklarını yansıtıyor. Kıraat farklarına bağlı olan şu unsurlar korunmuş:</p>
 <ul>
-    <li><a href="./iqra_list.html#tablo1">200 kadar ayette</a> aynı imlâ ile farklı harf okunabilir <br>
+    <li><a href="./iqra_list.html#tablo1">200 kadar kelime</a> imlâ değişmeden farklı harfle okunabilir. Bunların tamamı tek harf farkıdır. <br>
     (bu kelimeleri Iqra yazılımda göstermek için çalışıyorum)</li>
-    <li><a href="./kiraat.html#tablo1">13 ayette</a> aynı imlâ ile farklı kelime okunabilir </li>
-    <li>Kelime olarak imlâsı değişebilen sadece <a href="./mesahif.html#tablo1">üç ayet</a> var: <br>
+    <li><a href="./kiraat.html#tablo1">13 ayette</a> aynı imlâ ile farklı kelime okunabilir. Bunlar da ikisi hariç tek harf farkıdır. </li>
+    <li>İmlâ farkları büyük oranda tek harf boyutundadır. Tek harfi aşan imlâ farkı <a href="./mesahif.html#tablo1">üç kelime</a>: <br>
     * Tevbe <a name="v=9:100&r=tHt">9:100</a> — Mekke mushafında <b>tahtehâ ⇒ min tahtihâ</b><br>
     * Yunus <a name="v=10:22&r=syr">10:22</a> — Şam mushafında <b>yuseyyirukum ⇒ yenşurukum</b><br>
     * Hadid <a name="v=57:24&b=huwa">57:24</a> — Medine ve Şam mushafında <b>huve ⇒</b> (yok) </li>
 </ul>
+<p>Sessiz harf değiştiren kıraat farklarının nerdeyse tamamı tek harf boyutundadır: Bir harf eksik, bir harf fazla, ya da bir harf yerine başka bir harf okunmuş. Tek harfi aşan farklar beş adet:</p>
+<table id=tablo1></table>
+<p>Bunların ikisi imlâya yansımıyor, pembe işaretli üçü yansıyor.</p>
 <h3>Sonuç</h3>
 <p>"Bir harfi bile değişmemiştir" söylemi, kıraat farklarından habersiz olmanın bir göstergesidir, bu söylemden vaz geçmeliyiz. Peki ne diyelim? Aslında korunmuşluk çok daha kuvvetli bir hakikat: Kuran-ı Kerim bütün <b>kıraat farklarıyla birlikte</b> korunmuştur; <m>surelerin</m>, <m>ayetlerin</m>, <m>kelimelerin</m> dizilişinde hiçbir farklılık yoktur. Bazı kelimelerin okunuşunda hareke ya da harf farkı olabilir. Kıraat farkları hafızalarda, imlâ farkları Osmanî mushaflarda kaydedilmiştir.</p>
 <br>
 <p>Mesâhif <button><a href="kadime.html">◀</a></button> &emsp; Eylul 2024<br>
 </p>
 <script src="init.js"></script>
+<script src="/Kuran/code/common.js"></script>
+<script src="/Kuran/code/model.js"></script>
+<script src="/Kuran/code/utilities.js"></script>
+<script src="variants.js"></script>
+<script>
+const LIST = ['9:100', '10:22', '29:58', '49:6', '57:24']
+function filter(x) {
+    return (!LIST.includes(x.cv))
+}
+function callLater() {
+    //do nothing
+}
+</script>
