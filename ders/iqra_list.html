@@ -22,26 +22,26 @@
 6 Hamza      Kûfe
 7 el-Kisā'ī  Kûfe
 </pre>
-<p>Bütün kıraat varyantları beş grupta toplanabilir. Bunların pek çoğu söyleyiş (lehçe) ve hareke farklarıdır, değişen bir sessiz harf yoksa bunları tabloda göstermedim. Kelime farkları içeren dördüncü grubu sarı renkle, farklı imlâ gerektiren beşinci grubu pembe renkle işaretledim:</p>
+<p>Bütün kıraat varyantları beş grupta toplanabilir. Bunların pek çoğu söyleyiş (lehçe) ve hareke farklarıdır, değişen bir sessiz harf yoksa bunları tabloda göstermedim. Kelime farkları içeren dördüncü grubu <span class=yellow>sarı renkle</span>, farklı imlâ gerektiren beşinci grubu <span class=pink>pembe renkle</span> işaretledim:</p>
 <ol>
     <li>Şive/lehçe farkları
     <li>Hareke farkları
     <li>Farklı harf, aynı kelime
-    <li>Farklı kelime (sarı)
-    <li>Farklı imlâ (pembe)
+    <li>Farklı kelime (<span class=yellow>sarı</span>)
+    <li>Farklı imlâ (<span class=pink>pembe</span>)
 </ol>
-<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Diğer üç grupta harf farkı olan <span id=count1>300</span> ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için sarı renkle işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
-<p>Beşinci grup dışındaki bütün farklar, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farkların imlâya yansıdığı, pembe işaretli 40 ayeti daha önce <a href="./mesahif.html#tablo1">başka bir tabloda</a> göstermiştim.</p>
+<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Diğer üç grupta harf farkı olan <span id=count1>260</span> ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için <span class=yellow>sarı renkle</span> işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
+<p>Beşinci grup dışındaki bütün farklar, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farkların imlâya yansıdığı, <span class=pink>pembe işaretli</span> 44 ayeti daha önce <a href="./mesahif.html#tablo1">başka bir tabloda</a> göstermiştim.</p>
 <p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
 <p>Aşağıda ilk satırda, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Hemen altında, 2:58 ayetinde <b>naġfir</b> kelimesinin iki farklı okunuşu görülüyor.</p>
 
   <table id=tablo1></table>
 <blockquote>
-  İşaretsiz satırlar tek harf farkı olan <span id=count2>300</span> ayet <br>
-  Sarı işaretli satırlar, kelime farkı olan 13 ayet <br>
-  Pembe işaretli satırlar, imlâ farkı olan 40 ayet
+  İşaretsiz satırlar tek harf farkı olan <span id=count2>203</span>&nbsp;ayette&nbsp;240&nbsp;kelime <br>
+  <span class=yellow>sarı işaretli</span> satırlar, kelime farkı olan 13&nbsp;ayette&nbsp;14&nbsp;kelime <br>
+  <span class=pink>pembe işaretli</span> satırlar, imlâ farkı olan 44&nbsp;ayette&nbsp;45&nbsp;kelime <br>
+  Toplam <span id=count3>260</span>&nbsp;ayette&nbsp;299&nbsp;kelime
 </blockquote>
-<p class=yellow><b>Tablo henüz tamam değil</b></p>
 <p>Kıyaslanan kıraat imamı: <select id=qari></select></p>
 <br>
 <p>Mesâhif <button><a href="kadime.html">◀</a></button> &emsp; Ekim 2024
@@ -63,8 +63,9 @@ function filter(x) {
 //return (x.rgn && x.rgn !== '*') //skip spelling variants
 }
 function callLater() {
-    let verses = VD._keys.length - 53
-    count1.innerText = count2.innerText = verses
+    let verses = VD._keys.length
+    count1.innerText = verses
+    count2.innerText = verses - 57
 }
 function initMenu() {
     let labels = ['None']
