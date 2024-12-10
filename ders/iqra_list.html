@@ -30,17 +30,17 @@
     <li>Farklı kelime (<span class=yellow>sarı</span>)
     <li>Farklı imlâ (<span class=pink>pembe</span>)
 </ol>
-<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 700) ayet olduğu için bu sayfaya almadım. Diğer üç grupta harf farkı olan <span id=count1>260</span> ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için <span class=yellow>sarı renkle</span> işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
+<p>Birinci ve ikinci grupta çok sayıda (yaklaşık 500) ayet olduğu için bu sayfaya almadım. Diğer üç grupta harf farkı olan yaklaşık 250 ayet aşağıdaki tabloda görülebilir. Dördüncü gruptaki kelime farklarını harf farklarından ayırmak için <span class=yellow>sarı renkle</span> işaretledim. Bu 10 kelimenin ayrıntısı <a href="./kiraat.html#kelime">kıraat konusunda</a> bulunabilir.
 <p>Beşinci grup dışındaki bütün farklar, noktasız ve harekesiz resm-i Osmanî'de imlâyı değiştirmiyor. Farkların imlâya yansıdığı, <span class=pink>pembe işaretli</span> 44 ayeti daha önce <a href="./mesahif.html#tablo1">başka bir tabloda</a> göstermiştim.</p>
-<p>Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
+<p id="tablo">Tablonun her satırında ayet numarasına tıklayınca, ayet <b>Iqra</b> yazılımında gösterilir. Kelimenin varyant okunuşuna tıklayınca, ayetin farklı kıraatleri <i>Corpus Coranicum</i> sitesinde açılır.</p>
 <p>Aşağıda ilk satırda, 2:48 ayetindeki <b>yukbelu</b> kelimesini iki kıraat imamının  <b>tukbelu</b> okuduğunu görüyoruz. Hemen altında, 2:58 ayetinde <b>naġfir</b> kelimesinin iki farklı okunuşu görülüyor.</p>
 
-  <table id=tablo1></table>
+  <table id="tablo1"></table>
 <blockquote>
-  İşaretsiz satırlar tek harf farkı olan <span id=count2>203</span>&nbsp;ayette&nbsp;240&nbsp;kelime <br>
+  İşaretsiz satırlar tek harf farkı olan 198&nbsp;ayette&nbsp;233&nbsp;kelime <br>
   <span class=yellow>sarı işaretli</span> satırlar, kelime farkı olan 13&nbsp;ayette&nbsp;14&nbsp;kelime <br>
   <span class=pink>pembe işaretli</span> satırlar, imlâ farkı olan 44&nbsp;ayette&nbsp;45&nbsp;kelime <br>
-  Toplam <span id=count3>260</span>&nbsp;ayette&nbsp;299&nbsp;kelime
+  Toplam 255&nbsp;ayette&nbsp;292&nbsp;kelime
 </blockquote>
 <p>Kıyaslanan kıraat imamı: <select id=qari></select></p>
 <br>
@@ -52,6 +52,7 @@
 <script src="./variants.js"></script>
 <script>
 function filter(x) {
+  if (x.rgn == 'x') return true
   switch (qari.selectedIndex) {
     case 0:
       return false //compare to NONE
@@ -63,9 +64,9 @@ function filter(x) {
 //return (x.rgn && x.rgn !== '*') //skip spelling variants
 }
 function callLater() {
-    let verses = VD._keys.length
-    count1.innerText = verses
-    count2.innerText = verses - 57
+    // let verses = VD._keys.length
+    // count1.innerText = verses
+    // count2.innerText = verses - 57
 }
 function initMenu() {
     let labels = ['None']
