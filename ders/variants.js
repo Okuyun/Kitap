@@ -1,10 +1,18 @@
 "use strict";
 function makeTable() {
   function addVariant(x) {
+    function getColor() {
+      if (!rgn) return ''
+      switch (rgn) {
+        case '*': return 'yellow'
+        case 'x': return ''
+        default:  return 'pink'
+      }
+    }
       if (filter(x)) return
       let {cv, num, std, rdr, word, rgn, rasm} = x
       let [c, v] = cv.split(':')
-      let color = rgn? (rgn=='*'? 'yellow' : 'pink') : ''
+      let color = getColor()
       let cls = color? 'class='+color : ''
       if (rdr.length > 7) rdr = rdr.replaceAll(' ','')
       if (cv == prev.cv && num == prev.num) {
