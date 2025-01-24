@@ -2,30 +2,30 @@
 function makeTable() {
   function addVariant(x) {
     function getColor() {
-      if (!rgn) return ''
-      switch (rgn) {
+      if (!x.rgn) return ''
+      switch (x.rgn) {
         case '*': return 'yellow'
         case 'x': return ''
         default:  return 'pink'
       }
     }
       if (filter(x)) return
-      let {cv, num, std, rdr, word, rgn, rasm} = x
-      let [c, v] = cv.split(':')
+      // let {cv, num, std, rdr, word, rgn, rasm} = x
+      let [c, v] = x.cv.split(':')
       let color = getColor()
       let cls = color? 'class='+color : ''
-      if (rdr.length > 7) rdr = rdr.replaceAll(' ','')
-      if (cv == prev.cv && num == prev.num) {
+      if (x.rdr.length > 7) x.rdr = x.rdr.replaceAll(' ','')
+      if (x.cv == prev.cv && x.num == prev.num) {
         a.pop() //remove last entry and use it in the next
-        rdr  = prev.rdr  +'<br>'+ rdr
-        word = prev.word +'<br>'+ word
+        x.rdr  = prev.rdr  +'<br>'+ x.rdr
+        x.word = prev.word +'<br>'+ x.word
       } else i++
       let url = 
 "https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
       a.push(`<td>${i}
-        <td><a target=iqra href="/Kuran/reader.html#v=${cv}">${cv}</a>
-        <td ${cls}>${std}<td>${rdr}
-        <td><a target=Kuran href="${url}">${word}</a>\n`)
+        <td><a target=iqra href="/Kuran/reader.html#v=${x.cv}">${x.cv}</a>
+        <td ${cls}>${x.std}<td>${x.rdr}
+        <td><a target=Kuran href="${url}">${x.word}</a>\n`)
       prev = x
   }
     let a = [], i = 0, prev = {cv:'', num:0}
