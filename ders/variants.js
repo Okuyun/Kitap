@@ -1,6 +1,6 @@
 "use strict";
 function makeTable() {
-  function addVariant(x) {
+  function addVariant(y) {
     function getColor() {
       if (!x.rgn) return ''
       switch (x.rgn) {
@@ -9,8 +9,9 @@ function makeTable() {
         default:  return 'pink'
       }
     }
-      if (filter(x)) return
-      // let {cv, num, std, rdr, word, rgn, rasm} = x
+      if (filter(y)) return
+      let x = { ...y } //clone
+      verses.add(x.cv)
       let [c, v] = x.cv.split(':')
       let color = getColor()
       let cls = color? 'class='+color : ''
@@ -29,14 +30,16 @@ function makeTable() {
       prev = x
   }
     let a = [], i = 0, prev = {cv:'', num:0}
+    verses.clear() //global
     for (let k of VD._keys) {
       let d = VD.variants(k)
       if (d) d.forEach(addVariant)
     }
-    console.log(i+" entries in ", VD._keys.length+" verses")
+    console.log(i+" entries in ", verses.size+" verses")
     tablo1.innerHTML 
     = `<tr><th>No<th>Ayet<th>Standart<th>Kıraat<th>Varyant<tr>`
       + a.join('\n<tr>')
     if (callLater) callLater()
 }
+let verses = new Set()
 let VD  = new VariantData('/Kuran/data/variants.txt', makeTable)
