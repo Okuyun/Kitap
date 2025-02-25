@@ -22,7 +22,7 @@ function makeTable() {
         x.word = prev.word +'<br>'+ x.word
       } else i++
       let url = 
-"https://corpuscoranicum.de/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
+"https://corpuscoranicum.org/en/verse-navigator/sura/"+c+"/verse/"+v+"/variants"
       a.push(`<td>${i}
         <td><a target=iqra href="/Kuran/reader.html#v=${x.cv}">${x.cv}</a>
         <td ${cls}>${x.std}<td>${x.rdr}
