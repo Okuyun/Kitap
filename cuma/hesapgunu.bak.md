@@ -37,7 +37,8 @@ Yaratılış denkleminde kadın- erkek, pozitif- negatif, elektron- pozitron, m�
  <a href="/Kuran/reader#v=36:36" target=iqra>36/Yâsîn, 36</a>).
 
 Bilimsel araştırmalara göre tüm elemanter tanecikler, eşleri ile birlikte vardır ve bu temel parçacıklar antileri ile karşılaştıklarında birbirini yok etmektedirler.[2] Ölüm-hayat, bu dünya-ahiret hayatı, cennet ve cehennem denklemi, bu çift yaratılmanın bir sonucudur 
-(<a href="/Kuran/reader#v=6:95" target=iqra>6/En’âm, 95</a>; 35/Fâtır,11;
+(<a href="/Kuran/reader#v=6:95" target=iqra>6/En’âm, 95</a>;
+ <a href="/Kuran/reader#v=35:11" target=iqra>35/Fâtır, 11</a>;
  <a href="/Kuran/reader#v=43:11" target=iqra>43/Zuhrûf, 11</a>;
  <a href="/Kuran/reader#v=67:2" target=iqra>67/Mülk, 2</a>). Çift yaratılma yasasına göre bu dünya ahiretin tarlasıdır. İnsanlar bu dünyada Allah’ın emrettiği, koyduğu yasalara tâbi olup olmadıklarına göre ahirette yargılanacaklar ve eş yaratılma yasasına göre ya cennete ya da cehenneme gönderileceklerdir. İmam Gazzali’nin bu anlamdaki değerlendirmesi çok mesaj vericidir: “Ey ilahi sırları öğrenmek isteyen! Bir kimse: 1- İşlerin sonu: Ölüm, 2- Son durağı: Kabir, 3- Kendisine gelecekler: Münker, Nekir, 4- Vadesi: Kıyamet, 5- Ebedî kalacağı yer: Cennet veya cehennem olduğunu bilirse, o kişiye ölüm hakikatinden daha önemli bir düşünce gelmez. O kişi akıllı ise ona ölüm tedbirinden üstün tedbir olmaz. Nitekim Resûlüllah (s.) şöyle buyurmuştur: ‘Akıllı şu kişidir ki, nefsini yanıltarak emre uydurur ve ölümünden sonra kalacak işlerde (hazırlıklarda) bulunur.’”[3]
 
@@ -72,14 +73,14 @@ Melekü’l-mevt (ölüm meleği) Azrail, dört büyük melekten biri olup insan
 (<a href="/Kuran/reader#v=3:185" target=iqra>3/185</a>;
  <a href="/Kuran/reader#v=4:78" target=iqra>4/78</a>;
  <a href="/Kuran/reader#v=62:8" target=iqra>62/8</a>) ölüm melekleri aracılığıyla icra edilmektedir: “Sonunda sizden birinize ölüm gelip çattığı zaman, elçilerimiz onun ‘hayatına son verirler’. Onlar (bu işte ne eksik ne fazla) kusur etmezler.” 
-(<a href="/Kuran/reader#v=6:61" target=iqra>6/En’âm, 61</a>) Ölüm meleklerinin geçtiği ayetlerde dikkat çeken çok önemli bir husus, şahsın işlediği amellere göre ölüm meleğinin şahsın canını farklı şekillerde almasıdır (79/ Nâzi’ât 1-2). Ölüm melekleri, inkârcıların, zalimlerin, nemelazımcıların ölümü sürecinde kendilerine acı vererek canlarını almaktadırlar: “Sen bu zalimleri, ölümün ‘şiddetli sarsıntıları’ sırasında meleklerin ellerini uzatarak onlara: ‘Canlarınızı (bu kıskıvrak yakalanıştan) çıkarın, bugün Allah’a karşı haksız olanı söylediğiniz ve O’nun ayetlerinden büyüklenerek (yüz çevirmeniz) dolayısıyla alçaltıcı bir azapla karşılık göreceksiniz.’ (dediklerinde) bir görsen...” 
+(<a href="/Kuran/reader#v=6:61" target=iqra>6/En’âm, 61</a>) Ölüm meleklerinin geçtiği ayetlerde dikkat çeken çok önemli bir husus, şahsın işlediği amellere göre ölüm meleğinin şahsın canını farklı şekillerde almasıdır (79/Nâzi’ât 1-2). Ölüm melekleri, inkârcıların, zalimlerin, nemelazımcıların ölümü sürecinde kendilerine acı vererek canlarını almaktadırlar: “Sen bu zalimleri, ölümün ‘şiddetli sarsıntıları’ sırasında meleklerin ellerini uzatarak onlara: ‘Canlarınızı (bu kıskıvrak yakalanıştan) çıkarın, bugün Allah’a karşı haksız olanı söylediğiniz ve O’nun ayetlerinden büyüklenerek (yüz çevirmeniz) dolayısıyla alçaltıcı bir azapla karşılık göreceksiniz.’ (dediklerinde) bir görsen...” 
 (<a href="/Kuran/reader#v=6:93" target=iqra>6/En’âm, 93</a>) “Melekler, inkâr edenlerin yüzlerine ve sırtlarına vurarak, ‘Yakıcı azabı tadın, bu, kendi ellerinizle yaptığınızın karşılığıdır.’ diyerek canlarını alırken bir görseydin!” 
 (<a href="/Kuran/reader#v=8:50" target=iqra>8/Enfâl, 50</a>-51) Dikkat çekici olan bir durum, bu tür insanların ölüm meleklerine “Biz hiçbir kötülük yapmıyorduk!” şeklinde bir konuşma yapmalarıdır 
 (<a href="/Kuran/reader#v=16:28" target=iqra>16/Nahl, 28</a>). Melekler, Allah’tan sakınanların canlarını “Selam size” diyerek çok daha güzel bir muamele ile teslim almakta ve onlara cenneti müjdelemektedirler 
 (<a href="/Kuran/reader#v=16:30" target=iqra>16/Nahl, 30</a>-32).
 
 Kendilerini mustaz’af şeklinde tanımlayanlar ile ölüm meleği arasında geçen bir konuşma hem dikkat çekici hem düşündürücü hem de ibret vericidir. Zulme karşı hiçbir tavır takınmayanlar, yapabileceklerini yapmayanlar, “kendi kendilerine zulmedenler” diye tanımlanıp canları alınmaktadır: “Melekler kendi kendilerine zulmedenlerin hayatına son verecekleri zaman, derler ki: ‘Neyde idiniz?’ Onlar: ‘Biz, yeryüzünde zayıf bırakılmışlar (mustaz’aflar) idik.’ derler. (Melekler de:) ‘Onda hicret etmeniz için Allah’ın arzı geniş değil miydi?’ derler. İşte onların barınma yerleri cehennemdir. Ne kötü yataktır o!” 
-(<a href="/Kuran/reader#v=4:97" target=iqra>4/ Nisâ, 97</a>).
+(<a href="/Kuran/reader#v=4:97" target=iqra>4/Nisâ, 97</a>).
 
 **Her Nefis Ölümü Tadacak**
 
@@ -253,7 +254,8 @@ Kitapta “zerre miktarınca” her şeyin yazılı olması, ortada bir ölçün
 
 Allah Kur’ân’da yüce mahkemede yargılamanın en adil bir şekilde olabilmesi için insanın bu dünyada yaptıklarının hepsi dikkate alınarak adalet terazilerinde tartılacağını ve elde edilen sonuçların insanın amel defterine/kitabına kaydedileceğini bize bildirmektedir: “O gün insanlar, amelleri kendilerine gösterilsin diye, bölük bölük fırlayıp-çıkarlar. Artık kim zerre ağırlığınca bir hayır işlerse, onu görür; kim de zerre ağırlığınca bir şer (kötülük) işlerse, o da onu görür.” 
 (<a href="/Kuran/reader#v=99:6" target=iqra>99/Zilzâl, 6</a>-8). “Biz ise, kıyamet gününe ait duyarlı teraziler koyarız da artık, hiçbir nefis hiçbir şeyle haksızlığa uğramaz. Bir hardal tanesi bile olsa ona (teraziye) getiririz. Hesap görücüler olarak biz yeteriz.” 
-(<a href="/Kuran/reader#v=21:47" target=iqra>21/Enbiyâ, 47</a>). “Andolsun, (yapıp-etmelerini) onlara bir ilimle mutlaka haber vereceğiz. Ve biz gaibler (onlardan uzakta olan habersizler) de değildik. O gün tartı haktır. Kimin tartıları/mizanları ağır basarsa, işte kurtulanlar onlardır. Kimin de tartıları hafif kalırsa, bunlar da ayetlerimize zulmede geldiklerinden dolayı nefislerini hüsrana uğratanlardır.” (7 A’râf/7-9; bk.
+(<a href="/Kuran/reader#v=21:47" target=iqra>21/Enbiyâ, 47</a>). “Andolsun, (yapıp-etmelerini) onlara bir ilimle mutlaka haber vereceğiz. Ve biz gaibler (onlardan uzakta olan habersizler) de değildik. O gün tartı haktır. Kimin tartıları/mizanları ağır basarsa, işte kurtulanlar onlardır. Kimin de tartıları hafif kalırsa, bunlar da ayetlerimize zulmede geldiklerinden dolayı nefislerini hüsrana uğratanlardır.”
+(<a href="/Kuran/reader#v=7:9" target="iqra">7/A’râf 7-9</a>; bk.
  <a href="/Kuran/reader#v=17:13" target=iqra>17/13</a>-14;
  <a href="/Kuran/reader#v=23:102" target=iqra>23/102</a>-103;
  <a href="/Kuran/reader#v=45:29" target=iqra>45/29</a>, 33;
@@ -477,7 +479,7 @@ Bugün ümmet şuurunun yeniden inşa edilebilmesi için “Rabbimiz Allah’tı
 (<a href="/Kuran/reader#v=2:132" target=iqra>2/132</a>;
  <a href="/Kuran/reader#v=3:102" target=iqra>3/102</a>). Namazımız, ibadetlerimiz, dirimimiz ve ölümümüz âlemlerin Rabbi Allah’a ait olmalıdır 
 (<a href="/Kuran/reader#v=6:162" target=iqra>6/162</a>). Mümin olarak ölümümüzde de hayatımızda da nasihatkâr olmalıyız 
-(<a href="/Kuran/reader#v=36:20" target=iqra>36/ Yâsîn, 20</a>-27).
+(<a href="/Kuran/reader#v=36:20" target=iqra>36/Yâsîn, 20</a>-27).
 
 Bugün ümmet şuurunun yeniden inşasının önündeki en büyük engel, Müslümanların dünyevileşmesi, sekülerleşmesi ve laikleşmesidir. Hz. Peygamber asırlar önce Müslümanlar için bunu en ciddi tehlike görmüş ve ümmetini hususen uyarmıştır: “Öyleyse sevinin ve sizi sevindiren şeyi ümit edin. Allah’a yemin olsun, sizler için fakirlikten korkmuyorum. Ben size dünyanın genişlemesinden korkuyorum. Sizden öncekilere dünya genişlemişti de hemen dünya için birbirleriyle boğuşmaya başladılar ve helak oldular. Genişleyen dünyanın onlar gibi sizi de helak etmesinden korkuyorum.”[23]   
 
