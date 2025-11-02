@@ -79,9 +79,12 @@ function line(str) {
 	let text = str.slice(i+1)
 	let [id, turk, refs, link, pict] = code.split('\t')
 	if (!id) return
+	let cvList = refs.split(' ')
+	refs = cvList.map(cv => 
+`<a href="/Kuran/reader.html#v=${cv}" target=iqra>${cv}</a>`).join(' ')
 	let item = {id, turk, refs, link, pict, text}
 	NAMES.set(id, item)
-	refs.split(' ').forEach(verse)
+	cvList.forEach(verse)
 	return
 }
 function makeSamples() {
