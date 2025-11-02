@@ -28,7 +28,7 @@
 <p><b>Benzeşen ayetler nedir?</b></p>
 <p>Yüce Kitabımız Kur'ân-ı Kerim'in önemli bir özelliği, benzer ayetlerin birbirini tefsir etmesi, açıklamasıdır. Benzeşen ayetler arasındaki ufak farklar tutarsızlık belirtisi değil, aksine, Kitabın korunmuş olduğunun bir göstergesi. Aşağıdaki örnekler bu iddiayı destekliyor.
 </p>
-<p>Hiç fark olmadan aynen tekrarlanan ayetlere yer vermedik. Aşağıdaki örneklerin hepsinde, bir ifade az sayıda (2-4 kere) tekrar edilmiş ve ayetler arasında ufak farklar var.</p>
+<p>Hiç fark olmadan aynen tekrarlanan ayetlere yer vermedik. Aşağıdaki örneklerin hepsinde, bir ifade az sayıda (2-7 kere) tekrar edilmiş ve ayetler arasında ufak farklar var.</p>
 
 <div id="samples">
 </div>
@@ -50,15 +50,21 @@
 "use strict";
 const NAMES = new Map()
 function line(str) {
-  let [id, turk, refs, link, pict] = str.split('\t')
+	let i = str.indexOf('\n')
+	if (i < 0) i = str.length
+	let code = str.slice(0, i)
+	let text = str.slice(i+1) //not used
+  let [id, turk, refs, link, pict] = code.split('\t')
   if (!id) return ""
   NAMES.set(id, {refs, link, pict})
-  return `<p><a href="/Kuran/#${link}" target=iqraTop>${id}</a> 
-	-- <i>${turk}</i>&ensp; ${refs}<img alt="${id}" /></p>`
+  let txt = parent === self? 
+  `<p><a href="/Kuran/#${link}" target=iqraTop>${id}</a> -- ` : ''
+  return `${txt}<i>${turk}</i>&ensp; ${refs}<img alt="${id}" /></p>`
 }
 
+window.name = parent === self? 'KK' : 'finder'
 samples.innerHTML =
-    DATA.split('\n').map(line).join('\n')
+    DATA.split('\n==\n').map(line).join('\n')
 function register(x) {
 	function hideOrShow() {
 		let i = x.querySelector("img")
@@ -72,7 +78,6 @@ function register(x) {
 	x.onmouseleave = hideOrShow
 }
 samples.querySelectorAll("p").forEach(register)
-window.name = 'KK'
 </script>
   </body>
 </html>

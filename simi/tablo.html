@@ -14,6 +14,15 @@
 	#samples p {
 		margin-top: 2em;
 	}
+	#samples span {
+		display: block;
+	}
+	#samples div {
+        white-space: pre-wrap;
+	}
+	summary {
+		color: darkgreen;
+	}
 	details {
 		margin-top: 0.6em;
 		margin-bottom: 0.6em;
@@ -34,7 +43,7 @@
 <p><b>Benzeşen ayetler nedir?</b></p>
 <p>Yüce Kitabımız Kur'ân-ı Kerim'in önemli bir özelliği, benzer ayetlerin birbirini tefsir etmesi, açıklamasıdır. Benzeşen ayetler arasındaki ufak farklar tutarsızlık belirtisi değil, aksine, Kitabın korunmuş olduğunun bir göstergesi. Aşağıdaki örnekler bu iddiayı destekliyor.
 </p>
-<p>Hiç fark olmadan aynen tekrarlanan ayetlere yer vermedik. Aşağıdaki örneklerin hepsinde, bir ifade az sayıda (2-4 kere) tekrar edilmiş ve ayetler arasında ufak farklar var. Benzeşen ayetleri görmek için her örneğin yanındaki üçgene dokunun. Açılan resmin üstünde Iqra linkini bulacaksınız. Bu linke dokununca ayrı bir sekmede Rehber yazılımı açılır. Tekrar bu sekmeye dönüp örnekleri incelemeye devam edebilirsiniz.</p>
+<p>Hiç fark olmadan aynen tekrarlanan ayetlere yer vermedik. Aşağıdaki örneklerin hepsinde, bir ifade az sayıda (2-7 kere) tekrar edilmiş ve ayetler arasında ufak farklar var. Benzeşen ayetleri görmek için her örneğin yanındaki üçgene dokunun. Açılan resmin üstünde Iqra linkini bulacaksınız. Bu linke dokununca ayrı bir sekmede Rehber yazılımı açılır. Tekrar bu sekmeye dönüp örnekleri incelemeye devam edebilirsiniz.</p>
 
 <div id="samples">
 </div>
@@ -64,9 +73,13 @@ function line(str) {
 	  else if (!L.includes(item))
 	  L.push(item)
 	}
-	let [id, turk, refs, link, pict] = str.split('\t')
+	let i = str.indexOf('\n')
+	if (i < 0) i = str.length
+	let code = str.slice(0, i)
+	let text = str.slice(i+1)
+	let [id, turk, refs, link, pict] = code.split('\t')
 	if (!id) return
-	let item = {id, turk, refs, link, pict}
+	let item = {id, turk, refs, link, pict, text}
 	NAMES.set(id, item)
 	refs.split(' ').forEach(verse)
 	return
@@ -74,15 +87,16 @@ function line(str) {
 function makeSamples() {
 	function verse(x) {
 		let [c] = x.id.split(':')
+		let txt = parent === self? `<span id="${x.turk}">
+  <a href="/Kuran/#${x.link}" target=iqraTop>${x.id}</a>
+  </span>` : ''
 VERSES.push(`<details>
   <summary><i>${x.turk}</i>&ensp; ${x.refs}</summary>
-	<div id="${x.turk}">
-	<a href="/Kuran/#${x.link}" target=iqraTop>${x.id}</a>
-	</div>
-  <img src="img/${x.pict}" alt="${x.id}" />
+  ${txt}<img src="img/${x.pict}" alt="${x.id}" />
+  <div>${x.text}</div>
 </details>`)
 	}
-	DATA.split('\n').forEach(line)
+	DATA.split('\n==\n').forEach(line)
 	let VERSES = []
 	for (let c in CHAPS) {
 		// console.log(c, CHAPS[c]);
@@ -92,7 +106,7 @@ VERSES.push(`<details>
 	}
 	samples.innerHTML = VERSES.join('\n')
 }
-window.name = 'KK'
+window.name = parent === self? 'KK' : 'finder'
 makeSamples()
 //samples.querySelectorAll("p").forEach(register)
 </script>
