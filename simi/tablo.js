@@ -165,16 +165,12 @@ Yüce Kitabımızda defalarca tekrarlanan bir vaad: Hesap gününde herkes kendi
 Kelimenin öncesinin ve sonrasının ikişer ihtimali var ve bütün ihtimaller dizilmiş. Hiçbirinde kıraat ihtilafı yok.
 ==
 vevassaynâ	tavsiye etmiştik	29:8 31:14 46:15	b=wwSynA	vevassayna.png
-Aşranan <b>vevassaynâ</b> kelimesi üç ayette geçiyor, üçüncüde aradığımız istisna durumu görüyoruz: Bir kelimenin benzeri varyant kıraat olmuş.
-<a href="https://corpuscoranicum.org/en/verse-navigator/sura/45/verse/15/variants" target=Kuran>46:15'deki</a> 
-<b>ihsânen</b> (iyilik) kelimesi, 
-<a href="https://corpuscoranicum.org/en/verse-navigator/sura/29/verse/8/variants" target=Kuran>29:8'deki</a> 
-gibi <b>husnen</b> (güzellik) okunabiliyor. Benzer ayetlerde kıraat farkı olarak sadece bu örneği buldum!
+Aranan <b>vevassaynâ</b> kelimesi üç ayette geçiyor, üçüncüde aradığımız istisna durumu görüyoruz:
+<a href="https://corpuscoranicum.org/en/verse-navigator/sura/45/verse/15/variants" target=Kuran>46:15'deki</a> <b>ihsânen</b> (iyilik) kelimesi, <a href="https://corpuscoranicum.org/en/verse-navigator/sura/29/verse/8/variants" target=Kuran>29:8'deki</a> gibi <b>husnen</b> (güzellik) okunabiliyor. Benzer ayetlerde kıraat farkı olarak sadece bu örneği buldum!
 ==
 veyuzekkiy	arındırır	2:129 2:151 3:164 62:2	b=wyzky	veyuzekkiy.png
-Ortak kelime sayısı 7, ayetleri başı farklı ama benzerlik belirgin.
-2:129 Hz İbrahim'in, kendi neslinden bir elçi için duası, Rabbbinden
-"ayetlerini okuyan, Kitabı ve hikmeti öğreten, arındıran bir peygamber" istiyor.
+Ortak kelime sayısı 7, ayetlerin başı farklı ama benzerlik belirgin:
+2:129 Hz İbrahim'in, kendi neslinden bir elçi için duası, Rabbbinden "ayetlerini okuyan, Kitabı ve hikmeti öğreten, arındıran bir peygamber" istiyor.
 2:151 Allah, bu elçinin (salat ve selam ona) geldiğini bizzat haber veriyor.
 Bu ayet diğerlerinden farklı olarak, Müslümanlara "siz" diye hitap ediyor.
 
