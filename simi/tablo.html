@@ -38,12 +38,24 @@
   </style>
   <body>
 
+<b>Mukaddime</b>
+<p><i>Buradaki örnekler 1446 Ramazan ayında (Mart 2025)
+<a href="https://groups.google.com/g/okuyun5/search?q=before%3A2025-04-1" target=Kuran>Iqra -- Okuyun</a> mail grubunda günlük olarak yayınlanmıştı. 
+İlk 10 örnek <a href="./2025.html">şu sayfada</a> video yardımıyla daha ayrıntılı anlatılıyor. Bu sayfadan önce oraya bakmanız tavsiye edilir.</i>
+</p>
+<p>
+	Örnek sayısı: <span id=nsamp></span> &emsp; 
+	Ayet sayısı: <span id=nverse></span> &emsp;
+	<input type="checkbox" id="sort" name="sort" />
+    <label for="sort">Sıralı</label>
+</p><br>
+
 <h2>Benzeşen ayetlere örnekler</h2>
 
 <p><b>Benzeşen ayetler nedir?</b></p>
 <p>Yüce Kitabımız Kur'ân-ı Kerim'in önemli bir özelliği, benzer ayetlerin birbirini tefsir etmesi, açıklamasıdır. Benzeşen ayetler arasındaki ufak farklar tutarsızlık belirtisi değil, aksine, Kitabın korunmuş olduğunun bir göstergesi. Aşağıdaki örnekler bu iddiayı destekliyor.
 </p>
-<p>Hiç fark olmadan aynen tekrarlanan ayetlere yer vermedik. Aşağıdaki örneklerin hepsinde, bir ifade az sayıda (2-7 kere) tekrar edilmiş ve ayetler arasında ufak farklar var. Benzeşen ayetleri görmek için her örneğin yanındaki üçgene dokunun. Açılan resmin üstünde Iqra linkini bulacaksınız. Bu linke dokununca ayrı bir sekmede Rehber yazılımı açılır. Tekrar bu sekmeye dönüp örnekleri incelemeye devam edebilirsiniz.</p>
+<p>Hiç fark olmadan aynen tekrarlanan ayetlere burada yer verilmedi. Aşağıdaki örneklerin hepsinde, bir ifade az sayıda (2-7 kere) tekrar edilmiş ve ayetler arasında ufak farklar var. Benzeşen ayetleri görmek için her örneğin mealine dokunun. Açılan resimler Rehber modülünden alındı. Ayet linklerine dokununca ilgili ayet Iqra yazılımda gösterilir.</p>
 
 <div id="samples">
 </div>
@@ -54,17 +66,13 @@
 <iframe src="https://www.youtube.com/embed/1Zx7XCm4OWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br> -->
 <br>
-<h3 id="referans">Referanslar</h3>
-<p>Bu sayfadaki örnekler 1446 Ramazan ayında (Mart 2025)
-<a href="https://groups.google.com/g/okuyun5/search?q=before%3A2025-04-1" target=Kuran>Iqra -- Okuyun</a> mail grubunda günlük olarak yayınlanmıştı. 
-İlk 10 örnek <a href="./2025.html">şu sayfada</a> daha ayrıntılı anlatılıyor.
-</p><br>
 
 <script src="/Kuran/code/model.js"></script>
 <script src="tablo.js"></script>
 <script>
 "use strict";
-const NAMES = new Map(), CHAPS = []
+const MAP = new Map(), ITEMS = [],
+	  CHAPS = [], VERSES = [];
 function line(str) {
 	function verse(cv) {
 	  let [c, v] = cv.split(':')
@@ -80,38 +88,39 @@ function line(str) {
 	let [id, turk, refs, link, pict] = code.split('\t')
 	if (!id) return
 	let cvList = refs.split(' ')
-	refs = cvList.map(cv => 
-`<a href="/Kuran/reader.html#v=${cv}" target=iqra>${cv}</a>`).join(' ')
-	let item = {id, turk, refs, link, pict, text}
-	NAMES.set(id, item)
+	let href = cvList.map(cv => 
+`<a href="/Kuran/reader.html#v=${cv}" target=iqra>${cv}</a>`
+		).join(' ')
+	let ref2 = parent === self? `<span id="${turk}">
+  <a href="/Kuran/#${link}" target=iqraTop>${id}</a>
+</span>` : ''
+	let html = `<details>
+  <summary><i>${turk}</i>&ensp; ${href}</summary>
+  ${ref2}<img src="img/${pict}" alt="${id}" />
+  <div>${text}</div>
+</details>`
+	let item = {id, turk, refs, href, link, pict, text, html}
+	MAP.set(id, item); ITEMS.push(item.html)
 	cvList.forEach(verse)
-	return
 }
 function makeSamples() {
-	function verse(x) {
-		let [c] = x.id.split(':')
-		let txt = parent === self? `<span id="${x.turk}">
-  <a href="/Kuran/#${x.link}" target=iqraTop>${x.id}</a>
-  </span>` : ''
-VERSES.push(`<details>
-  <summary><i>${x.turk}</i>&ensp; ${x.refs}</summary>
-  ${txt}<img src="img/${x.pict}" alt="${x.id}" />
-  <div>${x.text}</div>
-</details>`)
-	}
 	DATA.split('\n==\n').forEach(line)
-	let VERSES = []
 	for (let c in CHAPS) {
 		// console.log(c, CHAPS[c]);
 		VERSES.push("<p>Sure "+c
 			+". <b>"+suraNames.tr[c]+"</b></p>")
-		CHAPS[c].forEach(verse)
+		CHAPS[c].forEach(x => VERSES.push(x.html))
 	}
-	samples.innerHTML = VERSES.join('\n')
+}
+function displayData() {
+	let a = (sort.checked? VERSES : ITEMS)
+	samples.innerHTML = a.join('\n')
 }
 window.name = parent === self? 'KK' : 'finder'
-makeSamples()
-//samples.querySelectorAll("p").forEach(register)
+sort.onchange = displayData
+makeSamples(); displayData()
+nsamp.textContent = MAP.size
+nverse.textContent = CHAPS.flat().length
 </script>
   </body>
 </html>
