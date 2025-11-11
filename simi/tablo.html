@@ -71,14 +71,15 @@
 <script src="tablo.js"></script>
 <script>
 "use strict";
-const ITEMS = [], CHAPS = [], VERSES = [];
+const ITEMS = [], CHAPS = []
+var shortText, sortedText;
 function line(str) {
 	function verse(cv) {
 	  let [c, v] = cv.split(':')
 	  let L = CHAPS[c]
-	  if (!L) CHAPS[c] = [item]
-	  else if (!L.includes(item))
-	  L.push(item)
+	  if (!L) L = CHAPS[c] = []
+	  if (!L.flat().includes(item))
+	  	L.push([v, item])
 	}
 	let i = str.indexOf('\n')
 	if (i < 0) i = str.length
@@ -98,21 +99,24 @@ function line(str) {
   ${ref2}<img src="img/${pict}" alt="${id}" />
   <div>${text}</div>
 </details>`
-	let item = {id, turk, refs, href, link, pict, text, detail}
+	let item = {id, turk, refs, link, pict, detail}
 	ITEMS.push(item)
 	cvList.forEach(verse)
 }
 function makeSamples() {
 	DATA.split('\n==\n').forEach(line)
+	const VERSES = []
 	for (let c in CHAPS) {
 		VERSES.push("<p>Sure "+c
 			+". <b>"+suraNames.tr[c]+"</b></p>")
-		CHAPS[c].forEach(x => VERSES.push(x.detail))
+		CHAPS[c].sort((a, b) => a[0] - b[0]) //verse number
+		CHAPS[c].forEach(([v,x]) => VERSES.push(x.detail))
 	}
+	shortText = ITEMS.map(x => x.detail).join('\n')
+	sortedText = VERSES.join('\n')
 }
 function displayData() {
-	let a = (sort.checked? VERSES : ITEMS.map(x => x.detail))
-	samples.innerHTML = a.join('\n')
+	samples.innerHTML = (sort.checked? sortedText : shortText)
 }
 window.name = parent === self? 'KK' : 'finder'
 sort.onchange = displayData
