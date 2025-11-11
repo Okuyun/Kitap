@@ -71,8 +71,7 @@
 <script src="tablo.js"></script>
 <script>
 "use strict";
-const MAP = new Map(), ITEMS = [],
-	  CHAPS = [], VERSES = [];
+const ITEMS = [], CHAPS = [], VERSES = [];
 function line(str) {
 	function verse(cv) {
 	  let [c, v] = cv.split(':')
@@ -94,32 +93,31 @@ function line(str) {
 	let ref2 = parent === self? `<span id="${turk}">
   <a href="/Kuran/#${link}" target=iqraTop>${id}</a>
 </span>` : ''
-	let html = `<details>
+	let detail = `<details>
   <summary><i>${turk}</i>&ensp; ${href}</summary>
   ${ref2}<img src="img/${pict}" alt="${id}" />
   <div>${text}</div>
 </details>`
-	let item = {id, turk, refs, href, link, pict, text, html}
-	MAP.set(id, item); ITEMS.push(item.html)
+	let item = {id, turk, refs, href, link, pict, text, detail}
+	ITEMS.push(item)
 	cvList.forEach(verse)
 }
 function makeSamples() {
 	DATA.split('\n==\n').forEach(line)
 	for (let c in CHAPS) {
-		// console.log(c, CHAPS[c]);
 		VERSES.push("<p>Sure "+c
 			+". <b>"+suraNames.tr[c]+"</b></p>")
-		CHAPS[c].forEach(x => VERSES.push(x.html))
+		CHAPS[c].forEach(x => VERSES.push(x.detail))
 	}
 }
 function displayData() {
-	let a = (sort.checked? VERSES : ITEMS)
+	let a = (sort.checked? VERSES : ITEMS.map(x => x.detail))
 	samples.innerHTML = a.join('\n')
 }
 window.name = parent === self? 'KK' : 'finder'
 sort.onchange = displayData
 makeSamples(); displayData()
-nsamp.textContent = MAP.size
+nsamp.textContent = ITEMS.length
 nverse.textContent = CHAPS.flat().length
 </script>
   </body>

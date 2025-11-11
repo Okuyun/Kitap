@@ -22,7 +22,7 @@ Kelimenin öncesi, ayetlerin beşinde ortak:
 
 Benzerlik buraya kadar, sonrası çok farklı, ekteki resimde gösterdim.
 ==
-metâ hâzâ	bu vaad ne zaman	10:48 21:38 27:71 32:28 34:29 36:48 67:25	b=mataY%60%20ha	meta haza.png
+metâ hâzâ	bu ne zaman	10:48 21:38 27:71 32:28 34:29 36:48 67:25	b=mataY%60%20ha	meta haza.png
 Bazan aynı surede bir ayetin defalarca tekrar edildiğini görüyoruz. Bazan da bir ayet farklı yerlerde hiç değişmeden karşımıza çıkıyor. Yasin ve Mülk surelerinde, ayrıca 4-5 surede daha geçen ifade:
 <b>veyeqûlûne metâ hâżel-va’du in kuntum sâdiqîn</b>
 <i>“Doğru söylüyorsanız, bu vaad ne zamanmış!” derler.</i>
