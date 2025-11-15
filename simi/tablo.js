@@ -1,11 +1,11 @@
 const DATA =
-`erzelil-'umur	ömrün düşkünü	16:70 22:5	b=loEumuri	2 erzelil-umur.png
+`erzelil-'umur	Ömrün düşkünü	16:70 22:5	b=loEumuri	2 erzelil-umur.png
 <b>erzel</b> (en düşkün) kelimesi 4 ayette geçiyor, bunların ikisi <b>'umur</b> (ömür) ile tamlama yapmış. İki fark hemen dikkati çekiyor:
 * <b>likeylâ</b> bir ayette bitişik, diğerinde ayrı 
 * ikinci ayette fazladan <b>min</b> kelimesi var
 Anlam tamamen aynı, ama bu farklar bütün mushaflarda korunmuş.
 ==
-ente vezevcuke	sen ve eşin	2:35 7:19	b=wzwjk	4 vezevcuke.png
+ente vezevcuke	Sen ve eşin	2:35 7:19	b=wzwjk	4 vezevcuke.png
 Çoğu zaman, benzer ayetler arasında tamamlayıcı farklar vardır. Mesela Hz Adem ve eşinin Cennet'te yerleşmesi Bakara ve A'raf surelerinde aynı kelimelerle anlatılır. Üç kelimede fark var:
 Bakara suresinde <b>qulnâ</b> ve <b>ragaden</b> kelimeleri fazla,
 diğerinde ise <b>vekulâ</b> yerine <b>fekulâ</b> okunuyor.
@@ -22,7 +22,7 @@ Kelimenin öncesi, ayetlerin beşinde ortak:
 
 Benzerlik buraya kadar, sonrası çok farklı, ekteki resimde gösterdim.
 ==
-metâ hâzâ	bu ne zaman	10:48 21:38 27:71 32:28 34:29 36:48 67:25	b=mataY%60%20ha	meta haza.png
+metâ hâzâ	Bu ne zaman	10:48 21:38 27:71 32:28 34:29 36:48 67:25	b=mataY%60%20ha	meta haza.png
 Bazan aynı surede bir ayetin defalarca tekrar edildiğini görüyoruz. Bazan da bir ayet farklı yerlerde hiç değişmeden karşımıza çıkıyor. Yasin ve Mülk surelerinde, ayrıca 4-5 surede daha geçen ifade:
 <b>veyeqûlûne metâ hâżel-va’du in kuntum sâdiqîn</b>
 <i>“Doğru söylüyorsanız, bu vaad ne zamanmış!” derler.</i>
@@ -39,7 +39,7 @@ Harfi harfine tam altı surede tekrar edilmiş.
 Yedincide ufak bir fark var: <b>va'd => feth</b>
 Peki neden bu tekrar? Çünkü hepsinin bağlamı farklı... Hepsinin cevabı da farklı, sonraki ayetler cevapları gösteriyor. Hafızlar şaşırmadan bu bağlamın cevabını okumak zorunda!
 ==
-yebgûnehâ 'ivecâ	eğrilik ararlar	7:45 11:19 14:3	b=yl%20Allh%20wyb	yebguneha.png
+yebgûnehâ	Eğrilik ararlar	7:45 11:19 14:3	b=yl%20Allh%20wyb	yebguneha.png
 Allah'ın Kitabınının tüm inceliklerini, farklı okunuşlarıyla birlikte koruyup nesilden nesle aktarılması hakikaten mucize... Özellikle, bu ümmetin başka hiçbir konuda anlaşamadığını hatırlayalım: Hadis, tefsir, fıkıh, siyer... her birinde dağlar kadar farklılıklar varken Kur'an metninde (10 farklı kıraatla birlikte) tam bir mutabakat sağlanmış.
 
 Bunu görmezden gelip uçuk teoriler üretiyorlar:
@@ -87,7 +87,7 @@ Dilbilgisi açısından çok farklı olsa da anlam aynı, ses ve imlâ çok fark
 
 Nasıl 6:32'de hem isim hem sıfat tamlaması oluyor? Çünkü (başkalarında değil) yalnız bu ayette farklı kıraat izni var. Yukarıdaki Iqra linkine, 6:32'ye dokunun, söz konusu kelime renkli çıkar. Kelimeye tıklayınca varyantı göreceksiniz. Hiç basit değil, ama öğrendikçe daha ilginç oluyor...
 ==
-muhlikel-qurâ	beldelerin helâki	6:131 11:117 28:59	b=hlk%20AlqrY	muhlikel-qura.png
+muhlikel-qurâ	Beldelerin helâki	6:131 11:117 28:59	b=hlk%20AlqrY	muhlikel-qura.png
 Başlık korkunç: <b>muhlikel-qurâ</b> (Ülkeleri yok eden)
 <b>muhlik</b>  helâk eden
 <b>yuhlike</b>  helâk eder
@@ -106,32 +106,32 @@ Hz İsa'nın meşhur sorusu iki ayette:
 Havariler iki ayette aynı cevabı veriyor:
 <b>nahnu ensârullâh</b>  "Allah'ın yardımcıları biziz!"
 ==
-lesâhirun 'aliym	bilgili büyücü	7:111 26:36	b=lsAHr%20Elym	lesahirun.png
+lesâhirun 'aliym	Bilgili büyücü	7:111 26:36	b=lsAHr%20Elym	lesahirun.png
 İbrani Üniversitesinde yakın zamanda yayınlanan bir "eğrilik arayışını" göstermek istiyorum. Benzeşen ayetler öteden beri iki tarafın da ilgisini çekmiş: Tefsirlerde paralel metinlere vurgu olduğu gibi, "eğrilik arayanlar" da burada malzeme bulduklarını sanmışlar. Bulduğu "çelişki" şu: Bir ayette firavun konuşuyor, diğerinde yöneticiler. Söylenen şey aynı olduğu için, "bu açık bir çelişki" sonucuna varmış.
 
 Halbuki bunun gibi "sorunlar" klasik tefsirlerde ele alınmış ve cevabı hazır. Hz Musa'nın mucizesine şahit olan yöneticiler, daha önce benzerini görmedikleri için, "Bu çok bilgili bir büyücü!" diye bağırmışlar. Firavun da doğrulamış, aynı şeyi söylemiş. Şu'ara suresinde <b>qâle lil-melei</b> "yöneticilere dedi", A'raf suresinde lam yerine elifle <b>qâlel-meleu</b> "yöneticiler dedi".
 
 Bu konuyu çalışmak için, dört ayetin her birinde ayet numarasına tıklayınca, benzerini gösteren bir menü çıkar. Yukarıda işaretli kelimeler dışında, iki grup tamamen aynı. Farklı kelimelerle ifadenin zenginleştiğini göreceksiniz.
 ==
-feyenzurû	öncekilerin akıbeti	12:109 30:9 35:44 40:21 47:10	b=D%20fynZrw	feyenzuru.png
+feyenzurû	Öncekilerin akıbeti	12:109 30:9 35:44 40:21 47:10	b=D%20fynZrw	feyenzuru.png
 Sık tekrarlanan temalardan biri: "öncekilerin akıbetine bakın." Bu haliyle 6 ayette geçiyor ve 11 kelime ortak. Bazı farkları resimde işaretledim:
 * Ayetlerin yarısı <b>efelem</b>, yarısı <b>evelem</b> diye başlıyor
 * 40:21'de fazladan <b>kânû</b> kelimesi var
 İçinde <b>kânû</b> geçen dört ayeti de işaretledim. Bu farkların insan hafızasında kolayca karışabileceğini düşünürdüm. Kıraat farklarına bakınca, (şâz okumalar dahil) hiç kimsenin bu farkları karıştırdığını görmüyoruz. Demek kıraat farkları hafız hatası değil. 
 ==
-ya'melûnes-sâlihât	salih işler yaparlar	17:9 18:2	b=yEmlwn%20AlS	3 salihat.png
+sâlihât	Salih işler yaparlar	17:9 18:2	b=yEmlwn%20AlS	3 salihat.png
 "Sâlih amel işleyen müminlere," Kitabımızda "büyük ve güzel bir ücret" müjdelenmiş. İki ayette geçen bu ifadenin biri haber veriyor, diğeri dilek bildiriyor.
 
 İki ayet son kelimesi dışında tamamen aynı. Demek ki ücret hem büyük hem de güzel... İlk kelimedeki son harfin harekesi haber kipi ya da dilek kipi olduğunu belirliyor.
 ==
-yagfiru limen	dilediğini bağışlar	2:284 3:129 5:18 48:14	b=ygfr%20lmn	yagfiru limen.png
+yagfiru limen	Dilediğini bağışlar	2:284 3:129 5:18 48:14	b=ygfr%20lmn	yagfiru limen.png
 Beş ayette okuduğumuz önemli bir haber:
 <b>yaġfiru limen yeşâu ve yu’ażżibu men yeşâ</b>
 "dilediğini bağışlar, dilediğini cezalandırır"
 
 Azap mı mağfiret mi? Bunun keyfi olmadığını, kulun tercihine göre Allah'ın dileyip yaratacağını başka ayetlerde açıkça görüyoruz. Dört ayette önce bağışlanma sonra azap, bir ayette tam tersi. Ayrıca, ilk ayette <b>fe</b> bağlacı farklı duruyor.
 ==
-el-arda mehden	yeryüzü beşik	20:53 43:10	b=mhdA	1 el-arda mehden.png
+el-arda mehden	Yeryüzü beşik	20:53 43:10	b=mhdA	1 el-arda mehden.png
 Yollar için bir yerde <b>seleke</b> (açtı) diğerinde <b>ca'ale</b> (yaptı) kullanılmış. Anlam neredeyse aynı, fakat kelime farklı olduğu için yazılım bu iki ayetin benzerliğini göremiyor.
 ==
 veimmâ yenzeganneke	(Şeytan) dürterse	7:200 41:36	b=ynzgnk	5 yenzeganneke.png
@@ -141,7 +141,7 @@ ebvâbe cehennem	Cehennemin kapıları	16:29 39:72 40:76	b=AbwAb%20jhnm	6 ebvabe
 Üç ayette Cehennemin kapıları aynı kelimelerle konu olmuş:
 Son ayetin 8 kelimesi hepsinde ortak. Bununla kıyaslayınca, ilk ayete fe- ve le- edatları eklenmiş, ortadaki ayette <b>qiyle</b> (dendi) kelimesi fazla: anlama çok etkisi olmayan farklar. 
 ==
-enbâil-gayb	gaybın haberleri	3:44 11:49 12:102	b=AnbA'%20Algyb	7 enbail-gayb.png
+enbâil-gayb	Gaybın haberleri	3:44 11:49 12:102	b=AnbA'%20Algyb	7 enbail-gayb.png
 Şu üç ayette esas olarak aynı şey söyleniyor: <br>
 "Bu(nlar), sana vahyettiğimiz gayb haberlerindendir. <br>
 ... onların yanında değildin (ki bunları bilesin.)"
@@ -159,16 +159,16 @@ Biri beşikte, biri mucize gösterince, biri de "Son yemek"ten hemen önce...
 Yani Hz İsa'nın değişmeyen mesajı budur.<br>
 Kelimeler açısından neden ilginç? Çünkü üç ayet tamamen aynı hakikati iletiyor. Birinde bir harf diğerinde iki harf fazlalık anlamı etkilemiyor ama metin bu haliyle korunmuş: Meryem suresindeki <b>ve</b> ile Zuhruf suresindeki <b>huve</b> Kitabın ayrılmaz parçaları ve herkes bu şekilde okumuş, bu şekilde yazmış.
 ==
-seyyiâtu mâ	işledikleri kötülükler	16:34 39:48 39:51 45:33	b=say~i_#aAtu	9 seyyiat.png
+seyyiâtu mâ	İşledikleri kötülükler	16:34 39:48 39:51 45:33	b=say~i_#aAtu	9 seyyiat.png
 Yüce Kitabımızda defalarca tekrarlanan bir vaad: Hesap gününde herkes kendi yaptığını bulacak. Dünya hayatında birisine yardım ettiyse orada yardım görecek, zulmettiyse aynısı ona yapılacak. Bu elbette zulüm değil, özlediğimiz ve muhtaç olduğumuz adaletin ta kendisi.
 <p>"Kötülükler" anlamındaki <b>seyyiât</b> kelimesi Kitabımızda 20 kere geçiyor, 4 tanesi özne halinde. Bu ayetlerin ilginç bir benzerliği var:
 Kelimenin öncesinin ve sonrasının ikişer ihtimali var ve bütün ihtimaller dizilmiş. Hiçbirinde kıraat ihtilafı yok.
 ==
-vevassaynâ	tavsiye etmiştik	29:8 31:14 46:15	b=wwSynA	vevassayna.png
+vevassaynâ	Tavsiye etmiştik	29:8 31:14 46:15	b=wwSynA	vevassayna.png
 Aranan <b>vevassaynâ</b> kelimesi üç ayette geçiyor, üçüncüde aradığımız istisna durumu görüyoruz:
 <a href="https://corpuscoranicum.org/en/verse-navigator/sura/45/verse/15/variants" target=Kuran>46:15'deki</a> <b>ihsânen</b> (iyilik) kelimesi, <a href="https://corpuscoranicum.org/en/verse-navigator/sura/29/verse/8/variants" target=Kuran>29:8'deki</a> gibi <b>husnen</b> (güzellik) okunabiliyor. Benzer ayetlerde kıraat farkı olarak sadece bu örneği buldum!
 ==
-veyuzekkiy	arındırır	2:129 2:151 3:164 62:2	b=wyzky	veyuzekkiy.png
+veyuzekkiy	Arındırır	2:129 2:151 3:164 62:2	b=wyzky	veyuzekkiy.png
 Ortak kelime sayısı 7, ayetlerin başı farklı ama benzerlik belirgin:
 2:129 Hz İbrahim'in, kendi neslinden bir elçi için duası, Rabbbinden "ayetlerini okuyan, Kitabı ve hikmeti öğreten, arındıran bir peygamber" istiyor.
 2:151 Allah, bu elçinin (salat ve selam ona) geldiğini bizzat haber veriyor.
@@ -178,20 +178,20 @@ Son iki ayet, aynı haberin farklı bağlamlarda, aynı kelimelerle tekrarı.
 Bu iki ayette ortak kelime sayısı 14'e çıkmış. 
 Bu ayetleri, kıraat imamları karıştırmış mı? Cevap yine HAYIR!
 ==
-belaga eşuddehû	yetişkinliğe ulaşınca	12:22 28:14	b=wlmA%20blg	belaga esuddehu.png
+belaga eşuddehû	Yetişkinliğe ulaşınca	12:22 28:14	b=wlmA%20blg	belaga esuddehu.png
 Yaklaşık 500 yıl arayla, iki nebinin gençliği:
 İlk ayet Hz Yusuf, ikinci Hz Musa hakkında, 9 kelime ortak:
 "Yetişkinlik çağına ulaşınca, ona hüküm ve ilim vermiştik; güzel davrananları böyle ödüllendiririz"
 İşaretsiz kelime <b>vestevâ</b> (olgunlaştı) sadece Hz Musa için kullanılmış. Hiçbir kıraat imamı bu kelimeyi unutmamış, ya da diğer ayete hata ile eklememiş.
 ==
-ey-yenfa'anâ	bize faydalı olabilir	12:21 28:9	b=ynfEnA%20Aw	ey-yenfaana.png
+yenfa'anâ	Bize faydalı olabilir	12:21 28:9	b=ynfEnA%20Aw	yenfaana.png
 Hz Yusuf ve Hz Musa'nın bir benzerliği daha var:
 Kuyudan çıkarılan çocuk Yusuf'u satın alan Mısır azizi ve Nil nehrinde bebek Musa'yı bulan Hz Asiye eşlerine aynı kelimelerle hitap ediyor:
 "Bize faydalı olabilir, ya da evlat ediniriz"
 
 Zalim firavuna bunu söyleyebilen Hz Asiye, Tahrim suresinin sonunda övgüye layık görülen iki kadından biridir.
 ==
-buşram-beyne	önünde müjdeci	7:57 25:48 27:63	b=b$rA%20byn	busran beyne.png
+buşram-beyne	Önünde müjdeci	7:57 25:48 27:63	b=b$rA%20byn	busran beyne.png
 Üç ayette aynı ifadeyi okuyoruz:
 "Rahmetinin önünde müjdeci olarak rüzgarları gönderen"
 İkinci ayette fiilin zamanı farklı, anlamı aynı.
@@ -219,7 +219,7 @@ Hiçbir kıraat imamı bunları farklı okumuş mu? <b>Hayır</b>
 <b>lâ nuferriqu beyne ehadin minhum venahnu lehû muslimûn</b>
 ... onların arasında hiçbir ayrım yapmayız, biz O’na teslim olanlarız
 ==
-illâ kânû bihî	alay etmesinler	15:11 36:30 43:7	b=AlA%20kAnwA%20bh	illa kanu bihi.png
+illâ kânû bihî	Alay etmesinler	15:11 36:30 43:7	b=AlA%20kAnwA%20bh	illa kanu bihi.png
 Üç ayette yedi kelime ortak:
 <b>(ve)mâ ye-tîhim min rasûlin/nebiyyin illâ kânû bihî yestehziûn</b>
 onlara hiçbir elçi/nebi gelmedi ki, onunla alay etmesinler.
@@ -227,7 +227,7 @@ onlara hiçbir elçi/nebi gelmedi ki, onunla alay etmesinler.
 * ikisinde rasûl, son ayette nebiy kelimeleri
 Ve yine hiçbir kıraat imamı bu farkları birbirine karıştırmamış
 ==
-velev yuâhizullâhu	hemen cezalandırsaydı	16:61 35:45	b=*%20Allh%20AlnAs	yuahizullahu.png
+yuâhizullâhu	Hemen cezalandırsaydı	16:61 35:45	b=*%20Allh%20AlnAs	yuahizullahu.png
 Benzerlik oranı yüksek, 16 kelime ortak.
 Anlamı değiştirmeyen iki fark var:
 * zulümleri/işledikleri 
@@ -236,7 +236,7 @@ Anlamı değiştirmeyen iki fark var:
 "Allah insanları zulümleri/işledikleri nedeniyle hemen cezalandıracak olsaydı, yer üstünde/sırtında bir tek canlı bırakmazdı; fakat onları belirli bir süreye kadar erteliyor. Ecelleri geldiği zaman ..."
 Her iki ayette de en ufak bir kıraat ihtilafı yok.
 ==
-qavmen mâ	uyarılmamış kavim	28:46 32:3 36:6	b=qwmA%20mA	qavmen ma.png
+qavmen mâ	Uyarılmamış kavim	28:46 32:3 36:6	b=qwmA%20mA	qavmen ma.png
 Yâsin'de geçen "qavmen mâ" ifadesini arayınca, 11 kelimenin ortak olduğu bir benzerlik buluyoruz. Söz konusu iki ayetin başı ve son kelimeleri farklı, ama üç ayet aynı anlamı ifade ediyor:
 "Senden önce uyarılmamış bir kavmi uyarman için"
 ==
@@ -255,19 +255,19 @@ Nimet kelimesi Kitabımızda 50 ayette geçiyor. Bu kelimelerin yaklaşık yarı
 
 "Ne önemi var, kâtiplerin tercihi" demek bu ayrıntıyı açıklamıyor. Çünkü tercih olsaydı yazıcıların kimisi şunu kimisi bunu seçerdi. Dikkatle incelersek şunu gözlüyoruz: Nimet kelimesinin iki farklı imlası var, ama 50 ayetin herbiri için hangi imlanın seçildiği keyfi değil, standart olmuş ve tedavüldeki her mushaf bu standarda uygun yazılmış. Özellikle,  Nahl suresinin iki ayetinde biri öyle biri böyle yazılmış. Yan yana iki ayette "kâtip hatası" olabilir mi? Muhtelif Kur'an sitelerinden bu iki ayetin son 3-4 kelimesini bir tablo halinde topladım. Bütün görünüş (font ve renk) farkına rağmen, açık ve kapalı Te ayrıntısının söz konusu iki ayette muhafaza edildiğini açıkça görebilirsiniz.
 ==
-ebneumme	Anamın oğlu	7:150 20:94	b=Abn%20Am	ebneumme.png
+yebneumme	Anamın oğlu	7:150 20:94	b=Abn%20Am	yebneumme.png
 Hz Musa Tur Dağında ilâhi kelâma muhatap olduktan sonra elinde On Emir levhası ile kavmine döndüğünde korkunç bir manzara gördü. İsrailoğulları bir buzağı heykelini tanrı edinmiş ona tapıyordu! Yerine vekil bıraktığı kardeşi Harun'un sakalından tutup çekiştirdi ve açıklama istedi. Kitabımızda iki yerde anlatılan bu olayda Hz Harun'un cevabındaki hitap ilginç. Birinde "annemin oğlu" iki kelime, diğerinde tek kelime: "Ey anamoğlu".
 
 Ne fark eder? Hiç... Çünkü okunuşu da, anlamı da aynı. Ama imladaki küçük ayrıntı aynen korunmuş. A'râf suresinde iki kelimeyi bir boşluk ayırırken, Tâhâ suresinde tek kelime, ayrıca başına hitap belirten bir Ye harfi eklenmiş. Birleştirilen üç kelimede birer elif gizlenmiş. Elbette öyle de olur böyle de. Ama mushaflarda bu minik ayrıntının titizlikle korunduğunu görüyoruz.
 ==
-fî sitteti eyyâm	altı günde	11:7 32:4 50:38 57:4	b=fiY%20sit~api	sitteti eyyam.png
+fî sitteti eyyâm	Altı günde	11:7 32:4 50:38 57:4	b=fiY%20sit~api	sitteti eyyam.png
 <b>ḣalaqas-semâvâti vel-arda vemâ beynehumâ fî sitteti eyyâm, śumme-stevâ ‘alel-’arş</b>
 "gökleri ve yeri ve arasındakileri altı günde yarattı, sonra arşa kuruldu"
 İfade tam şekliyle iki ayette, "altı gün" ifadesi 7 ayette geçiyor.
 
 Neden sadece iki? Çünkü bu ayetlerin dördünde "ve arasındakiler", ikisinde "sonra arşa kuruldu" ifadeleri yok. Her durumdan birer örnek alınca yukarıdaki resim ortaya çıkıyor. Hafızların işi zor: yedi ayeti karıştırmadan okumak gerekiyor.
 ==
-kun feyekûn	"ol" der ve olur	2:117 3:47 19:35 40:68	b=AnmA%20yqwl	kun feyekun.png
+kun feyekûn	"Ol" der ve olur	2:117 3:47 19:35 40:68	b=AnmA%20yqwl	kun feyekun.png
 Kitabımızdaki meşhur kalıplardan biri 8 ayette geçiyor:
 <b>iżâ qadâ emran fe-innemâ yeqûlu lehû kun feyekûn</b>
 "bir işin olmasını istedi mi ona ol der ve olur"
