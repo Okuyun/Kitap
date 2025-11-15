@@ -117,7 +117,7 @@ feyenzurû	öncekilerin akıbeti	12:109 30:9 35:44 40:21 47:10	b=D%20fynZrw	feye
 Sık tekrarlanan temalardan biri: "öncekilerin akıbetine bakın." Bu haliyle 6 ayette geçiyor ve 11 kelime ortak. Bazı farkları resimde işaretledim:
 * Ayetlerin yarısı <b>efelem</b>, yarısı <b>evelem</b> diye başlıyor
 * 40:21'de fazladan <b>kânû</b> kelimesi var
-İçinde <b>kânû</b> geçen dört ayeti de işaretledim. Bu farkların insan hafızasında kolayca karışabileceğini düşünürdüm. Kıraat farklarına bakınca, (şâz okumalar dahil) hiç kimsenin bu farkları karıştırdığını görmüyoruz. Demek kıraat farkları hafız hatası değil. Mesela
+İçinde <b>kânû</b> geçen dört ayeti de işaretledim. Bu farkların insan hafızasında kolayca karışabileceğini düşünürdüm. Kıraat farklarına bakınca, (şâz okumalar dahil) hiç kimsenin bu farkları karıştırdığını görmüyoruz. Demek kıraat farkları hafız hatası değil. 
 ==
 ya'melûnes-sâlihât	salih işler yaparlar	17:9 18:2	b=yEmlwn%20AlS	3 salihat.png
 "Sâlih amel işleyen müminlere," Kitabımızda "büyük ve güzel bir ücret" müjdelenmiş. İki ayette geçen bu ifadenin biri haber veriyor, diğeri dilek bildiriyor.
