@@ -127,9 +127,9 @@ ya'melûnes-sâlihât	salih işler yaparlar	17:9 18:2	b=yEmlwn%20AlS	3 salihat.p
 yagfiru limen	dilediğini bağışlar	2:284 3:129 5:18 48:14	b=ygfr%20lmn	yagfiru limen.png
 Beş ayette okuduğumuz önemli bir haber:
 <b>yaġfiru limen yeşâu ve yu’ażżibu men yeşâ</b>
-dilediğini bağışlar, dilediğini cezalandırır
+"dilediğini bağışlar, dilediğini cezalandırır"
 
-Azap mı mağfiret mi? Bunun keyfi olmadığını, kulun tercihine göre Allah'ın dileyip yaratacağını başka ayetlerde açıkça görüyoruz. Dört ayette önce bağışlanma sonra azap, bir ayette tam tersi. Ayrıca, ilk ayette fe bağlacı farklı duruyor.
+Azap mı mağfiret mi? Bunun keyfi olmadığını, kulun tercihine göre Allah'ın dileyip yaratacağını başka ayetlerde açıkça görüyoruz. Dört ayette önce bağışlanma sonra azap, bir ayette tam tersi. Ayrıca, ilk ayette <b>fe</b> bağlacı farklı duruyor.
 ==
 el-arda mehden	yeryüzü beşik	20:53 43:10	b=mhdA	1 el-arda mehden.png
 Yollar için bir yerde <b>seleke</b> (açtı) diğerinde <b>ca'ale</b> (yaptı) kullanılmış. Anlam neredeyse aynı, fakat kelime farklı olduğu için yazılım bu iki ayetin benzerliğini göremiyor.
@@ -239,5 +239,49 @@ Her iki ayette de en ufak bir kıraat ihtilafı yok.
 qavmen mâ	uyarılmamış kavim	28:46 32:3 36:6	b=qwmA%20mA	qavmen ma.png
 Yâsin'de geçen "qavmen mâ" ifadesini arayınca, 11 kelimenin ortak olduğu bir benzerlik buluyoruz. Söz konusu iki ayetin başı ve son kelimeleri farklı, ama üç ayet aynı anlamı ifade ediyor:
 "Senden önce uyarılmamış bir kavmi uyarman için"
+==
+qur-ânen 'arabiyyen	Arapça bir metin	12:2 43:2	b=quro'a%60nFA	qur-anen.png
+Yusuf ve Zuhruf surelerinin ikinci ayetlerinde yalnız bir kelime farkı var: Birinde "indirdik" diğerinde "yaptık" deniyor ve bütün dünyada öyle okunuyor. Namazda birinin yerine diğeri okunursa hemen düzeltilir ve hiçbir kıraat imamı bunları karıştırmaz.
+==
+hâzel-qurân	Bu Kurân	12:2 12:3	p=234&r=qrA	hazel-quran.png
+Qur-ân kelimesinin iki imlası var: 68 yerde elifle, iki ayette elifsiz yazılır.
+
+Yusuf suresinin ard arda iki ayetinde iki farklı imlayı görebilirsiniz. Harekesiz yazılan modern Arapçada bu fark ortadan kalkmış, lakin mushaflarda aynen korunmuş.
+
+Keyfi değil, "bu ayet elifle yazılır, şu ayet elifsiz" şeklinde belirlenmiş ve (Türkiye dahil) bütün dünyada öyle yazılıyor. Okunuşu etkilemediği için, hiç kimse o eliflerin farkına varmıyor. Hattatlar bile farkında olmadan kopyalıyor belki... Ancak erbâbı biliyor. Anlamı da etkilemiyorsa neden bu ayrıntı?
+==
+bini'metillâh	Allah'ın nimetiyle	16:71 16:72	b=abiniEoma	binimetillah.png
+Nimet kelimesi Kitabımızda 50 ayette geçiyor. Bu kelimelerin yaklaşık yarısı kapalı Te merbûta ile yazılmış, diğerlerinde ise son harf açık Te ile yazılmış. Okunuşunu ya da anlamını değiştirmeyen bu ayrıntı bile bütün mushaflarda korunuyor. Örnek olarak, kelimenin bi edatıyla kullanıldığı ardışık iki ayete yakından bakalım.
+
+"Ne önemi var, kâtiplerin tercihi" demek bu ayrıntıyı açıklamıyor. Çünkü tercih olsaydı yazıcıların kimisi şunu kimisi bunu seçerdi. Dikkatle incelersek şunu gözlüyoruz: Nimet kelimesinin iki farklı imlası var, ama 50 ayetin herbiri için hangi imlanın seçildiği keyfi değil, standart olmuş ve tedavüldeki her mushaf bu standarda uygun yazılmış. Özellikle,  Nahl suresinin iki ayetinde biri öyle biri böyle yazılmış. Yan yana iki ayette "kâtip hatası" olabilir mi? Muhtelif Kur'an sitelerinden bu iki ayetin son 3-4 kelimesini bir tablo halinde topladım. Bütün görünüş (font ve renk) farkına rağmen, açık ve kapalı Te ayrıntısının söz konusu iki ayette muhafaza edildiğini açıkça görebilirsiniz.
+==
+ebneumme	Anamın oğlu	7:150 20:94	b=Abn%20Am	ebneumme.png
+Hz Musa Tur Dağında ilâhi kelâma muhatap olduktan sonra elinde On Emir levhası ile kavmine döndüğünde korkunç bir manzara gördü. İsrailoğulları bir buzağı heykelini tanrı edinmiş ona tapıyordu! Yerine vekil bıraktığı kardeşi Harun'un sakalından tutup çekiştirdi ve açıklama istedi. Kitabımızda iki yerde anlatılan bu olayda Hz Harun'un cevabındaki hitap ilginç. Birinde "annemin oğlu" iki kelime, diğerinde tek kelime: "Ey anamoğlu".
+
+Ne fark eder? Hiç... Çünkü okunuşu da, anlamı da aynı. Ama imladaki küçük ayrıntı aynen korunmuş. A'râf suresinde iki kelimeyi bir boşluk ayırırken, Tâhâ suresinde tek kelime, ayrıca başına hitap belirten bir Ye harfi eklenmiş. Birleştirilen üç kelimede birer elif gizlenmiş. Elbette öyle de olur böyle de. Ama mushaflarda bu minik ayrıntının titizlikle korunduğunu görüyoruz.
+==
+fî sitteti eyyâm	altı günde	11:7 32:4 50:38 57:4	b=fiY%20sit~api	sitteti eyyam.png
+<b>ḣalaqas-semâvâti vel-arda vemâ beynehumâ fî sitteti eyyâm, śumme-stevâ ‘alel-’arş</b>
+"gökleri ve yeri ve arasındakileri altı günde yarattı, sonra arşa kuruldu"
+İfade tam şekliyle iki ayette, "altı gün" ifadesi 7 ayette geçiyor.
+
+Neden sadece iki? Çünkü bu ayetlerin dördünde "ve arasındakiler", ikisinde "sonra arşa kuruldu" ifadeleri yok. Her durumdan birer örnek alınca yukarıdaki resim ortaya çıkıyor. Hafızların işi zor: yedi ayeti karıştırmadan okumak gerekiyor.
+==
+kun feyekûn	"ol" der ve olur	2:117 3:47 19:35 40:68	b=AnmA%20yqwl	kun feyekun.png
+Kitabımızdaki meşhur kalıplardan biri 8 ayette geçiyor:
+<b>iżâ qadâ emran fe-innemâ yeqûlu lehû kun feyekûn</b>
+"bir işin olmasını istedi mi ona ol der ve olur"
+Tam bu şekilde geçtiği 4 ayet var, ikisindeki ufak farklarla birlikte:
+Bir ayette <b>fe</b> fazla, diğerinde <b>ve</b>...
+==
+innâ enzelnâhu	Onu Biz indirdik	12:2 44:3 97:1	b=AnA%20AnzlnAh	inna enzelnahu.png
+Ramazan'ın son üçte birinin önemini iyi biliyoruz, içinde "bin aydan hayırlı" bir gece var. Efendimiz (salat ve selam ona) Kadir Gecesini "27. gecedir" şeklinde belirlememiş, "tek gecelerin sonunda arayın" diye bir ipucu vermiş: 23, 25, 27, 29 olabilir.
+
+<b>innâ enzelnâhu</b> "Onu Biz indirdik" ifadesi üç ayette geçiyor:
+Yusuf suresi: "Arapça bir metin olarak"
+Duhan suresi: "mübarek bir gecede"
+Kadir suresi: "Kadir Gecesinde"
+
+Yukarıdaki Iqra linkinde son "h" harfini kaldırıp <b>innâ enzelnâ</b> aratınca beş ayet daha çıkıyor.
 ==
 `
