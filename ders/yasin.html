@@ -21,7 +21,7 @@
       font-family: georgia, serif;
       font-style: italic;
       min-width: 190px;
-      max-width: 380px;
+      max-width: 390px;
       text-align: left;
     }
     td:nth-child(2) {
@@ -56,7 +56,7 @@
 <h2>Yâsîn Suresi &emsp; <button class=goBack>◀</button></h2>
 
 <p></p>
-<p></p>
+<p id="warning">Telefon yan tutulursa daha okunaklı olur</p>
 
 <table id=tablo>
   <tr>
@@ -301,4 +301,9 @@ wordToHTML = x => {
     return r? '<span data='+r+'>'+x+'</span>': x
 }
  */
+function resize() {
+	warning.hidden = (window.innerWidth > 550)
+}
+window.onresize = resize
+resize() //initial call
 </script>
