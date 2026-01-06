@@ -27,8 +27,7 @@
 	details {
 		break-after: page;
 		margin-top: 0.6em;
-		margin-bottom: 0.6em;
-		margin-left: 1em;
+		margin-bottom: 1em;
 	}
 	img {
 		max-width: min(500px, 100%);
@@ -52,6 +51,9 @@
 	<input type="checkbox" id="sort" name="sort" />
     <label for="sort">Sıralı</label> &emsp;
 	<input type="button" id="cButton" value="Aç" />
+	<input type="button" id="pButton" value="Print" />
+</p>
+<p><i>Print butonu ile PDF halinde yazdırabilirsiniz.</i>
 </p><br>
 
 <h2>Benzeşen ayetlere örnekler</h2>
@@ -122,23 +124,18 @@ function makeSamples() {
 function displayData() {
 	samples.innerHTML = (sort.checked? sortedText : shortText)
 }
-function closeAll() {
-	if (cButton.value == "Aç") {
-		samples.querySelectorAll('details')
-			.forEach(x => x.open = true)
-		cButton.value = "Kapat"
-	} else {
-		samples.querySelectorAll('details')
-			.forEach(x => x.open = false)
-		cButton.value = "Aç"
-	} 
+function openAll(opening, txt) {
+	samples.querySelectorAll('details')
+		.forEach(x => x.open = opening)
+	cButton.value = opening? "Kapat" : "Aç"
 }
 window.name = parent === self? 'KK' : 'finder'
 sort.onchange = displayData
 makeSamples(); displayData()
 nsamp.textContent = ITEMS.length
 nverse.textContent = CHAPS.flat().length
-cButton.onclick = closeAll
+cButton.onclick = () => { openAll(cButton.value == "Aç") }
+pButton.onclick = () => { openAll(true); print() }
 </script>
   </body>
 </html>

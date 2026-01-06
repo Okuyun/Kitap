@@ -52,7 +52,7 @@ Bunların Kur'an dilinde adı var: "eğrilik aramak"
 
 Ramazan geceleri, dünyanın her yerinde namaz içinde ayakta dinlenen Kur'an metni, eğrilik arayanların hepsine en kuvvetli cevaptır. "Teravih sünnet miydi, müstehap mıydı" tartışmasına girenler bu muhteşem mekanizmayı gözden kaçırıyorlar.
 ==
-ma leke minallahi	Allah'tan sana ... yok	2:120 13:37	b=mA%20lk%20mn	ma leke minallahi.png
+ma leke minallahi	Sana bir dost olmaz	2:120 13:37	b=mA%20lk%20mn	ma leke minallahi.png
 Bu iki ayet aynı ifade ile başlıyor:
 Sana gelen ilimden sonra onların arzularına uyarsan...
 
@@ -134,7 +134,7 @@ Azap mı mağfiret mi? Bunun keyfi olmadığını, kulun tercihine göre Allah'�
 el-arda mehden	Yeryüzü beşik	20:53 43:10	b=mhdA	1 el-arda mehden.png
 Yollar için bir yerde <b>seleke</b> (açtı) diğerinde <b>ca'ale</b> (yaptı) kullanılmış. Anlam neredeyse aynı, fakat kelime farklı olduğu için yazılım bu iki ayetin benzerliğini göremiyor.
 ==
-veimmâ yenzeganneke	(Şeytan) dürterse	7:200 41:36	b=ynzgnk	5 yenzeganneke.png
+veimmâ yenzeganneke	Şeytan dürterse	7:200 41:36	b=ynzgnk	5 yenzeganneke.png
 "Şeytan'dan bir dürtü gelirse" diye başlayan iki ayet var, aynı şeyi söylüyorlar: "Allah'a sığın, O Duyan'dır ve Bilen'dir." İlkinde esmâ-i husnadan iki isim (Duyan ve Bilen) belirsiz kullanılmış. İkinci ayette aynı isimler belirli, ama hiçbir kıraat imamı bunları farklı okumamış.
 ==
 ebvâbe cehennem	Cehennemin kapıları	16:29 39:72 40:76	b=AbwAb%20jhnm	6 ebvabe cehennem.png
@@ -283,5 +283,101 @@ Duhan suresi: "mübarek bir gecede"
 Kadir suresi: "Kadir Gecesinde"
 
 Yukarıdaki Iqra linkinde son "h" harfini kaldırıp <b>innâ enzelnâ</b> aratınca beş ayet daha çıkıyor.
+==
+munzirun minhum	İçlerinden bir uyarıcı	38:4 50:2	b=hm%20mn*r%20mn	munzirun minhum.png
+Sad ve Qaf sureleri Kuran'a kasem ile başlıyor. Sonra 8 kelimesi ortak olan bu ayetleri okuyoruz:
+"Kafirler aralarından bir uyarıcı gelmesine şaştılar"
+Şaştıkları şey, bir ayette "tek Tanrı" diğerinde "öldükten sonra dirilmek"
+İkisini de akıllarına sığdıramamışlar, sığdıramıyorlar.
+==
+leemleenne	Cehennemi dolduracağım	7:18 11:119 32:13 38:85	b=lAmlAn	leemleenne.png
+Dünyanın kuralıdır, sâlihler değil zâlimler haber olur. Bir iyilik neden haber olsun, kötülüğü izlemek daha ilginç... Yaygın haberlere bakınca, dünyanın zalimlerle dolduğu, iyiliğin ortadan kaybolduğu gibi yanlış izlenimler ediniriz, bu da bize iyilikle mukabele şevki vermez, motivasyon kırılır.
+
+Bazan da ölçüyü kaçırıp "Cehenneme ne gerek var" gibi bir düşünceye kapılırız. Halbuki Cehennem lüzumsuz değil ve Rabbimiz onu zalimlerle dolduracağını 4 ayette vaadetmiş. Bu aramada <b>lemlenne</b> لاملان kelimesini kullandım.
+
+Aynı aramayı Mucem'de yapsaydık, Hesap Gününden dehşetli bir haber veren 50:30 ayetini de bulacaktık.
+==
+bimâ enzelallah	Allah'ın indirdiği	5:44 5:45 5:47	b=bmA%20Anzl%20Allh%20fA	bima enzelallah.png
+Bazan benzer ayetler yan yana oluyor:
+"Allah'ın indirdiği ile hükmetmeyenler, işte onlar ..."
+
+Mâide suresinde 44, 45, 47. ayetler üç farklı kelime ile sona eriyor:
+* <b>kâfirûn</b> -- kafirler
+* <b>zâlimûn</b> -- zalimler
+* <b>fâsiqûn</b> -- fasıklar
+
+Her üç ayet, 620'li yıllardaki kutsal kitaplara değer veriyor, takipçilerine "madem bu Kitaba tâbisiniz, onunla amel edin" diyor.
+==
+vellezine hâdû	... ve yahudiler	2:62 5:69 22:17	b=wAl*yn%20hAdwA	ves-sabiun.png
+Şimdiye kadar gördüğümüz en karmaşık benzerlik:
+20 kelime ortak, üç farkla -- ayrıca dört kelime eksik:
+* <b>nasârâ</b> ile <b>sâbiîn</b> yer değiştirmiş
+* <b>sâbiîn</b> yerine <b>sâbiûn</b>
+* <b>velâ</b> yerine <b>felâ</b>
+* <b>felehum ecruhum 'inde rabbihim</b>
+Bu farklar kıraat farkına yol açmış mı? HAYIR
+
+İman edenler, Yahudiler, Hristiyanlar ve Sabiiler hakkında güzel bir haber:
+"Kim Allah’a ve ahiret gününe iman edip iyi işler yaparsa, onlara Rableri katında ödül vardır" 
+==
+minel-kerbil-azîm	Büyük bir dert	21:76 37:76 37:115	b=Alkrb	minel-kerbil-azim.png
+https://okuyun.github.io/Kuran/#
+"Onu ve ehlini o büyük felâketten kurtardık"
+<b>venecceynâhu ve ehlehu minel-kerbil-’azîm</b>
+İlk iki ayette söz konusu olan Hz Nuh ve gemiye binenler. Anlamı değiştirmeyen <b>fe-ve</b> farkına dikkat. Üçüncü ayette ise, iki peygamber ve kavminin Kızıldenizi geçişi anlatılıyor.
+==
+illâ kânû	Ayet ve elçi gelince	6:4 15:11 26:5 36:30 36:46 43:7	b=AlA%20kAnwA	illa kanu.jpg
+Yasin Suresinde benzeşen 30. ve 46. ayetlerden böyle bir simetri çıktı: Yarısında "ayet" ya da "zikr" geliyor ve ondan yüz çeviriyorlar. Diğer yarısında "rasul" ya da "nebi" geliyor ve onunla alay ediyorlar. Bir ondan, bir bundan... Toplumun geneli, kitaplara ve elçilere hep böyle davranmış.
+==
+ebeden bimâ	Bunu asla istemezler	2:95 62:7	b=AbdA%20bmA	ebeden bima.jpg
+İsrail oğulları 19 asır boyunca bir devlet sahibi olamadılar, dünyanın her yerinde zillet içinde, dağınık yaşadılar. Ortada topluca bir zulmün izi yokken, 1400 yıl önceden "zâlim" diye nitelenmişler:
+"Kendi elleriyle yaptıkları ortadayken bunu (ölümü) asla temenni etmeyecekler: Allah zalimleri en iyi bilendir."
+İki ayetin tek farkı, biri geniş zaman, diğeri gelecek.
+==
+enfusikum ezvâcen	Kendinizden eşler	16:72 30:21 42:11	b=Anfskm%20AzwAjA	enfusikum ezvacen.png
+<b>min enfusikum ezvacen</b> "kendinizden eşler"
+iki ayette "yaptı" birinde "yarattı"
+==
+yûhâ ileyye	Bana vahiy geliyor	18:110 21:108 41:6	b=AlY%20AnmA	yuha ileyye.png
+Bu resim için iki farklı ifade aradım.
+<b>ene beşerun mislikum</b> ilk iki ayeti buluyor:
+"ben sizin gibi bir beşerim" 11 kelime ortak
+
+<b>yûhâ ileyye ennemâ</b> ile üçü birlikte:
+"ancak bana vahyolunuyor" 8 kelime ortak
+==
+neczil-muhsinîn	Muhsinlerin karşılığı	37:80 37:105 37:110 37:121 37:131	b=njzY%20AlmHsn	neczil-muhsinin.png
+Saffat suresinde 5 elçiye özel selam, hemen sonraki ayetlerde bir haber:
+"Biz muhsinlerin karşılığını işte böyle veririz"
+Hz İbrahim için iki kere söylenmiş.
+
+Bu surenin iyi bilinen son ayetlerinde selâm bütün elçilere: <b>veselâmun 'alel-murselîn</b>
+==
+men câe	Kim bir iyilikle gelirse	6:160 27:89 28:84	b=bAlHsnp%20flh	men cae.png
+<b>men câe bil-haseneti</b>
+"Kim bir iyilikle gelirse ..."
+<b>felehu ḣayrun minhâ</b>
+Ona bundan daha hayırlısı (verilir)
+<b>'aşru emsâlihâ</b> (en az) on misli
+
+<b>vemen câe bis-seyyieti</b>
+"kim de bir kötülükle gelirse"
+Yalnızca yaptıklarını karşılık olarak görür, bire bir adalet bulur.
+
+Üç ayet aynı şekilde başlıyor, son ayet diğer ikisine parçalı benziyor.
+==
+in asaytu rabbiy	Rabbime isyan edersem	6:15 7:59 10:15 26:135 39:13 46:21	b=ba%20yawomK%20EaZ	in asaytu rabbiy.jpg
+<b>‘ażâbe yevmin ‘azîm</b> "Büyük bir günün azabı"
+7 ayette geçiyor, şekildeki 6 ayette peygamberler
+<b>inny eḣâfu</b> "Ben korkarım" diyor.
+
+Bu 6 ayetin ilginç bir örgüsü var:
+Yarısında <b>'aleykum</b> inkarcılar aleyhine korkuyorlar.
+
+Diğer yarısında in <b>‘asaytu rabbiy</b> "Rabbime isyan edersem" ekiyle, Efendimiz bizzat kendisi için korkuyor. Salât, Selâm, Vesîle, Mahmûd makamı ve Kevser onun olduğu halde korkuyor. Müslümanların umurunda değil, kurtuluşu garanti görüyorlar, korkunun izi yok!
+==
+evelev kâne âbâuhum	Ataları akılsız olsa da mı?	2:170 5:104	b=Awlw%20kAn%20AbA	abaena.png
+... "atalarımızı neyin üzerinde bulduysak ona uyarız" dediler. Ya ataları bir şeye akıl erdiremez/bilmez ve doğruyu seçemez idiyseler de mi?
+10 kelime ortak, 2 kelime farklı
 ==
 `
