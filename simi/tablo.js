@@ -369,12 +369,12 @@ Yalnızca yaptıklarını karşılık olarak görür, bire bir adalet bulur.
 in asaytu rabbiy	Rabbime isyan edersem	6:15 7:59 10:15 26:135 39:13 46:21	b=ba%20yawomK%20EaZ	in asaytu rabbiy.jpg
 <b>‘ażâbe yevmin ‘azîm</b> "Büyük bir günün azabı"
 7 ayette geçiyor, şekildeki 6 ayette peygamberler
-<b>inny eḣâfu</b> "Ben korkarım" diyor.
+<b>inniy eḣâfu</b> "Ben korkarım" diyor.
 
 Bu 6 ayetin ilginç bir örgüsü var:
 Yarısında <b>'aleykum</b> inkarcılar aleyhine korkuyorlar.
 
-Diğer yarısında in <b>‘asaytu rabbiy</b> "Rabbime isyan edersem" ekiyle, Efendimiz bizzat kendisi için korkuyor. Salât, Selâm, Vesîle, Mahmûd makamı ve Kevser onun olduğu halde korkuyor. Müslümanların umurunda değil, kurtuluşu garanti görüyorlar, korkunun izi yok!
+Diğer yarısında <b>in ‘asaytu rabbiy</b> "Rabbime isyan edersem" ekiyle, Efendimiz bizzat kendisi için korkuyor. Salât, Selâm, Vesîle, Mahmûd makamı ve Kevser onun olduğu halde korkuyor. Müslümanların umurunda değil, kurtuluşu garanti görüyorlar, korkunun izi yok!
 ==
 evelev kâne âbâuhum	Ataları akılsız olsa da mı?	2:170 5:104	b=Awlw%20kAn%20AbA	abaena.png
 ... "atalarımızı neyin üzerinde bulduysak ona uyarız" dediler. Ya ataları bir şeye akıl erdiremez/bilmez ve doğruyu seçemez idiyseler de mi?
