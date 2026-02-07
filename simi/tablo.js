@@ -374,10 +374,94 @@ in asaytu rabbiy	Rabbime isyan edersem	6:15 7:59 10:15 26:135 39:13 46:21	b=ba%2
 Bu 6 ayetin ilginç bir örgüsü var:
 Yarısında <b>'aleykum</b> inkarcılar aleyhine korkuyorlar.
 
-Diğer yarısında <b>in ‘asaytu rabbiy</b> "Rabbime isyan edersem" ekiyle, Efendimiz bizzat kendisi için korkuyor. Salât, Selâm, Vesîle, Mahmûd makamı ve Kevser onun olduğu halde korkuyor. Müslümanların umurunda değil, kurtuluşu garanti görüyorlar, korkunun izi yok!
+Diğer yarısında <b>in ‘asaytu rabbiy</b> "Rabbime isyan edersem" ekiyle, Efendimiz bizzat kendisi için korkuyor. Salât, Selâm, Vesîle, Mahmûd makamı ve Kevser onun olduğu halde korkuyor. Bu çağda kimsenin umurunda değil, kurtuluşu garanti görüyorlar, korkunun izi yok!
 ==
 evelev kâne âbâuhum	Ataları akılsız olsa da mı?	2:170 5:104	b=Awlw%20kAn%20AbA	abaena.png
 ... "atalarımızı neyin üzerinde bulduysak ona uyarız" dediler. Ya ataları bir şeye akıl erdiremez/bilmez ve doğruyu seçemez idiyseler de mi?
 10 kelime ortak, 2 kelime farklı
 ==
+fî qulûbihimur-ru’b	yüreklerine korku	33:26 59:2	b=hm%20AlrEb	er-rube.png
+<b>veqażefe fî qulûbihimur-ru’b</b>
+Allah yüreklerine korku düşürdü
+Benî İsrail'in İslam düşmanlığı, Medine ve civarındaki üç Yahudi kabilesinin, ihanet cezası olarak, birer yıl arayla sürgün edilmesiyle başlıyor. Bedir, Uhud ve Hendek savaşlarında anlaşmayı bozdukları için verilen bu cezalar yukarıdaki iki ayette <b>ru'b</b> "korku" kelimesiyle ifade edilmiş.
+==
+muteşâbihen	benzeyen ve benzemeyen	6:99 6:141	b=wgyr%20mt	mutesabihen.png
+Benzerlikten bahseden bu benzeşen ikilide meyveler için aynı anlamda şu iki ifadeyi okuyoruz:
+<b> muştebihen  veġayra muteşâbih
+muteşâbihen veġayra muteşâbih</b>
+benzeyen ve benzemeyen: Yani, temel yaşama ilkelerinde birbirine benzer; ama yapı, görüntü ve tad olarak çok farklı.
+
+İki ayette 8 kelime ortak. Anlamı değiştirmeyen bir farkı yukarıda gördük. Diğer fark şu: "meyve verdiği zaman" ilkinde "meyvesine bakın", diğerinde "meyvesinden yiyin ve hakkını verin". Birinde tefekkür, diğerinde zekât emredilmiş.
+==
+sabbârin şekûr	sabreden ve şükreden	14:5 31:31 34:19 42:33	b=yAt%20lkl	sabbarin sekur.png
+Dört ayetin sonunda 7 kelime ortak:
+<b>inne fî żâlike leâyâtin likulli sabbârin şekûr</b>
+Ayetler çok farklı konularla başlıyor, aynı haberle sona eriyor.
+Kuşkusuz bunda, sıkıntılara sabreden ve gönülden şükredenler için alınacak dersler vardır
+==
+felemmâ neccâhum	kurtuldukları zaman 	29:65 31:32	b=lh%20Aldyn%20flmA	neccahum.png
+Denizde dev dalgaları görünce...
+içtenlikle yalnız Allah’a bağlanarak O’na sığınırlar,
+fakat Allah onları kıyıya ulaştırdığında...
+İki ayetin başı ve sonu farklı, 9 kelime ortak.
+==
+vassâkum bihi	size böyle tavsiye etti 	6:151 6:152 6:153	b=bh%20lElkm	vassakum.png
+En'âm suresi, ardışık üç ayette aynı ifadeyi okuyoruz:
+<b>żâlikum vassâkum bihi le’allekum ...</b>
+... için Allah size böyle tavsiye etti
+
+Ayetlerin son kelimeleri farklı:
+<b>ta’kilûn</b>  akletmeniz için
+<b>teżekkerûn</b>  öğüt almanız için
+<b>tetteqûn</b>  korunmanız için
+==
+innehû teżkira	o bir öğüttür	69:48 73:19 74:54 76:29 80:11	b=ta*okirapN	tezkira.png
+tezkiratun kelimesi 5 ayette geçiyor. İkisi tamamen aynı. Diğer üçü birbirine çok benziyor, lakin sonuncuda bir elif fazla:
+<b>kellâ innehû teżkira
+kellâ innehâ teżkira</b>
+(Bunu ayrı bir yazıda anlatayım)
+==
+illâ buşrâ	ancak bir müjde 	3:126 8:10	b=AlA%20b$rY	illa buşra.png
+16 kelimesi ortak olan iki ayet buluyoruz. Enfal suresindeki ayet, daha önce Bedir'de 1000 melekle gelen yardımı hatırlatıyor. Diğer ayet ise Uhud'da 3000 melek vaadettikten sonra, aynı kelimelerle şunları söylüyor:
+"Allah, bunu size sırf bir müjde olsun ve kalpleriniz onunla yatışsın diye yaptı. Yardım, ancak izzet ve hikmet sahibi olan Allah katındandır."
+
+Farklar:
+* Birinde <b>lekum</b> "sizin için," diğerinde <b>innallâhe</b> "şüphesiz Allah" fazla
+* <b>bihî</b> "onunla" kelimesinin yeri değişmiş
+* Allah'ın güzel isimleri birinde belirli, diğerinde belirsiz
+==
+huvel-haqqu	çünkü Allah Haktır	22:62 31:30	b=hw%20AlHq%20wAn%20	huvel-haqqu.png
+16 kelime ortak, ilk ayette vurgu için fazladan <b>huve</b> var:
+"O’nun dışında yalvardıkları ise (o) bâtıldır"
+==
+velein seeltehum	sorsan onlara	29:61 31:25 39:38 43:9 43:87	b=hm%20mn%20xlq	seeltehum.png
+Yedi ayet "sorsan onlara" diye başlıyor, soru 
+farklı olsa da haber aynı: "elbette Allah derler"
+
+Resimdeki beş ayet yaratmakla ilgili.
+
+Son ayetten başlayalım:
+<b>vele-in seeltehum men ḣalaqahum</b>
+sorsan onlara: kendilerini kim yarattı
+<b>leyeqûlunnallâh</b>
+elbette "Allah" derler
+
+Diğer soru "gökleri ve yeri kim yarattı?"
+Dördünde aynı cevap: "Allah" 
+Diğer cevap: "el-Azîz, el-'Alîm yarattı"
+==
+nusqiykum	sizi sular	16:66 23:21	b=nsqykm	nusqiykum.png
+Süt konusu (yazılacak)
+==
 `
+/* 
+Finder içinde yapılan son aramanın sonuçları: (2026)
+function results() {
+  b=[]; r=/\d+:\d+/;
+  dTable.querySelectorAll('div.btn-group').forEach(x => {
+   s=r.exec(x.innerText);
+   if (s && !b.includes(s[0])) b.push(s[0])
+  }); console.log(b.join(' '))
+}
+results()
+*/
