@@ -24,6 +24,9 @@ function init() {
       a.href = "/Kuran/reader.html#"+a.name
       a.target = "iqra"
     }
+	let icn = document.querySelector('link[rel="icon"]')
+	if (icn) icn.setAttribute("href", "icon-esma.png")
+		
     let div = document.createElement('div')
     div.innerHTML = `&emsp; <button class=goBack>◀</button>
                 <button class=goNext>▶</button><br> &emsp;`;
