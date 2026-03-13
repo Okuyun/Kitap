@@ -49,9 +49,13 @@
         text-align: center;
         font-size: small;
     }
+	div#bottom { display: flex; }
+	div#bottom a {
+		position: relative;
+		top: -12px;
+	}
     .goBack, .goNext {
-        position: relative;
-        background: #c9fdfd;
+		height: 25px;
         cursor: pointer;
     }
     h2 .goBack {

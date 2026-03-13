@@ -28,9 +28,11 @@ function init() {
 	if (icn) icn.setAttribute("href", "icon-esma.png")
 		
     let div = document.createElement('div')
-    div.innerHTML = `&emsp; <button class=goBack>◀</button>
-                <button class=goNext>▶</button><br> &emsp;`;
-    document.body.append(div)
+    div.innerHTML = `&emsp; <button class=goBack>◀</button>&ensp;
+                <button class=goNext>▶</button> &emsp;
+	<a href="https://instagram.com/okuyun.5/"  target="Kuran"><img alt="https://instagram.com/okuyun.5/" src="/Kitap/icon/instagram.png" style="width: 34px"/></a>`;
+
+    document.body.append(div); div.id = "bottom"
     for (let b of document.querySelectorAll('.goBack'))
       b.onclick = goBack
     for (let b of document.querySelectorAll('.goNext'))
