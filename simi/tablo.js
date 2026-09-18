@@ -321,7 +321,6 @@ Bu farklar kıraat farkına yol açmış mı? HAYIR
 "Kim Allah’a ve ahiret gününe iman edip iyi işler yaparsa, onlara Rableri katında ödül vardır" 
 ==
 minel-kerbil-azîm	Büyük bir dert	21:76 37:76 37:115	b=Alkrb	minel-kerbil-azim.png
-https://okuyun.github.io/Kuran/#
 "Onu ve ehlini o büyük felâketten kurtardık"
 <b>venecceynâhu ve ehlehu minel-kerbil-’azîm</b>
 İlk iki ayette söz konusu olan Hz Nuh ve gemiye binenler. Anlamı değiştirmeyen <b>fe-ve</b> farkına dikkat. Üçüncü ayette ise, iki peygamber ve kavminin Kızıldenizi geçişi anlatılıyor.
